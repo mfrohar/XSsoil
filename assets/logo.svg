@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" width="220" height="56" role="img" aria-label="XS Soil Solutions logo">
+  <defs>
+    <linearGradient id="hex-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D4A22"/>
+      <stop offset="100%" style="stop-color:#3B6D11"/>
+    </linearGradient>
+  </defs>
+  <!-- Hexagon symbol -->
+  <polygon points="22,4 42,4 52,22 42,40 22,40 12,22" fill="url(#hex-grad)" opacity="0.95"/>
+  <!-- Soil strata lines -->
+  <line x1="16" y1="26" x2="48" y2="26" stroke="#97C459" stroke-width="1.2" opacity="0.7"/>
+  <line x1="16" y1="30" x2="48" y2="30" stroke="#97C459" stroke-width="0.8" opacity="0.5"/>
+  <line x1="18" y1="34" x2="46" y2="34" stroke="#97C459" stroke-width="0.6" opacity="0.35"/>
+  <!-- XS monogram in upper hexagon area -->
+  <text x="32" y="21" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#EAF3DE" text-anchor="middle" opacity="0.9">XS</text>
+  <!-- Wordmark -->
+  <text x="60" y="26" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#1C2318" letter-spacing="0.5">XS SOIL</text>
+  <text x="60" y="40" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#5F5E5A" letter-spacing="2">SOLUTIONS</text>
+</svg>
