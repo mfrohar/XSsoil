@@ -23,7 +23,7 @@
   --color-text-faint:   rgba(255,255,255,0.33);
   --color-border:       rgba(255,255,255,0.08);
   --color-border-dark:  rgba(255,255,255,0.1);
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Fraunces', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
   --space-xs:  4px;
   --space-sm:  8px;
@@ -207,12 +207,15 @@ input, textarea, select {
   flex-shrink: 0;
   display: flex;
   align-items: center;
+  background: rgba(255,255,255,0.12);
+  border-radius: var(--radius-md);
+  padding: 5px 12px;
 }
 
 .nav-logo img {
-  height: 64px;
+  height: 56px;
   width: auto;
-  filter: drop-shadow(0 0 3px rgba(255,255,255,0.95)) drop-shadow(0 0 8px rgba(255,255,255,0.6)) drop-shadow(0 0 16px rgba(255,255,255,0.25));
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.95)) drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
 .nav-links {
