@@ -212,6 +212,7 @@ input, textarea, select {
 .nav-logo img {
   height: 52px;
   width: auto;
+  filter: drop-shadow(0 0 2px rgba(255,255,255,0.7)) drop-shadow(0 0 5px rgba(255,255,255,0.3));
 }
 
 .nav-links {
@@ -1330,12 +1331,7 @@ select.form-control {
 }
 
 .audience-number {
-  font-family: var(--font-display);
-  font-size: 80px;
-  font-weight: 600;
-  color: rgba(140,214,63,0.15);
-  line-height: 1;
-  margin-bottom: var(--space-md);
+  display: none;
 }
 
 .scenario-box {
@@ -1412,12 +1408,7 @@ select.form-control {
 }
 
 .value-number {
-  font-family: var(--font-display);
-  font-size: 48px;
-  font-weight: 600;
-  color: rgba(140,214,63,0.2);
-  line-height: 1;
-  margin-bottom: var(--space-sm);
+  display: none;
 }
 
 /* Map section */
@@ -1443,11 +1434,7 @@ select.form-control {
 }
 
 .service-number {
-  font-family: var(--font-display);
-  font-size: 72px;
-  font-weight: 600;
-  color: rgba(140,214,63,0.15);
-  line-height: 1;
+  display: none;
 }
 
 .callout-box {
