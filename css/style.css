@@ -179,17 +179,18 @@ input, textarea, select {
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 64px;
-  background-color: var(--color-soil-black);
+  height: 72px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(28,35,24,0.08);
   display: flex;
   align-items: center;
   transition: box-shadow var(--transition), backdrop-filter var(--transition);
 }
 
 .nav.scrolled {
-  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
   backdrop-filter: blur(8px);
-  background-color: rgba(28,35,24,0.95);
+  background-color: rgba(255,255,255,0.97);
 }
 
 .nav-inner {
@@ -209,7 +210,7 @@ input, textarea, select {
 }
 
 .nav-logo img {
-  height: 36px;
+  height: 52px;
   width: auto;
 }
 
@@ -221,9 +222,9 @@ input, textarea, select {
 }
 
 .nav-link {
-  color: rgba(255,255,255,0.85);
+  color: #1C2318;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-sm);
   transition: color var(--transition), background-color var(--transition);
@@ -232,8 +233,8 @@ input, textarea, select {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--color-soil-light);
-  background-color: rgba(255,255,255,0.05);
+  color: var(--color-soil-forest);
+  background-color: rgba(99,153,34,0.08);
 }
 
 /* Dropdown */
@@ -245,9 +246,9 @@ input, textarea, select {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  color: rgba(255,255,255,0.85);
+  color: #1C2318;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-sm);
   transition: color var(--transition), background-color var(--transition);
@@ -255,8 +256,8 @@ input, textarea, select {
 }
 
 .nav-dropdown-toggle:hover {
-  color: var(--color-soil-light);
-  background-color: rgba(255,255,255,0.05);
+  color: var(--color-soil-forest);
+  background-color: rgba(99,153,34,0.08);
 }
 
 .nav-dropdown-toggle svg {
@@ -313,14 +314,14 @@ input, textarea, select {
 }
 
 .nav-phone {
-  color: rgba(255,255,255,0.7);
+  color: #1C2318;
   font-size: 14px;
   white-space: nowrap;
   transition: color var(--transition);
 }
 
 .nav-phone:hover {
-  color: var(--color-soil-light);
+  color: var(--color-soil-forest);
 }
 
 /* Hamburger */
@@ -339,7 +340,7 @@ input, textarea, select {
   display: block;
   width: 22px;
   height: 2px;
-  background: rgba(255,255,255,0.85);
+  background: rgba(28,35,24,0.85);
   border-radius: 2px;
   transition: transform var(--transition), opacity var(--transition);
 }
@@ -359,7 +360,7 @@ input, textarea, select {
 /* Mobile menu */
 .nav-mobile-menu {
   position: fixed;
-  top: 64px;
+  top: 72px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -415,15 +416,15 @@ input, textarea, select {
 }
 
 .btn-primary {
-  background-color: var(--color-gold);
+  background-color: #1C2318;
   color: var(--color-white);
-  border-color: var(--color-gold);
+  border-color: #1C2318;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-gold-hover);
-  border-color: var(--color-gold-hover);
-  box-shadow: 0 4px 12px rgba(186,117,23,0.35);
+  background-color: #2D4A22;
+  border-color: #2D4A22;
+  box-shadow: 0 4px 12px rgba(28,35,24,0.35);
 }
 
 .btn-secondary {
@@ -600,6 +601,9 @@ input, textarea, select {
   position: relative;
   min-height: 100vh;
   background-color: var(--color-soil-black);
+  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/soil_sampling-94e1ea1c-1920w.jpg');
+  background-size: cover;
+  background-position: center center;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -608,10 +612,12 @@ input, textarea, select {
 .hero-topo {
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Cg fill='none' stroke='%2397C459' stroke-width='0.5' opacity='0.07'%3E%3Cellipse cx='400' cy='400' rx='380' ry='100'/%3E%3Cellipse cx='400' cy='400' rx='320' ry='80'/%3E%3Cellipse cx='400' cy='400' rx='260' ry='60'/%3E%3Cellipse cx='400' cy='400' rx='200' ry='40'/%3E%3Cellipse cx='400' cy='400' rx='140' ry='22'/%3E%3Cellipse cx='400' cy='400' rx='80' ry='10'/%3E%3Cellipse cx='280' cy='300' rx='180' ry='50'/%3E%3Cellipse cx='550' cy='500' rx='200' ry='55'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 800px 800px;
-  background-repeat: repeat;
-  opacity: 0.6;
+  background: linear-gradient(
+    to right,
+    rgba(28,35,24,0.88) 0%,
+    rgba(28,35,24,0.70) 45%,
+    rgba(28,35,24,0.40) 100%
+  );
 }
 
 .hero-gradient {
@@ -738,8 +744,20 @@ input, textarea, select {
   overflow: hidden;
 }
 
+.hero-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/constrtuction+gorunds-1920w.jpg');
+  background-size: cover;
+  background-position: center 55%;
+  opacity: 0.30;
+  z-index: 0;
+}
+
 .hero-inner .hero-topo {
   opacity: 0.3;
+  z-index: 1;
 }
 
 .hero-breadcrumb {
@@ -1522,6 +1540,22 @@ select.form-control {
   border-radius: var(--radius-xl);
   padding: var(--space-3xl) var(--space-2xl);
   margin: var(--space-2xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/Fill+Management+Plan.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  z-index: 0;
+}
+.cta-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Land Acknowledgement */
@@ -1743,4 +1777,86 @@ select.form-control {
   .section-pad {
     padding: var(--space-3xl) 0;
   }
+}
+
+/* ============================================
+   SECTION BACKGROUND PHOTO CLASSES
+   ============================================ */
+
+.section-bg-photo {
+  position: relative;
+  overflow: hidden;
+}
+.section-bg-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/soil+management+strategy.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  opacity: 0.18;
+  z-index: 0;
+}
+.section-bg-photo .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-services-bg {
+  position: relative;
+  overflow: hidden;
+}
+.section-services-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/Excavated+Material+Management+Plan.webp');
+  background-size: cover;
+  background-position: center 60%;
+  opacity: 0.08;
+  z-index: 0;
+}
+.section-services-bg .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark header photo — for inline-styled dark headers (contact, careers) */
+.hero-dark-photo {
+  position: relative;
+  overflow: hidden;
+}
+.hero-dark-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/soil-help-2880w.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  opacity: 0.25;
+  z-index: 0;
+}
+.hero-dark-photo > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Timeline section background */
+.section-timeline-bg {
+  position: relative;
+  overflow: hidden;
+}
+.section-timeline-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/Soil+Management+Strategies.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  z-index: 0;
+}
+.section-timeline-bg .container {
+  position: relative;
+  z-index: 1;
 }
