@@ -4,27 +4,27 @@
 
 /* --- CUSTOM PROPERTIES --- */
 :root {
-  --color-soil-black:   #1C2318;
-  --color-soil-deep:    #243020;
+  --color-soil-black:   #0B1209;
+  --color-soil-deep:    #152010;
   --color-soil-forest:  #2D4A22;
-  --color-soil-mid:     #3B6D11;
-  --color-soil-bright:  #639922;
-  --color-soil-light:   #97C459;
-  --color-soil-pale:    #EAF3DE;
-  --color-gold:         #BA7517;
-  --color-gold-hover:   #9A6010;
-  --color-gold-light:   #FAEEDA;
-  --color-gold-text:    #412402;
-  --color-off-white:    #F7F6F2;
+  --color-soil-mid:     #4A8B1E;
+  --color-soil-bright:  #76C83C;
+  --color-soil-light:   #8CD63F;
+  --color-soil-pale:    rgba(140,214,63,0.12);
+  --color-gold:         #C88A1C;
+  --color-gold-hover:   #A87016;
+  --color-gold-light:   rgba(200,138,28,0.12);
+  --color-gold-text:    rgba(255,210,140,0.9);
+  --color-off-white:    #0B1209;
   --color-white:        #FFFFFF;
-  --color-card:         #FFFFFF;
-  --color-text:         #1C2318;
-  --color-text-muted:   #5F5E5A;
-  --color-text-faint:   #888780;
-  --color-border:       rgba(28,35,24,0.12);
+  --color-card:         #152010;
+  --color-text:         #FFFFFF;
+  --color-text-muted:   rgba(255,255,255,0.58);
+  --color-text-faint:   rgba(255,255,255,0.33);
+  --color-border:       rgba(255,255,255,0.08);
   --color-border-dark:  rgba(255,255,255,0.1);
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
   --space-xs:  4px;
   --space-sm:  8px;
   --space-md:  16px;
@@ -103,23 +103,23 @@ input, textarea, select {
    ============================================ */
 .display-xl {
   font-family: var(--font-display);
-  font-size: clamp(36px, 5vw, 52px);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
 }
 
 .display-lg {
   font-family: var(--font-display);
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(32px, 4.5vw, 48px);
   font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
 .display-md {
   font-family: var(--font-display);
-  font-size: clamp(22px, 3vw, 28px);
+  font-size: clamp(24px, 3vw, 32px);
   font-weight: 600;
   line-height: 1.2;
 }
@@ -180,17 +180,17 @@ input, textarea, select {
   top: 0;
   z-index: 1000;
   height: 72px;
-  background-color: #FFFFFF;
-  border-bottom: 1px solid rgba(28,35,24,0.08);
+  background-color: #0B1209;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   display: flex;
   align-items: center;
   transition: box-shadow var(--transition), backdrop-filter var(--transition);
 }
 
 .nav.scrolled {
-  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.45);
   backdrop-filter: blur(8px);
-  background-color: rgba(255,255,255,0.97);
+  background-color: rgba(11,18,9,0.97);
 }
 
 .nav-inner {
@@ -222,9 +222,9 @@ input, textarea, select {
 }
 
 .nav-link {
-  color: #1C2318;
+  color: rgba(255,255,255,0.78);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-sm);
   transition: color var(--transition), background-color var(--transition);
@@ -233,8 +233,8 @@ input, textarea, select {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--color-soil-forest);
-  background-color: rgba(99,153,34,0.08);
+  color: var(--color-soil-light);
+  background-color: rgba(140,214,63,0.08);
 }
 
 /* Dropdown */
@@ -246,9 +246,9 @@ input, textarea, select {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  color: #1C2318;
+  color: rgba(255,255,255,0.78);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-sm);
   transition: color var(--transition), background-color var(--transition);
@@ -256,8 +256,8 @@ input, textarea, select {
 }
 
 .nav-dropdown-toggle:hover {
-  color: var(--color-soil-forest);
-  background-color: rgba(99,153,34,0.08);
+  color: var(--color-soil-light);
+  background-color: rgba(140,214,63,0.08);
 }
 
 .nav-dropdown-toggle svg {
@@ -314,14 +314,14 @@ input, textarea, select {
 }
 
 .nav-phone {
-  color: #1C2318;
+  color: rgba(255,255,255,0.6);
   font-size: 14px;
   white-space: nowrap;
   transition: color var(--transition);
 }
 
 .nav-phone:hover {
-  color: var(--color-soil-forest);
+  color: var(--color-soil-light);
 }
 
 /* Hamburger */
@@ -340,7 +340,7 @@ input, textarea, select {
   display: block;
   width: 22px;
   height: 2px;
-  background: rgba(28,35,24,0.85);
+  background: rgba(255,255,255,0.8);
   border-radius: 2px;
   transition: transform var(--transition), opacity var(--transition);
 }
@@ -416,15 +416,15 @@ input, textarea, select {
 }
 
 .btn-primary {
-  background-color: #1C2318;
-  color: var(--color-white);
-  border-color: #1C2318;
+  background-color: var(--color-soil-light);
+  color: #0B1209;
+  border-color: var(--color-soil-light);
 }
 
 .btn-primary:hover {
-  background-color: #2D4A22;
-  border-color: #2D4A22;
-  box-shadow: 0 4px 12px rgba(28,35,24,0.35);
+  background-color: #A0E54D;
+  border-color: #A0E54D;
+  box-shadow: 0 4px 16px rgba(140,214,63,0.35);
 }
 
 .btn-secondary {
@@ -788,8 +788,8 @@ input, textarea, select {
 .service-icon {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
-  background: var(--color-soil-pale);
+  border-radius: var(--radius-md);
+  background: rgba(140,214,63,0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -799,7 +799,7 @@ input, textarea, select {
 .service-icon svg {
   width: 24px;
   height: 24px;
-  color: var(--color-soil-forest);
+  color: var(--color-soil-light);
 }
 
 .service-icon-dark {
@@ -812,14 +812,15 @@ input, textarea, select {
 
 .service-tag {
   display: inline-block;
-  background: var(--color-soil-pale);
-  color: var(--color-soil-forest);
+  background: rgba(140,214,63,0.12);
+  color: var(--color-soil-light);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.04em;
   padding: 3px 10px;
   border-radius: 100px;
   margin: 2px;
+  border: 1px solid rgba(140,214,63,0.2);
 }
 
 /* ============================================
@@ -860,9 +861,9 @@ input, textarea, select {
    10. TRUST BAR
    ============================================ */
 .trust-bar {
-  background: var(--color-white);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  background: #152010;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
   padding: var(--space-xl) 0;
 }
 
@@ -882,7 +883,7 @@ input, textarea, select {
   width: 40px;
   height: 40px;
   border-radius: var(--radius-md);
-  background: var(--color-soil-pale);
+  background: rgba(140,214,63,0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -892,7 +893,7 @@ input, textarea, select {
 .trust-icon svg {
   width: 20px;
   height: 20px;
-  color: var(--color-soil-forest);
+  color: var(--color-soil-light);
 }
 
 .trust-title {
@@ -912,8 +913,8 @@ input, textarea, select {
    11. TESTIMONIAL CARDS
    ============================================ */
 .testimonial-card {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
+  background: #152010;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   position: relative;
@@ -974,11 +975,11 @@ input, textarea, select {
   width: 100%;
   height: 44px;
   padding: 0 var(--space-md);
-  border: 1.5px solid var(--color-border);
+  border: 1.5px solid rgba(255,255,255,0.12);
   border-radius: var(--radius-md);
   font-size: 15px;
   color: var(--color-text);
-  background: var(--color-white);
+  background: #152010;
   transition: border-color var(--transition), box-shadow var(--transition);
   appearance: none;
 }
@@ -1022,12 +1023,12 @@ select.form-control {
 
 .form-success {
   display: none;
-  background: var(--color-soil-pale);
-  border: 1px solid var(--color-soil-light);
+  background: rgba(140,214,63,0.1);
+  border: 1px solid rgba(140,214,63,0.3);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   text-align: center;
-  color: var(--color-soil-forest);
+  color: var(--color-soil-light);
 }
 
 .form-success.visible {
@@ -1262,21 +1263,21 @@ select.form-control {
   padding: var(--space-lg) var(--space-xl);
   text-align: left;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-text);
-  background: var(--color-white);
+  background: #152010;
   cursor: pointer;
   transition: background-color var(--transition), color var(--transition);
 }
 
 .faq-question:hover {
-  background: var(--color-soil-pale);
-  color: var(--color-soil-forest);
+  background: #1c2d17;
+  color: var(--color-soil-light);
 }
 
 .faq-question.open {
-  background: var(--color-soil-pale);
-  color: var(--color-soil-forest);
+  background: #1c2d17;
+  color: var(--color-soil-light);
 }
 
 .faq-chevron {
@@ -1289,7 +1290,7 @@ select.form-control {
 
 .faq-question.open .faq-chevron {
   transform: rotate(180deg);
-  color: var(--color-soil-forest);
+  color: var(--color-soil-light);
 }
 
 .faq-answer {
@@ -1303,14 +1304,14 @@ select.form-control {
   font-size: 15px;
   line-height: 1.7;
   color: var(--color-text-muted);
-  background: var(--color-white);
+  background: #1c2d17;
 }
 
 /* ============================================
    17. DOT GRID TEXTURE
    ============================================ */
 .dot-grid {
-  background-image: radial-gradient(circle, rgba(28,35,24,0.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
@@ -1325,21 +1326,21 @@ select.form-control {
 }
 
 .audience-section:nth-child(even) {
-  background: var(--color-white);
+  background: #152010;
 }
 
 .audience-number {
   font-family: var(--font-display);
   font-size: 80px;
-  font-weight: 700;
-  color: var(--color-soil-pale);
+  font-weight: 600;
+  color: rgba(140,214,63,0.15);
   line-height: 1;
   margin-bottom: var(--space-md);
 }
 
 .scenario-box {
-  background: var(--color-soil-pale);
-  border-left: 3px solid var(--color-soil-bright);
+  background: rgba(140,214,63,0.07);
+  border-left: 3px solid var(--color-soil-light);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   padding: var(--space-lg);
   margin-bottom: var(--space-md);
@@ -1355,14 +1356,14 @@ select.form-control {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-soil-forest);
+  color: var(--color-soil-light);
   margin-bottom: var(--space-sm);
 }
 
 /* Team cards */
 .team-card {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
+  background: #152010;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   text-align: center;
@@ -1404,8 +1405,8 @@ select.form-control {
 
 /* Values cards */
 .value-card {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
+  background: #152010;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
 }
@@ -1413,15 +1414,16 @@ select.form-control {
 .value-number {
   font-family: var(--font-display);
   font-size: 48px;
-  font-weight: 700;
-  color: var(--color-soil-pale);
+  font-weight: 600;
+  color: rgba(140,214,63,0.2);
   line-height: 1;
   margin-bottom: var(--space-sm);
 }
 
 /* Map section */
 .map-section {
-  background: var(--color-soil-pale);
+  background: #152010;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-xl);
   padding: var(--space-xl);
   display: flex;
@@ -1443,14 +1445,14 @@ select.form-control {
 .service-number {
   font-family: var(--font-display);
   font-size: 72px;
-  font-weight: 700;
-  color: var(--color-soil-pale);
+  font-weight: 600;
+  color: rgba(140,214,63,0.15);
   line-height: 1;
 }
 
 .callout-box {
-  background: var(--color-gold-light);
-  border: 1px solid rgba(186,117,23,0.2);
+  background: rgba(200,138,28,0.1);
+  border: 1px solid rgba(200,138,28,0.22);
   border-radius: var(--radius-md);
   padding: var(--space-lg);
   margin: var(--space-lg) 0;
@@ -1536,7 +1538,8 @@ select.form-control {
 
 /* CTA Section */
 .cta-section {
-  background: var(--color-gold-light);
+  background: linear-gradient(135deg, #152010 0%, #1e3018 100%);
+  border: 1px solid rgba(255,255,255,0.07);
   border-radius: var(--radius-xl);
   padding: var(--space-3xl) var(--space-2xl);
   margin: var(--space-2xl) 0;
@@ -1560,11 +1563,12 @@ select.form-control {
 
 /* Land Acknowledgement */
 .land-ack {
-  background: var(--color-soil-pale);
+  background: #152010;
+  border: 1px solid rgba(255,255,255,0.07);
   border-radius: var(--radius-lg);
   padding: var(--space-2xl);
   font-style: italic;
-  color: var(--color-soil-forest);
+  color: rgba(255,255,255,0.65);
   font-size: 15px;
   line-height: 1.75;
   text-align: center;
@@ -1595,13 +1599,13 @@ select.form-control {
   font-size: 22px;
   font-style: italic;
   line-height: 1.5;
-  color: var(--color-soil-forest);
+  color: rgba(255,255,255,0.8);
 }
 
 /* Job cards */
 .job-card {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
+  background: #152010;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   transition: box-shadow var(--transition), border-color var(--transition);
@@ -1614,8 +1618,8 @@ select.form-control {
 
 .job-type {
   display: inline-block;
-  background: var(--color-soil-pale);
-  color: var(--color-soil-forest);
+  background: rgba(140,214,63,0.12);
+  color: var(--color-soil-light);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -1635,7 +1639,7 @@ select.form-control {
   width: 56px;
   height: 56px;
   border-radius: var(--radius-lg);
-  background: var(--color-soil-pale);
+  background: rgba(140,214,63,0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1645,7 +1649,7 @@ select.form-control {
 .benefit-icon svg {
   width: 28px;
   height: 28px;
-  color: var(--color-soil-forest);
+  color: var(--color-soil-light);
 }
 
 /* File input */
@@ -1668,14 +1672,14 @@ select.form-control {
 .file-input-display {
   flex: 1;
   height: 44px;
-  border: 1.5px dashed var(--color-border);
+  border: 1.5px dashed rgba(255,255,255,0.12);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   padding: 0 var(--space-md);
   font-size: 14px;
   color: var(--color-text-faint);
-  background: var(--color-white);
+  background: #152010;
 }
 
 /* ============================================
