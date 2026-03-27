@@ -11,6 +11,10 @@
   --color-soil-bright:  #089b0a;
   --color-soil-light:   #0a9a0a;
   --color-soil-pale:    rgba(10,154,10,0.12);
+  --color-charcoal:     #2C2C2E;
+  --color-charcoal-mid: #3A3A3C;
+  --color-charcoal-light: rgba(58,58,60,0.5);
+  --color-charcoal-border: rgba(255,255,255,0.11);
   --color-gold:         #C88A1C;
   --color-gold-hover:   #A87016;
   --color-gold-light:   rgba(200,138,28,0.12);
@@ -506,6 +510,14 @@ input, textarea, select {
   color: var(--color-gold-text);
 }
 
+.card-charcoal {
+  background: var(--color-charcoal);
+  border: 1px solid var(--color-charcoal-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  color: var(--color-white);
+}
+
 .card-hover {
   transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
 }
@@ -866,9 +878,9 @@ input, textarea, select {
    10. TRUST BAR
    ============================================ */
 .trust-bar {
-  background: #152010;
-  border-top: 1px solid rgba(255,255,255,0.07);
-  border-bottom: 1px solid rgba(255,255,255,0.07);
+  background: var(--color-charcoal);
+  border-top: 1px solid var(--color-charcoal-border);
+  border-bottom: 1px solid var(--color-charcoal-border);
   padding: var(--space-xl) 0;
 }
 
@@ -918,8 +930,8 @@ input, textarea, select {
    11. TESTIMONIAL CARDS
    ============================================ */
 .testimonial-card {
-  background: #152010;
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--color-charcoal);
+  border: 1px solid var(--color-charcoal-border);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   position: relative;
@@ -984,7 +996,7 @@ input, textarea, select {
   border-radius: var(--radius-md);
   font-size: 15px;
   color: var(--color-text);
-  background: #152010;
+  background: var(--color-charcoal);
   transition: border-color var(--transition), box-shadow var(--transition);
   appearance: none;
 }
@@ -1254,13 +1266,13 @@ select.form-control {
    16. FAQ ACCORDION
    ============================================ */
 .faq-list {
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-charcoal-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
 
 .faq-item {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-charcoal-border);
 }
 
 .faq-item:last-child {
@@ -1278,18 +1290,18 @@ select.form-control {
   font-size: 15px;
   font-weight: 500;
   color: var(--color-text);
-  background: #152010;
+  background: var(--color-charcoal);
   cursor: pointer;
   transition: background-color var(--transition), color var(--transition);
 }
 
 .faq-question:hover {
-  background: #1c2d17;
+  background: var(--color-charcoal-mid);
   color: var(--color-soil-light);
 }
 
 .faq-question.open {
-  background: #1c2d17;
+  background: var(--color-charcoal-mid);
   color: var(--color-soil-light);
 }
 
@@ -1562,8 +1574,8 @@ select.form-control {
 
 /* Land Acknowledgement */
 .land-ack {
-  background: #152010;
-  border: 1px solid rgba(255,255,255,0.07);
+  background: var(--color-charcoal);
+  border: 1px solid var(--color-charcoal-border);
   border-radius: var(--radius-lg);
   padding: var(--space-2xl);
   font-style: italic;
