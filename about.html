@@ -123,7 +123,7 @@
 
             <!-- Abstract org graphic -->
             <div style="background:var(--color-soil-black);border-radius:var(--radius-xl);padding:32px;display:flex;flex-direction:column;align-items:center;gap:16px;">
-              <svg viewBox="0 0 240 160" width="240" height="160" xmlns="http://www.w3.org/2000/svg" aria-label="Organization chart illustration">
+              <svg viewBox="0 0 240 180" width="100%" style="max-width:520px;display:block;" xmlns="http://www.w3.org/2000/svg" aria-label="Organization chart illustration">
                 <!-- Top node -->
                 <rect x="95" y="8" width="50" height="28" rx="8" fill="#2D4A22"/>
                 <text x="120" y="27" font-family="sans-serif" font-size="8" fill="#97C459" text-anchor="middle" font-weight="600">Leadership</text>
@@ -135,18 +135,23 @@
                 <line x1="190" y1="56" x2="190" y2="76" stroke="rgba(151,196,89,0.3)" stroke-width="1.5"/>
                 <!-- Three QP nodes -->
                 <rect x="20" y="76" width="60" height="28" rx="8" fill="#3B6D11"/>
-                <text x="50" y="94" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">QP Engineers</text>
+                <text x="50" y="90" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">QP</text>
+                <text x="50" y="100" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">Engineers</text>
                 <rect x="90" y="76" width="60" height="28" rx="8" fill="#3B6D11"/>
-                <text x="120" y="94" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">QP Geoscientists</text>
+                <text x="120" y="90" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">QP</text>
+                <text x="120" y="100" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">Geoscientists</text>
                 <rect x="160" y="76" width="60" height="28" rx="8" fill="#3B6D11"/>
-                <text x="190" y="94" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">Field Technicians</text>
-                <!-- Bottom connecting -->
-                <line x1="50" y1="104" x2="50" y2="124" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
-                <line x1="120" y1="104" x2="120" y2="124" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
-                <line x1="190" y1="104" x2="190" y2="124" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
-                <!-- Burlington HQ label -->
-                <rect x="60" y="124" width="120" height="24" rx="6" fill="rgba(151,196,89,0.1)" stroke="rgba(151,196,89,0.3)" stroke-width="1"/>
-                <text x="120" y="140" font-family="sans-serif" font-size="8" fill="rgba(151,196,89,0.8)" text-anchor="middle">Burlington, ON — Province-Wide Service</text>
+                <text x="190" y="90" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">Field</text>
+                <text x="190" y="100" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">Technicians</text>
+                <!-- Bottom connecting lines merge to centre -->
+                <line x1="50" y1="104" x2="50" y2="120" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
+                <line x1="120" y1="104" x2="120" y2="120" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
+                <line x1="190" y1="104" x2="190" y2="120" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
+                <line x1="50" y1="120" x2="190" y2="120" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
+                <line x1="120" y1="120" x2="120" y2="134" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
+                <!-- Burlington HQ oval — wider to fit full text -->
+                <ellipse cx="120" cy="152" rx="112" ry="18" fill="rgba(151,196,89,0.1)" stroke="rgba(151,196,89,0.35)" stroke-width="1.2"/>
+                <text x="120" y="157" font-family="sans-serif" font-size="8.5" fill="rgba(151,196,89,0.9)" text-anchor="middle" font-weight="500">Burlington, ON — Province-Wide Service</text>
               </svg>
             </div>
           </div>

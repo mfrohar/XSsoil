@@ -213,10 +213,10 @@ input, textarea, select {
   height: 72px;
   width: auto;
   filter:
-    drop-shadow(0 0 2px rgba(255,255,255,1))
-    drop-shadow(0 0 6px rgba(255,255,255,0.85))
-    drop-shadow(0 0 14px rgba(255,255,255,0.5))
-    drop-shadow(0 0 28px rgba(255,255,255,0.2));
+    drop-shadow(1px 0 0 rgba(255,255,255,0.85))
+    drop-shadow(-1px 0 0 rgba(255,255,255,0.85))
+    drop-shadow(0 1px 0 rgba(255,255,255,0.85))
+    drop-shadow(0 -1px 0 rgba(255,255,255,0.85));
 }
 
 .nav-links {
@@ -606,9 +606,9 @@ input, textarea, select {
   position: relative;
   min-height: 100vh;
   background-color: var(--color-soil-black);
-  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/soil_sampling-94e1ea1c-1920w.jpg');
+  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/constrtuction+gorunds-1920w.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center 40%;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -753,10 +753,10 @@ input, textarea, select {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/constrtuction+gorunds-1920w.jpg');
+  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/soil_sampling-94e1ea1c-1920w.jpg');
   background-size: cover;
-  background-position: center 55%;
-  opacity: 0.30;
+  background-position: center 40%;
+  opacity: 0.32;
   z-index: 0;
 }
 
@@ -1104,9 +1104,10 @@ select.form-control {
 
 .footer-brand img {
   filter:
-    drop-shadow(0 0 2px rgba(255,255,255,1))
-    drop-shadow(0 0 6px rgba(255,255,255,0.85))
-    drop-shadow(0 0 14px rgba(255,255,255,0.5));
+    drop-shadow(1px 0 0 rgba(255,255,255,0.85))
+    drop-shadow(-1px 0 0 rgba(255,255,255,0.85))
+    drop-shadow(0 1px 0 rgba(255,255,255,0.85))
+    drop-shadow(0 -1px 0 rgba(255,255,255,0.85));
 }
 
 .footer-brand p {
