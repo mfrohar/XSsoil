@@ -140,62 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================
-     5. DROPDOWN KEYBOARD ACCESSIBILITY
-     ========================================== */
-  const dropdowns = document.querySelectorAll('.nav-dropdown');
-
-  dropdowns.forEach(dropdown => {
-    const toggle = dropdown.querySelector('.nav-dropdown-toggle');
-    const menu = dropdown.querySelector('.nav-dropdown-menu');
-    if (!toggle || !menu) return;
-
-    toggle.setAttribute('aria-haspopup', 'true');
-    toggle.setAttribute('aria-expanded', 'false');
-
-    toggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = dropdown.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    toggle.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        const isOpen = dropdown.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(isOpen));
-        if (isOpen) {
-          const firstItem = menu.querySelector('.nav-dropdown-item');
-          if (firstItem) firstItem.focus();
-        }
-      }
-      if (e.key === 'Escape') {
-        dropdown.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.focus();
-      }
-    });
-
-    menu.querySelectorAll('.nav-dropdown-item').forEach(item => {
-      item.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          dropdown.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-          toggle.focus();
-        }
-      });
-    });
-  });
-
-  document.addEventListener('click', () => {
-    dropdowns.forEach(d => {
-      d.classList.remove('open');
-      const t = d.querySelector('.nav-dropdown-toggle');
-      if (t) t.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  /* ==========================================
-     6. STAT COUNTER ANIMATION
+     5. STAT COUNTER ANIMATION
      ========================================== */
   function easeOutCubic(t) {
     return 1 - Math.pow(1 - t, 3);
