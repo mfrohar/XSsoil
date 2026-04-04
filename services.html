@@ -11,11 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=7">
   <style>
-    /* Services page: fullpage scroll snap on desktop */
-    html { scroll-behavior: smooth; scroll-padding-top: 0; }
-    @media (min-width: 861px) {
-      html { scroll-snap-type: y mandatory; }
-    }
+    html { scroll-behavior: smooth; }
   </style>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -58,7 +54,7 @@
 
   <main>
     <!-- HERO -->
-    <header class="hero-inner" aria-label="Page header" style="scroll-snap-align:start;">
+    <header class="hero-inner" aria-label="Page header">
       <div class="hero-topo" aria-hidden="true"></div>
       <div class="container" style="position:relative;z-index:2;padding-bottom:48px;">
         <nav class="hero-breadcrumb" aria-label="Breadcrumb">
@@ -74,6 +70,9 @@
         <p style="color:rgba(255,255,255,0.6);font-size:18px;margin-top:16px;max-width:560px;">Every service you need to achieve O. Reg. 406/19 compliance, from initial characterization through final sign-off.</p>
       </div>
     </header>
+
+    <!-- STICKY STACKING WRAPPER: sections slide over each other on scroll -->
+    <div class="services-stack">
 
     <!-- SERVICE 1: ESMP -->
     <section id="esmp" class="service-section" aria-labelledby="esmp-heading">
@@ -134,7 +133,7 @@
     <section id="esdar" class="service-section" aria-labelledby="esdar-heading">
       <div class="service-inner">
         <aside class="service-image-panel animate-on-scroll" aria-hidden="true"
-          style="background-image:url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/Excavated+Material+Management+Plan-2880w.webp');"></aside>
+          style="background-image:url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/who_we_service-2880w.jpg');"></aside>
         <div class="service-text-col animate-on-scroll delay-2">
           <h2 class="display-md" id="esdar-heading">Excess Soil Destination Assessments</h2>
           <p class="body-lg" style="color:var(--color-text-muted);">Required for receiving sites before they can accept excess soil under O. Reg. 406/19. Our QPs assess the baseline environmental condition of the receiving site, prepare the ESDAR, and register it in the Registry — protecting site owners from future environmental liability.</p>
@@ -201,6 +200,8 @@
           style="background-image:url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/soil-help-2880w.jpg');"></aside>
       </div>
     </section>
+
+    </div><!-- /.services-stack -->
 
     <!-- FAQ -->
     <section class="section-pad faq-snap" style="background:var(--color-soil-pale);" aria-labelledby="faq-heading">
@@ -355,5 +356,34 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <script>
+    /* -----------------------------------------------
+       Sticky Stack — "lock-in" reveal animation
+       When a new section slides to the top and locks,
+       re-trigger the text/image animate-on-scroll items
+       so content fades in fresh each time.
+    ----------------------------------------------- */
+    if (window.matchMedia('(min-width: 861px)').matches) {
+      const sections = document.querySelectorAll('.services-stack .service-section');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const animEls = entry.target.querySelectorAll('.animate-on-scroll');
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+            // Section has slid into view — reveal its content
+            animEls.forEach(el => el.classList.add('visible'));
+          } else {
+            // Section scrolled away — reset so it re-animates next visit
+            animEls.forEach(el => el.classList.remove('visible'));
+          }
+        });
+      }, {
+        threshold: 0.6   // fires when 60% of the section is visible
+      });
+
+      sections.forEach(s => observer.observe(s));
+    }
+  </script>
 </body>
 </html>

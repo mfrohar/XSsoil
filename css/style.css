@@ -2227,27 +2227,45 @@ select.form-control {
 
 /* --- SERVICES PAGE: FULLPAGE SCROLL SNAP --- */
 
-/* Hero snaps to top */
+/* Hero — normal flow, no snap */
 .page-services .hero-inner {
   height: 100vh !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;
   justify-content: flex-end !important;
-  scroll-snap-align: start;
 }
 
-/* Each service section = exactly one viewport */
+/* =============================================
+   STICKY STACKING — services page
+   Each section pins at top; next slides over it
+   ============================================= */
+.services-stack {
+  position: relative;
+}
+
+/* Each service section = sticky card */
 .page-services .service-section {
+  position: sticky;
+  top: 0;
   height: 100vh;
   min-height: unset;
   padding: 0;
   overflow: hidden;
   display: block;
   border-bottom: none;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  /* subtle shadow so stacking depth is visible */
+  box-shadow: 0 -4px 32px rgba(0,0,0,0.45);
 }
+
+/* Incrementing z-index so each new section slides on top */
+.page-services #esmp     { z-index: 1; }
+.page-services #sap      { z-index: 2; }
+.page-services #scr      { z-index: 3; }
+.page-services #esdar    { z-index: 4; }
+.page-services #fmp      { z-index: 5; }
+.page-services #sms      { z-index: 6; }
+.page-services #problems { z-index: 7; }
 
 /* Full-bleed two-column grid — no container wrapper */
 .service-inner {
@@ -2320,12 +2338,22 @@ select.form-control {
     min-height: 60vh !important;
     padding-bottom: 40px;
   }
+  /* Disable sticky stacking on mobile — sections flow normally */
   .page-services .service-section {
+    position: static;
     height: auto;
     overflow: visible;
-    scroll-snap-align: none;
-    scroll-snap-stop: normal;
+    box-shadow: none;
   }
+  /* Reset z-index overrides on mobile */
+  .page-services #esmp,
+  .page-services #sap,
+  .page-services #scr,
+  .page-services #esdar,
+  .page-services #fmp,
+  .page-services #sms,
+  .page-services #problems { z-index: auto; }
+
   .service-inner {
     grid-template-columns: 1fr;
   }
