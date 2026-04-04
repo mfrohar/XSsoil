@@ -8,10 +8,17 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=4">
+  <style>
+    /* Services page: fullpage scroll snap on desktop */
+    html { scroll-behavior: smooth; scroll-padding-top: 0; }
+    @media (min-width: 861px) {
+      html { scroll-snap-type: y mandatory; }
+    }
+  </style>
 </head>
-<body>
+<body class="page-services">
 
   <!-- NAV -->
   <nav class="nav" aria-label="Main navigation">
@@ -64,7 +71,7 @@
 
   <main>
     <!-- HERO -->
-    <header class="hero-inner" aria-label="Page header">
+    <header class="hero-inner" aria-label="Page header" style="scroll-snap-align:start;">
       <div class="hero-topo" aria-hidden="true"></div>
       <div class="container" style="position:relative;z-index:2;padding-bottom:48px;">
         <nav class="hero-breadcrumb" aria-label="Breadcrumb">
@@ -72,6 +79,7 @@
           <span class="hero-breadcrumb-sep" aria-hidden="true">/</span>
           <span aria-current="page">Services</span>
         </nav>
+        <span class="watermark-title" aria-hidden="true">Services</span>
         <span class="section-eyebrow" style="color:var(--color-soil-light);">What We Do</span>
         <h1 class="display-xl" style="color:var(--color-white);margin-top:12px;max-width:680px;">
           Comprehensive soil management services
@@ -82,333 +90,133 @@
 
     <!-- SERVICE 1: ESMP -->
     <section id="esmp" class="service-section" aria-labelledby="esmp-heading">
-      <div class="container">
-        <div class="grid-2" style="align-items:flex-start;gap:64px;">
-          <div class="animate-on-scroll">
-            <div class="service-number" aria-hidden="true">01</div>
-            <h2 class="display-md" id="esmp-heading" style="margin:8px 0 24px;">Excess Soil Management Plans (ESMP)</h2>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">An Excess Soil Management Plan is the cornerstone document required for any regulated project generating excess soil in Ontario. Prepared by a Qualified Person, the ESMP identifies the volume of soil to be generated, characterizes soil quality, and establishes approved destination sites.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">Our QPs conduct thorough site investigations, review historical records, and coordinate laboratory analysis to ensure your ESMP accurately reflects site conditions and satisfies all MECP requirements under O. Reg. 406/19.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:24px;">We manage the complete ESMP lifecycle: preparation, registration in the Ontario Excess Soil Registry, ongoing amendments as conditions change, and final record of site condition documentation upon project completion.</p>
-
-            <div class="callout-box">
-              <div class="callout-box-title">When an ESMP is Required</div>
-              <div class="callout-box-content">ESMPs are mandatory for Class 1 projects (large-scale construction, infrastructure, and industrial projects). They are strongly recommended for Class 2 projects and any project where excess soil will leave the project area for reuse elsewhere in Ontario.</div>
-            </div>
-
-            <h3 class="heading-md" style="margin:24px 0 12px;">Key Deliverables</h3>
-            <ul class="deliverables-list" aria-label="ESMP deliverables">
-              <li>Qualified Person authored ESMP document</li>
-              <li>Site investigation report and soil characterization data</li>
-              <li>Ontario Excess Soil Registry registration</li>
-              <li>Approved receiving site documentation</li>
-              <li>Soil sampling and laboratory coordination</li>
-              <li>Truck manifest and chain-of-custody templates</li>
-              <li>Post-project compliance summary</li>
-            </ul>
-
-            <div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;">
-              <span class="service-tag">O. Reg. 406/19</span>
-              <span class="service-tag">Class 1 Projects</span>
-              <span class="service-tag">QP Authored</span>
-              <span class="service-tag">Registry Filing</span>
-            </div>
-            <div style="margin-top:24px;">
-              <a href="contact.html" class="btn btn-primary">Request an ESMP Quote</a>
-            </div>
+      <div class="service-inner">
+        <div class="service-text-col animate-on-scroll">
+          <h2 class="display-md" id="esmp-heading">Excess Soil Management Plans</h2>
+          <p class="body-lg" style="color:var(--color-text-muted);">The cornerstone compliance document for any project generating excess soil in Ontario. Our Qualified Persons prepare compliant ESMPs, register soil lots in the Ontario Excess Soil Registry, and manage all documentation from initial site assessment through final project sign-off.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="service-tag">O. Reg. 406/19</span>
+            <span class="service-tag">Class 1 Projects</span>
+            <span class="service-tag">QP Authored</span>
+            <span class="service-tag">Registry Filing</span>
           </div>
-          <aside class="animate-on-scroll delay-2">
-            <div class="card-gold" style="margin-bottom:24px;">
-              <h3 class="heading-sm" style="color:var(--color-gold);margin-bottom:12px;">Related Services</h3>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <a href="#scr" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Soil Characterization Reports</a>
-                <a href="#esdar" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ ESD Assessments &amp; Reports</a>
-                <a href="#sms" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Soil Management Systems</a>
-              </div>
-            </div>
-            <div class="card" style="background:var(--color-soil-pale);border-color:transparent;">
-              <h4 class="heading-sm" style="margin-bottom:8px;">Typical Timeline</h4>
-              <p class="body-md" style="color:var(--color-text-muted);">Straightforward ESMPs: 5–10 business days. Complex multi-site projects: 15–25 business days from site investigation to registry filing.</p>
-            </div>
-          </aside>
+          <div><a href="contact.html" class="btn btn-primary">Request a Quote</a></div>
         </div>
+        <aside class="service-image-panel animate-on-scroll delay-2" aria-hidden="true"
+          style="background-image:url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/constrtuction+gorunds-1920w.jpg');"></aside>
       </div>
     </section>
 
     <!-- SERVICE 2: SAP -->
-    <section id="sap" class="service-section" style="background:var(--color-off-white);" aria-labelledby="sap-heading">
-      <div class="container">
-        <div class="grid-2" style="align-items:flex-start;gap:64px;">
-          <aside class="animate-on-scroll" style="order:2;">
-            <div class="card-gold" style="margin-bottom:24px;">
-              <h3 class="heading-sm" style="color:var(--color-gold);margin-bottom:12px;">Related Services</h3>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <a href="#fmp" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Fill Management Plans</a>
-                <a href="#scr" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Soil Characterization Reports</a>
-                <a href="#esmp" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Excess Soil Management Plans</a>
-              </div>
-            </div>
-            <div class="card" style="background:var(--color-soil-pale);border-color:transparent;">
-              <h4 class="heading-sm" style="margin-bottom:8px;">Municipal Coverage</h4>
-              <p class="body-md" style="color:var(--color-text-muted);">We prepare SAPs accepted by all major Ontario municipalities including Burlington, Hamilton, Mississauga, Brampton, Toronto, and regions across the GTA.</p>
-            </div>
-          </aside>
-          <div class="animate-on-scroll delay-1" style="order:1;">
-            <div class="service-number" aria-hidden="true">02</div>
-            <h2 class="display-md" id="sap-heading" style="margin:8px 0 24px;">Site Alteration Plans (SAP)</h2>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">Many Ontario municipalities require a Site Alteration Plan before any significant grading, fill placement, or soil removal activity can begin on a property. These plans must demonstrate that proposed changes will not adversely affect drainage, adjacent properties, or groundwater.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">Our team is familiar with the site alteration by-laws for municipalities across Ontario and prepares SAPs that meet the specific technical requirements of each jurisdiction — avoiding the revision cycles that cause costly delays.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:24px;">SAPs prepared by XS Soil Solutions include drainage assessments, erosion and sediment control plans, and all supporting documentation required for permit issuance.</p>
-
-            <div class="callout-box">
-              <div class="callout-box-title">When a SAP is Required</div>
-              <div class="callout-box-content">Required when placing fill, removing significant volumes of topsoil, or altering site grades on properties in municipalities with site alteration by-laws. Thresholds vary by municipality — contact us to confirm requirements for your site.</div>
-            </div>
-
-            <h3 class="heading-md" style="margin:24px 0 12px;">Key Deliverables</h3>
-            <ul class="deliverables-list">
-              <li>Site Alteration Plan document per municipal by-law</li>
-              <li>Grading and drainage assessment</li>
-              <li>Erosion and sediment control plan</li>
-              <li>Fill quality documentation</li>
-              <li>Site monitoring and inspection protocol</li>
-              <li>Municipal submission package</li>
-            </ul>
-
-            <div style="margin-top:24px;">
-              <a href="contact.html" class="btn btn-primary">Request a SAP Quote</a>
-            </div>
+    <section id="sap" class="service-section" aria-labelledby="sap-heading">
+      <div class="service-inner">
+        <aside class="service-image-panel animate-on-scroll" aria-hidden="true"
+          style="background-image:url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/Fill+Management+Plan-2880w.jpg');"></aside>
+        <div class="service-text-col animate-on-scroll delay-2">
+          <h2 class="display-md" id="sap-heading">Site Alteration Plans</h2>
+          <p class="body-lg" style="color:var(--color-text-muted);">Required by most Ontario municipalities before significant grading, fill placement, or soil removal can begin. We prepare SAPs tailored to each jurisdiction's specific by-law requirements — eliminating the revision cycles that cause costly project delays.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="service-tag">Municipal Permits</span>
+            <span class="service-tag">Drainage Assessment</span>
+            <span class="service-tag">ESC Plan</span>
           </div>
+          <div><a href="contact.html" class="btn btn-primary">Request a Quote</a></div>
         </div>
       </div>
     </section>
 
     <!-- SERVICE 3: SCR -->
     <section id="scr" class="service-section" aria-labelledby="scr-heading">
-      <div class="container">
-        <div class="grid-2" style="align-items:flex-start;gap:64px;">
-          <div class="animate-on-scroll">
-            <div class="service-number" aria-hidden="true">03</div>
-            <h2 class="display-md" id="scr-heading" style="margin:8px 0 24px;">Soil Characterization Reports (SCR)</h2>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">Soil characterization is the analytical process that determines whether excess soil meets the quality standards for reuse at receiving sites. Our SCRs are prepared in accordance with O. Reg. 406/19 sampling protocols and are required for soil lot registration in the Ontario Excess Soil Registry.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">We coordinate all aspects of characterization: field sampling by trained technicians, chain-of-custody documentation, laboratory analysis at accredited Ontario labs, and data interpretation against Table 1 and Table 2 standards.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:24px;">Accurate characterization protects both generating and receiving site owners from liability and ensures that beneficial reuse opportunities are not unnecessarily eliminated by over-conservative sampling programs.</p>
-
-            <div class="callout-box">
-              <div class="callout-box-title">When an SCR is Required</div>
-              <div class="callout-box-content">Required for all soil lots being registered in the Ontario Excess Soil Registry, and for any project where soil will be reused at a receiving site. Also required when a project triggers the Phase One or Phase Two ESA requirements under the regulation.</div>
-            </div>
-
-            <h3 class="heading-md" style="margin:24px 0 12px;">Key Deliverables</h3>
-            <ul class="deliverables-list">
-              <li>Field sampling program design</li>
-              <li>Technician mobilization and sampling</li>
-              <li>Accredited laboratory analysis coordination</li>
-              <li>Table 1/Table 2 comparison and classification</li>
-              <li>Soil Characterization Report document</li>
-              <li>Registry-ready data package</li>
-            </ul>
-
-            <div style="margin-top:24px;">
-              <a href="contact.html" class="btn btn-primary">Request a SCR Quote</a>
-            </div>
+      <div class="service-inner">
+        <div class="service-text-col animate-on-scroll">
+          <h2 class="display-md" id="scr-heading">Soil Characterization Reports</h2>
+          <p class="body-lg" style="color:var(--color-text-muted);">The analytical report that determines whether excess soil meets quality standards for reuse at receiving sites. We coordinate field sampling, accredited lab analysis, and Table 1/2 comparisons — all required for soil lot registration in the Ontario Excess Soil Registry.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="service-tag">Table 1 &amp; 2</span>
+            <span class="service-tag">Lab Analysis</span>
+            <span class="service-tag">Registry-Ready</span>
           </div>
-          <aside class="animate-on-scroll delay-2">
-            <div class="card-gold" style="margin-bottom:24px;">
-              <h3 class="heading-sm" style="color:var(--color-gold);margin-bottom:12px;">Related Services</h3>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <a href="#esmp" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Excess Soil Management Plans</a>
-                <a href="#esdar" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ ESD Assessments</a>
-              </div>
-            </div>
-            <div class="card" style="background:var(--color-soil-pale);border-color:transparent;">
-              <h4 class="heading-sm" style="margin-bottom:8px;">Lab Turnaround</h4>
-              <p class="body-md" style="color:var(--color-text-muted);">Standard analysis: 10 business days. Rush 5-day service available. We coordinate with Ontario-accredited labs to minimize turnaround time for time-sensitive projects.</p>
-            </div>
-          </aside>
+          <div><a href="contact.html" class="btn btn-primary">Request a Quote</a></div>
         </div>
+        <aside class="service-image-panel animate-on-scroll delay-2" aria-hidden="true"
+          style="background-image:url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/soil_sampling-94e1ea1c-1920w.jpg');"></aside>
       </div>
     </section>
 
     <!-- SERVICE 4: ESDAR -->
-    <section id="esdar" class="service-section" style="background:var(--color-off-white);" aria-labelledby="esdar-heading">
-      <div class="container">
-        <div class="grid-2" style="align-items:flex-start;gap:64px;">
-          <aside class="animate-on-scroll" style="order:2;">
-            <div class="card-gold" style="margin-bottom:24px;">
-              <h3 class="heading-sm" style="color:var(--color-gold);margin-bottom:12px;">Related Services</h3>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <a href="#scr" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Soil Characterization Reports</a>
-                <a href="#fmp" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Fill Management Plans</a>
-              </div>
-            </div>
-            <div class="card" style="background:var(--color-soil-pale);border-color:transparent;">
-              <h4 class="heading-sm" style="margin-bottom:8px;">Receiving Site Owners</h4>
-              <p class="body-md" style="color:var(--color-text-muted);">If you are accepting excess soil from another project, you are a receiving site. ESDA requirements protect you from receiving contaminated material — let us guide you through the process.</p>
-            </div>
-          </aside>
-          <div class="animate-on-scroll delay-1" style="order:1;">
-            <div class="service-number" aria-hidden="true">04</div>
-            <h2 class="display-md" id="esdar-heading" style="margin:8px 0 24px;">ESD Assessments &amp; Reports (ESDAR)</h2>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">An Environmental Site Disclosure Assessment is required for receiving sites before they can accept excess soil under O. Reg. 406/19. The ESDA establishes the baseline environmental condition of the receiving site and confirms that proposed fill material is compatible with existing site conditions.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">Our Qualified Persons conduct records searches, site reconnaissance, and analytical testing as required to prepare a compliant ESDA. We also prepare the Environmental Site Disclosure Report (ESDR) that must be registered in the Ontario Excess Soil Registry prior to any soil acceptance.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:24px;">Proper ESDA documentation protects receiving site owners from future liability and ensures that the site remains suitable for its intended land use after fill placement is complete.</p>
-
-            <div class="callout-box">
-              <div class="callout-box-title">When an ESDAR is Required</div>
-              <div class="callout-box-content">Required for all receiving sites intending to accept excess soil from registered projects. The ESDA must be completed and the ESDR registered before any soil shipments can be received. Exemptions apply to certain agricultural receiving sites — contact us for details.</div>
-            </div>
-
-            <h3 class="heading-md" style="margin:24px 0 12px;">Key Deliverables</h3>
-            <ul class="deliverables-list">
-              <li>Historical records and environmental database review</li>
-              <li>Site reconnaissance and inspection</li>
-              <li>Baseline soil and groundwater assessment (if required)</li>
-              <li>Environmental Site Disclosure Assessment document</li>
-              <li>Environmental Site Disclosure Report (ESDR)</li>
-              <li>Registry registration and ongoing record maintenance</li>
-            </ul>
-
-            <div style="margin-top:24px;">
-              <a href="contact.html" class="btn btn-primary">Request an ESDAR Quote</a>
-            </div>
+    <section id="esdar" class="service-section" aria-labelledby="esdar-heading">
+      <div class="service-inner">
+        <aside class="service-image-panel animate-on-scroll" aria-hidden="true"
+          style="background-image:url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/Excavated+Material+Management+Plan-2880w.webp');"></aside>
+        <div class="service-text-col animate-on-scroll delay-2">
+          <h2 class="display-md" id="esdar-heading">Excess Soil Destination Assessments</h2>
+          <p class="body-lg" style="color:var(--color-text-muted);">Required for receiving sites before they can accept excess soil under O. Reg. 406/19. Our QPs assess the baseline environmental condition of the receiving site, prepare the ESDAR, and register it in the Registry — protecting site owners from future environmental liability.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="service-tag">Receiving Sites</span>
+            <span class="service-tag">Baseline Assessment</span>
+            <span class="service-tag">Registry Filing</span>
           </div>
+          <div><a href="contact.html" class="btn btn-primary">Request a Quote</a></div>
         </div>
       </div>
     </section>
 
     <!-- SERVICE 5: FMP -->
     <section id="fmp" class="service-section" aria-labelledby="fmp-heading">
-      <div class="container">
-        <div class="grid-2" style="align-items:flex-start;gap:64px;">
-          <div class="animate-on-scroll">
-            <div class="service-number" aria-hidden="true">05</div>
-            <h2 class="display-md" id="fmp-heading" style="margin:8px 0 24px;">Fill Management Plans (FMP)</h2>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">A Fill Management Plan provides the operational framework for accepting, tracking, and documenting incoming soil at a receiving site. FMPs are required by many municipalities in conjunction with site alteration permits and are best practice for any site receiving significant volumes of fill material.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">Our FMPs establish rigorous truck-by-truck documentation protocols, pre-acceptance soil testing requirements, placement mapping procedures, and inspection frequencies — giving site owners confidence that every load of fill meets their quality standards.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:24px;">We also provide on-site inspection services and load monitoring programs to ensure the FMP is being implemented correctly throughout the fill acceptance program.</p>
-
-            <div class="callout-box">
-              <div class="callout-box-title">When an FMP is Required</div>
-              <div class="callout-box-content">Required by most Ontario municipalities for sites accepting more than 500 m³ of fill. Also required for receiving sites registered under O. Reg. 406/19 that are accepting soil from multiple generating projects simultaneously.</div>
-            </div>
-
-            <h3 class="heading-md" style="margin:24px 0 12px;">Key Deliverables</h3>
-            <ul class="deliverables-list">
-              <li>Fill Management Plan document</li>
-              <li>Truck manifest and tracking system</li>
-              <li>Pre-acceptance testing protocol</li>
-              <li>Placement mapping and grading plan</li>
-              <li>Inspection and monitoring schedule</li>
-              <li>Monthly and final compliance reports</li>
-            </ul>
-
-            <div style="margin-top:24px;">
-              <a href="contact.html" class="btn btn-primary">Request an FMP Quote</a>
-            </div>
+      <div class="service-inner">
+        <div class="service-text-col animate-on-scroll">
+          <h2 class="display-md" id="fmp-heading">Fill Management Plans</h2>
+          <p class="body-lg" style="color:var(--color-text-muted);">For sites accepting significant volumes of incoming fill, our Fill Management Plans establish truck-by-truck documentation, pre-acceptance testing protocols, placement mapping, and inspection schedules — giving site owners confidence that every load meets quality standards.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="service-tag">Truck Tracking</span>
+            <span class="service-tag">Load Documentation</span>
+            <span class="service-tag">Placement Mapping</span>
           </div>
-          <aside class="animate-on-scroll delay-2">
-            <div class="card-gold" style="margin-bottom:24px;">
-              <h3 class="heading-sm" style="color:var(--color-gold);margin-bottom:12px;">Related Services</h3>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <a href="#sap" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Site Alteration Plans</a>
-                <a href="#esdar" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ ESD Assessments</a>
-                <a href="#sms" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Soil Management Systems</a>
-              </div>
-            </div>
-          </aside>
+          <div><a href="contact.html" class="btn btn-primary">Request a Quote</a></div>
         </div>
+        <aside class="service-image-panel animate-on-scroll delay-2" aria-hidden="true"
+          style="background-image:url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/constrtuction+gorunds-1920w.jpg');"></aside>
       </div>
     </section>
 
     <!-- SERVICE 6: SMS -->
-    <section id="sms" class="service-section" style="background:var(--color-off-white);" aria-labelledby="sms-heading">
-      <div class="container">
-        <div class="grid-2" style="align-items:flex-start;gap:64px;">
-          <aside class="animate-on-scroll" style="order:2;">
-            <div class="card-gold" style="margin-bottom:24px;">
-              <h3 class="heading-sm" style="color:var(--color-gold);margin-bottom:12px;">Related Services</h3>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <a href="#esmp" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Excess Soil Management Plans</a>
-                <a href="#fmp" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Fill Management Plans</a>
-              </div>
-            </div>
-            <div class="card" style="background:var(--color-soil-pale);border-color:transparent;">
-              <h4 class="heading-sm" style="margin-bottom:8px;">Ideal For</h4>
-              <p class="body-md" style="color:var(--color-text-muted);">Municipal road authorities, large-scale subdivision developments, and infrastructure projects generating or receiving soil from multiple simultaneous sites.</p>
-            </div>
-          </aside>
-          <div class="animate-on-scroll delay-1" style="order:1;">
-            <div class="service-number" aria-hidden="true">06</div>
-            <h2 class="display-md" id="sms-heading" style="margin:8px 0 24px;">Soil Management Systems (SMS)</h2>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">For organizations managing soil across multiple projects simultaneously, a Soil Management System provides the overarching framework for consistent compliance, cost efficiency, and reporting. Municipalities, developers with active land banks, and infrastructure owners benefit significantly from systematic soil management.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">Our SMS programs integrate digital tracking platforms, standardized documentation templates, trained project personnel, and periodic QP audits to maintain compliance across your entire portfolio of soil-generating and soil-receiving activities.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:24px;">Mass balance reporting, cost-per-tonne tracking, and regulatory performance dashboards are included as standard components of our SMS programs, giving management complete visibility into soil compliance costs and risks.</p>
-
-            <div class="callout-box">
-              <div class="callout-box-title">When a SMS is Recommended</div>
-              <div class="callout-box-content">Ideal for any organization managing three or more soil-related projects concurrently, or any municipality operating a receiving site while simultaneously generating soil from road or utility works.</div>
-            </div>
-
-            <h3 class="heading-md" style="margin:24px 0 12px;">Key Deliverables</h3>
-            <ul class="deliverables-list">
-              <li>Custom SMS framework and governance document</li>
-              <li>Digital tracking and reporting platform setup</li>
-              <li>Standardized ESMP and FMP templates</li>
-              <li>Staff training and onboarding program</li>
-              <li>Quarterly QP audit and compliance review</li>
-              <li>Annual mass balance and regulatory report</li>
-            </ul>
-
-            <div style="margin-top:24px;">
-              <a href="contact.html" class="btn btn-primary">Request an SMS Consultation</a>
-            </div>
+    <section id="sms" class="service-section" aria-labelledby="sms-heading">
+      <div class="service-inner">
+        <aside class="service-image-panel animate-on-scroll" aria-hidden="true"
+          style="background-image:url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/Soil+Management+Strategies-2880w.jpg');"></aside>
+        <div class="service-text-col animate-on-scroll delay-2">
+          <h2 class="display-md" id="sms-heading">Soil Management Systems</h2>
+          <p class="body-lg" style="color:var(--color-text-muted);">For organizations managing soil across multiple projects simultaneously. Our SMS programs integrate digital tracking platforms, standardized templates, periodic QP audits, and mass balance reporting — giving management complete visibility into compliance costs and risks across your entire portfolio.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="service-tag">Digital Tracking</span>
+            <span class="service-tag">Multi-Project</span>
+            <span class="service-tag">Mass Balance</span>
           </div>
+          <div><a href="contact.html" class="btn btn-primary">Request a Consultation</a></div>
         </div>
       </div>
     </section>
 
     <!-- SERVICE 7: PROBLEMS -->
     <section id="problems" class="service-section" aria-labelledby="problems-heading">
-      <div class="container">
-        <div class="grid-2" style="align-items:flex-start;gap:64px;">
-          <div class="animate-on-scroll">
-            <div class="service-number" aria-hidden="true">07</div>
-            <h2 class="display-md" id="problems-heading" style="margin:8px 0 24px;">Solving Soil Problems</h2>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">Not every soil situation fits neatly into a standard regulatory pathway. Unexpected contamination discoveries, stop-work orders, municipal disputes about fill quality, or legacy sites with incomplete documentation all require experienced problem-solving beyond standard report preparation.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:16px;">Our QPs have resolved hundreds of complex soil compliance issues for clients across Ontario. We conduct rapid site assessments, prepare remedial action plans, liaise directly with MECP officers, and develop creative solutions that keep projects moving while achieving full regulatory compliance.</p>
-            <p class="body-lg" style="color:var(--color-text-muted);margin-bottom:24px;">If your project has hit a regulatory roadblock or you have inherited a soil compliance problem from a previous consultant, contact us for an urgent consultation. We specialize in getting stalled projects back on track.</p>
-
-            <div class="callout-box">
-              <div class="callout-box-title">Common Situations We Resolve</div>
-              <div class="callout-box-content">Stop-work orders related to soil movement; unexpected contamination finds during excavation; incomplete or non-compliant legacy ESMPs; municipal disputes over fill quality documentation; soil movement without prior registry registration; receiving sites that accepted non-compliant fill.</div>
-            </div>
-
-            <div style="margin-top:24px;">
-              <a href="contact.html" class="btn btn-primary">Get Urgent Help</a>
-            </div>
+      <div class="service-inner">
+        <div class="service-text-col animate-on-scroll">
+          <h2 class="display-md" id="problems-heading">Solving Soil Problems</h2>
+          <p class="body-lg" style="color:var(--color-text-muted);">Unexpected contamination, stop-work orders, or incomplete legacy ESMPs — our QPs have resolved hundreds of complex soil compliance situations across Ontario. Contact us for an urgent consultation if your project has hit a regulatory roadblock and needs to get back on track.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="service-tag">Stop-Work Orders</span>
+            <span class="service-tag">Legacy ESMPs</span>
+            <span class="service-tag">Urgent Response</span>
           </div>
-          <aside class="animate-on-scroll delay-2">
-            <div class="card" style="background:var(--color-soil-pale);border-color:transparent;margin-bottom:24px;">
-              <h4 class="heading-sm" style="margin-bottom:8px;color:var(--color-soil-forest);">Emergency Response</h4>
-              <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">We offer 48-hour emergency response for stop-work order situations and urgent regulatory compliance issues.</p>
-              <a href="tel:9053341197" class="btn btn-primary btn-sm">Call 905-334-1197</a>
-            </div>
-            <div class="card-gold">
-              <h3 class="heading-sm" style="color:var(--color-gold);margin-bottom:12px;">Related Services</h3>
-              <div style="display:flex;flex-direction:column;gap:8px;">
-                <a href="#esmp" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Excess Soil Management Plans</a>
-                <a href="#scr" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Soil Characterization Reports</a>
-                <a href="#sms" class="btn btn-ghost" style="justify-content:flex-start;font-size:14px;">→ Soil Management Systems</a>
-              </div>
-            </div>
-          </aside>
+          <div><a href="contact.html" class="btn btn-primary">Get Urgent Help</a></div>
         </div>
+        <aside class="service-image-panel animate-on-scroll delay-2" aria-hidden="true"
+          style="background-image:url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/soil-help-2880w.jpg');"></aside>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section-pad" style="background:var(--color-soil-pale);" aria-labelledby="faq-heading">
+    <section class="section-pad faq-snap" style="background:var(--color-soil-pale);" aria-labelledby="faq-heading">
       <div class="container-sm">
         <div class="text-center mb-xl animate-on-scroll">
           <span class="section-eyebrow">FAQ</span>
@@ -492,7 +300,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="section-pad-sm">
+    <section class="section-pad-sm cta-snap">
       <div class="container">
         <div class="cta-section animate-on-scroll" style="text-align:center;">
           <span class="section-eyebrow" style="color:var(--color-gold);">Ready to Start?</span>
