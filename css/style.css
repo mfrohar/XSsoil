@@ -2225,7 +2225,12 @@ select.form-control {
   pointer-events: none;
 }
 
-/* --- SERVICES PAGE: FULLPAGE SCROLL SNAP --- */
+/* --- SERVICES PAGE --- */
+
+/* Dark page background so body off-white never bleeds through */
+body.page-services {
+  background-color: var(--color-soil-black);
+}
 
 /* Hero — matches standard inner-page hero height */
 .page-services .hero-inner {
