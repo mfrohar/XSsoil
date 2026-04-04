@@ -2227,13 +2227,10 @@ select.form-control {
 
 /* --- SERVICES PAGE: FULLPAGE SCROLL SNAP --- */
 
-/* Hero — normal flow, no snap */
+/* Hero — matches standard inner-page hero height */
 .page-services .hero-inner {
-  height: 100vh !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  justify-content: flex-end !important;
+  height: auto;
+  min-height: 420px;
 }
 
 /* =============================================
@@ -2334,9 +2331,7 @@ select.form-control {
 
 @media (max-width: 860px) {
   .page-services .hero-inner {
-    height: auto !important;
-    min-height: 60vh !important;
-    padding-bottom: 40px;
+    min-height: 280px;
   }
   /* Disable sticky stacking on mobile — sections flow normally */
   .page-services .service-section {
