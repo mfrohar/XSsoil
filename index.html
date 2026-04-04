@@ -8,8 +8,9 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -38,6 +39,7 @@
           </div>
         </div>
         <a href="who-we-help.html" class="nav-link" role="listitem">Who We Help</a>
+        <a href="blog.html" class="nav-link" role="listitem">Blog</a>
         <a href="about.html" class="nav-link" role="listitem">About</a>
         <a href="contact.html" class="nav-link" role="listitem">Contact</a>
         <a href="careers.html" class="nav-link" role="listitem">Careers</a>
@@ -56,6 +58,7 @@
   <div id="mobile-menu" class="nav-mobile-menu" role="dialog" aria-label="Mobile navigation">
     <a href="services.html" class="nav-mobile-link">Services</a>
     <a href="who-we-help.html" class="nav-mobile-link">Who We Help</a>
+    <a href="blog.html" class="nav-mobile-link">Blog</a>
     <a href="about.html" class="nav-mobile-link">About</a>
     <a href="contact.html" class="nav-mobile-link">Contact</a>
     <a href="careers.html" class="nav-mobile-link">Careers</a>
@@ -75,8 +78,8 @@
           <span class="hero-eyebrow-dot" aria-hidden="true"></span>
           Ontario&#x27;s Excess Soil Regulation Experts
         </div>
-        <h1 class="display-xl animate-on-scroll delay-1">
-          Compliant soil management,<br>on time and on budget.
+        <h1 class="display-xl hero-headline animate-on-scroll delay-1">
+          Compliant Soil Management<br>On Time. On Budget.
         </h1>
         <p class="hero-sub animate-on-scroll delay-2">
           XS Soil Solutions guides Ontario constructors, developers, and municipalities through every step of O. Reg. 406/19 compliance — from site assessment to final documentation.
@@ -119,6 +122,25 @@
         </svg>
       </div>
     </section>
+
+    <!-- FEATURE STRIP -->
+    <div class="feature-strip">
+      <div class="feature-strip-item">
+        <div class="feature-strip-label">Soil Management</div>
+        <div class="feature-strip-sub">Expert Compliance</div>
+        <div class="feature-strip-desc">Full O. Reg. 406/19 compliance from site assessment to final documentation</div>
+      </div>
+      <div class="feature-strip-item">
+        <div class="feature-strip-label">Qualified Persons</div>
+        <div class="feature-strip-sub">QP on Every Project</div>
+        <div class="feature-strip-desc">Licensed QPs leading every engagement — no junior-only handoffs, ever</div>
+      </div>
+      <div class="feature-strip-item">
+        <div class="feature-strip-label">Fast Delivery</div>
+        <div class="feature-strip-sub">On Time &amp; On Budget</div>
+        <div class="feature-strip-desc">Registry filings within 48 hours, reports delivered to your project timeline</div>
+      </div>
+    </div>
 
     <!-- TRUST BAR -->
     <div class="trust-bar animate-on-scroll">
@@ -176,10 +198,12 @@
       </div>
     </div>
 
-    <!-- SERVICES GRID -->
+    <!-- SERVICES GRID (removed per request) -->
+    <!--
     <section class="section-pad section-services-bg" aria-labelledby="services-heading">
       <div class="container">
         <div class="text-center mb-xl animate-on-scroll">
+          <span class="watermark-title" aria-hidden="true">Services</span>
           <span class="section-eyebrow">What We Do</span>
           <h2 class="display-lg" id="services-heading">Comprehensive soil management services</h2>
           <p class="body-lg" style="color:var(--color-text-muted);max-width:560px;margin:16px auto 0;">From initial site characterization through final regulatory sign-off, we manage every aspect of your excess soil compliance program.</p>
@@ -189,16 +213,14 @@
           <article class="card card-hover animate-on-scroll delay-1">
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M9 11l3 3L22 4"/>
-                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                <path d="M3 3h18v18H3z"/><path d="M8 9h8M8 13h5"/>
               </svg>
             </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">Excess Soil Management Plans</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">Comprehensive ESMPs prepared by Qualified Persons, fully compliant with O. Reg. 406/19 requirements for all project classes.</p>
+            <h3 class="heading-md" style="margin:16px 0 8px;">Assessment of Past Uses</h3>
+            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">A study involving site visits, interviews, and historical records review to identify the likelihood that one or more contaminants of concern are present on your site.</p>
             <div style="margin-bottom:16px;">
-              <span class="service-tag">O. Reg. 406/19</span>
-              <span class="service-tag">MECP</span>
-              <span class="service-tag">Class 1 &amp; 2</span>
+              <span class="service-tag">Phase I ESA</span>
+              <span class="service-tag">Site History</span>
             </div>
             <a href="services.html#esmp" class="btn btn-ghost">Learn more →</a>
           </article>
@@ -206,17 +228,17 @@
           <article class="card card-hover animate-on-scroll delay-2">
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                <polyline points="9 22 9 12 15 12 15 22"/>
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
               </svg>
             </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">Site Alteration Plans</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">Detailed SAPs for fill placement and site grading projects, meeting municipal by-law requirements across Ontario municipalities.</p>
+            <h3 class="heading-md" style="margin:16px 0 8px;">Excess Soil Management Plan</h3>
+            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">A comprehensive approach to soil management on your site, identifying how soil will be stockpiled, temporarily stored, hauled, tested and transported to final destination sites.</p>
             <div style="margin-bottom:16px;">
-              <span class="service-tag">Municipal By-laws</span>
-              <span class="service-tag">Fill Placement</span>
+              <span class="service-tag">O. Reg. 406/19</span>
+              <span class="service-tag">MECP</span>
             </div>
-            <a href="services.html#sap" class="btn btn-ghost">Learn more →</a>
+            <a href="services.html#esmp" class="btn btn-ghost">Learn more →</a>
           </article>
 
           <article class="card card-hover animate-on-scroll delay-3">
@@ -226,8 +248,8 @@
                 <path d="M21 21l-4.35-4.35"/>
               </svg>
             </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">Soil Characterization Reports</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">Laboratory-backed SCRs classifying soil quality against Table 1 and Table 2 standards to enable legally compliant reuse and placement.</p>
+            <h3 class="heading-md" style="margin:16px 0 8px;">Soil Characterization Report</h3>
+            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">Using data from the soil sampling plan, XS Soil develops site-specific reports required for receiving site review and utilized for all soil disposal locations.</p>
             <div style="margin-bottom:16px;">
               <span class="service-tag">Table 1 &amp; 2</span>
               <span class="service-tag">Lab Analysis</span>
@@ -244,8 +266,8 @@
                 <line x1="16" y1="17" x2="8" y2="17"/>
               </svg>
             </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">ESD Assessments &amp; Reports</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">Environmental Site Disclosure Assessments and reports for receiving sites, providing the documentation required before accepting excess soil.</p>
+            <h3 class="heading-md" style="margin:16px 0 8px;">Excess Soil Destination Assessment Report</h3>
+            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">Prior to hauling excess soil offsite, ensure the receiving site has measures in place to protect the natural environment. XS Soil conducts destination site reviews on your behalf.</p>
             <div style="margin-bottom:16px;">
               <span class="service-tag">Receiving Sites</span>
               <span class="service-tag">Disclosure</span>
@@ -262,8 +284,8 @@
                 <circle cx="18.5" cy="18.5" r="2.5"/>
               </svg>
             </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">Fill Management Plans</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">Truck-tracking, load documentation, and fill acceptance protocols that satisfy municipal and provincial oversight requirements.</p>
+            <h3 class="heading-md" style="margin:16px 0 8px;">Fill Management Plan</h3>
+            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">For receiving sites accepting over 10,000 m³, this plan covers truck-tracking, load record-keeping, protocols for incoming soil and the process for rejected loads.</p>
             <div style="margin-bottom:16px;">
               <span class="service-tag">Truck Tracking</span>
               <span class="service-tag">Documentation</span>
@@ -277,8 +299,8 @@
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
             </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">Soil Management Systems</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">Digital soil tracking, mass balance reporting, and chain-of-custody systems for large-scale infrastructure and development projects.</p>
+            <h3 class="heading-md" style="margin:16px 0 8px;">Soil Management Strategies</h3>
+            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">With experience managing over 8 million metric tons of soil, XS Soil develops unique strategies to help you efficiently test, characterize, stockpile, haul, track and manage your soil.</p>
             <div style="margin-bottom:16px;">
               <span class="service-tag">Digital Tracking</span>
               <span class="service-tag">Mass Balance</span>
@@ -292,12 +314,14 @@
         </div>
       </div>
     </section>
+    -->
 
     <!-- WHY XS SOIL: SPLIT LAYOUT -->
     <section class="section-pad section-bg-photo" style="background:var(--color-soil-black);" aria-labelledby="why-heading">
       <div class="container">
         <div class="grid-2" style="align-items:center;">
           <div class="animate-on-scroll">
+            <span class="watermark-title" aria-hidden="true">Expertise</span>
             <span class="section-eyebrow" style="color:var(--color-soil-light);">Why XS Soil</span>
             <h2 class="display-lg" id="why-heading" style="color:var(--color-white);margin-bottom:24px;">Expertise that eliminates costly delays</h2>
             <p class="body-lg" style="color:rgba(255,255,255,0.65);margin-bottom:32px;">Ontario&#x27;s excess soil regulation is complex and evolving. Mistakes trigger stop-work orders, fines, and remediation costs. Our QPs have seen every scenario — and know how to keep your project moving.</p>
@@ -369,46 +393,11 @@
       </div>
     </section>
 
-    <!-- REGULATION TIMELINE -->
-    <section class="section-pad section-timeline-bg" style="background:var(--color-soil-deep);" aria-labelledby="timeline-heading">
-      <div class="container">
-        <div class="text-center mb-xl animate-on-scroll">
-          <span class="section-eyebrow" style="color:var(--color-soil-light);">Regulatory History</span>
-          <h2 class="display-lg" id="timeline-heading" style="color:var(--color-white);">Ontario&#x27;s excess soil regulation timeline</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item animate-on-scroll delay-1">
-            <div class="timeline-dot"></div>
-            <span class="timeline-year">2021</span>
-            <div class="timeline-title">O. Reg. 406/19 Takes Effect</div>
-            <div class="timeline-desc">Ontario&#x27;s On-Site and Excess Soil Management regulation officially came into force, replacing the old Interim Guidelines with legally binding requirements for project leaders.</div>
-          </div>
-          <div class="timeline-item animate-on-scroll delay-2">
-            <div class="timeline-dot"></div>
-            <span class="timeline-year">2022</span>
-            <div class="timeline-title">Phase 2: ESMP Mandatory for Class 1</div>
-            <div class="timeline-desc">Excess Soil Management Plans became mandatory for Class 1 projects. QP oversight requirements expanded, requiring full characterization and registration for all major projects.</div>
-          </div>
-          <div class="timeline-item animate-on-scroll delay-3">
-            <div class="timeline-dot"></div>
-            <span class="timeline-year">2023</span>
-            <div class="timeline-title">Registry Full Rollout</div>
-            <div class="timeline-desc">The Ontario Excess Soil Registry (ECA) fully operational. All regulated projects required to register soil lots, receiving sites, and track movements from source to destination.</div>
-          </div>
-          <div class="timeline-item animate-on-scroll delay-4">
-            <div class="timeline-dot"></div>
-            <span class="timeline-year">2025</span>
-            <div class="timeline-title">Enhanced Enforcement</div>
-            <div class="timeline-desc">MECP increased compliance audit frequency and penalty thresholds. Proactive documentation and QP oversight now more critical than ever for project teams across Ontario.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- WHO WE HELP -->
-    <section class="section-pad dot-grid" aria-labelledby="audience-heading">
+    <section class="section-pad dot-grid" style="background:var(--color-soil-deep);" aria-labelledby="audience-heading">
       <div class="container">
         <div class="text-center mb-xl animate-on-scroll">
+          <span class="watermark-title" aria-hidden="true">Clients</span>
           <span class="section-eyebrow">Clients We Serve</span>
           <h2 class="display-lg" id="audience-heading">Built for every project type</h2>
           <p class="body-lg" style="color:var(--color-text-muted);max-width:520px;margin:16px auto 0;">Whether you&#x27;re breaking ground or receiving fill, we have the expertise your project requires.</p>
@@ -476,7 +465,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/XS+Soil+Solutions+Logo-404w.png" alt="XS Soil Solutions" width="160" height="41" style="filter: brightness(0) invert(1);">
+          <img src="https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/XS+Soil+Solutions+Logo-404w.png" alt="XS Soil Solutions" width="160" height="41">
           <p>Ontario&#x27;s trusted experts in excess soil management, regulatory compliance, and site assessment. Serving constructors, developers, and municipalities province-wide.</p>
           <div style="margin-top:20px;">
             <span class="footer-cert">QP Certified</span>
@@ -527,6 +516,7 @@
           <p class="footer-bottom-text">&copy; 2024 XS Soil Solutions Inc. All rights reserved.</p>
           <p class="footer-bottom-text">5353 John Lucas Drive Suite 100, Burlington ON L7L 6G5 &middot; Serving Ontario province-wide</p>
         </div>
+        <a href="admin/" class="footer-admin-link">Admin</a>
       </div>
     </div>
   </footer>

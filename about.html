@@ -8,8 +8,9 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -36,6 +37,7 @@
           </div>
         </div>
         <a href="who-we-help.html" class="nav-link" role="listitem">Who We Help</a>
+        <a href="blog.html" class="nav-link" role="listitem">Blog</a>
         <a href="about.html" class="nav-link active" role="listitem">About</a>
         <a href="contact.html" class="nav-link" role="listitem">Contact</a>
         <a href="careers.html" class="nav-link" role="listitem">Careers</a>
@@ -53,6 +55,7 @@
   <div class="nav-mobile-menu" role="dialog" aria-label="Mobile navigation">
     <a href="services.html" class="nav-mobile-link">Services</a>
     <a href="who-we-help.html" class="nav-mobile-link">Who We Help</a>
+    <a href="blog.html" class="nav-mobile-link">Blog</a>
     <a href="about.html" class="nav-mobile-link active">About</a>
     <a href="contact.html" class="nav-mobile-link">Contact</a>
     <a href="careers.html" class="nav-mobile-link">Careers</a>
@@ -81,10 +84,11 @@
     </header>
 
     <!-- COMPANY STORY -->
-    <section class="section-pad" aria-labelledby="story-heading">
+    <section class="section-pad" style="background:var(--color-soil-black);" aria-labelledby="story-heading">
       <div class="container">
         <div class="grid-2" style="gap:80px;align-items:flex-start;">
           <div class="animate-on-scroll">
+            <span class="watermark-title" aria-hidden="true">About Us</span>
             <span class="section-eyebrow">Who We Are</span>
             <h2 class="display-lg" id="story-heading" style="margin:8px 0 24px;">Built for the complexity of Ontario&#x27;s regulatory landscape</h2>
 
@@ -123,7 +127,7 @@
 
             <!-- Abstract org graphic -->
             <div style="background:var(--color-soil-black);border-radius:var(--radius-xl);padding:32px;display:flex;flex-direction:column;align-items:center;gap:16px;">
-              <svg viewBox="0 0 240 160" width="240" height="160" xmlns="http://www.w3.org/2000/svg" aria-label="Organization chart illustration">
+              <svg viewBox="0 0 240 180" width="100%" style="max-width:520px;display:block;" xmlns="http://www.w3.org/2000/svg" aria-label="Organization chart illustration">
                 <!-- Top node -->
                 <rect x="95" y="8" width="50" height="28" rx="8" fill="#2D4A22"/>
                 <text x="120" y="27" font-family="sans-serif" font-size="8" fill="#97C459" text-anchor="middle" font-weight="600">Leadership</text>
@@ -135,18 +139,23 @@
                 <line x1="190" y1="56" x2="190" y2="76" stroke="rgba(151,196,89,0.3)" stroke-width="1.5"/>
                 <!-- Three QP nodes -->
                 <rect x="20" y="76" width="60" height="28" rx="8" fill="#3B6D11"/>
-                <text x="50" y="94" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">QP Engineers</text>
+                <text x="50" y="90" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">QP</text>
+                <text x="50" y="100" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">Engineers</text>
                 <rect x="90" y="76" width="60" height="28" rx="8" fill="#3B6D11"/>
-                <text x="120" y="94" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">QP Geoscientists</text>
+                <text x="120" y="90" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">QP</text>
+                <text x="120" y="100" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">Geoscientists</text>
                 <rect x="160" y="76" width="60" height="28" rx="8" fill="#3B6D11"/>
-                <text x="190" y="94" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">Field Technicians</text>
-                <!-- Bottom connecting -->
-                <line x1="50" y1="104" x2="50" y2="124" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
-                <line x1="120" y1="104" x2="120" y2="124" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
-                <line x1="190" y1="104" x2="190" y2="124" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
-                <!-- Burlington HQ label -->
-                <rect x="60" y="124" width="120" height="24" rx="6" fill="rgba(151,196,89,0.1)" stroke="rgba(151,196,89,0.3)" stroke-width="1"/>
-                <text x="120" y="140" font-family="sans-serif" font-size="8" fill="rgba(151,196,89,0.8)" text-anchor="middle">Burlington, ON — Province-Wide Service</text>
+                <text x="190" y="90" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">Field</text>
+                <text x="190" y="100" font-family="sans-serif" font-size="7" fill="#EAF3DE" text-anchor="middle">Technicians</text>
+                <!-- Bottom connecting lines merge to centre -->
+                <line x1="50" y1="104" x2="50" y2="120" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
+                <line x1="120" y1="104" x2="120" y2="120" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
+                <line x1="190" y1="104" x2="190" y2="120" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
+                <line x1="50" y1="120" x2="190" y2="120" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
+                <line x1="120" y1="120" x2="120" y2="134" stroke="rgba(151,196,89,0.2)" stroke-width="1"/>
+                <!-- Burlington HQ oval — wider to fit full text -->
+                <ellipse cx="120" cy="152" rx="112" ry="18" fill="rgba(151,196,89,0.1)" stroke="rgba(151,196,89,0.35)" stroke-width="1.2"/>
+                <text x="120" y="157" font-family="sans-serif" font-size="8.5" fill="rgba(151,196,89,0.9)" text-anchor="middle" font-weight="500">Burlington, ON — Province-Wide Service</text>
               </svg>
             </div>
           </div>
@@ -155,7 +164,7 @@
     </section>
 
     <!-- VALUES -->
-    <section class="section-pad" style="background:var(--color-soil-pale);" aria-labelledby="values-heading">
+    <section class="section-pad" style="background:var(--color-soil-deep);" aria-labelledby="values-heading">
       <div class="container">
         <div class="text-center mb-xl animate-on-scroll">
           <span class="section-eyebrow">What Drives Us</span>
@@ -200,33 +209,14 @@
     </section>
 
     <!-- TEAM -->
-    <section class="section-pad" aria-labelledby="team-heading">
+    <section class="section-pad" style="background:var(--color-soil-black);" aria-labelledby="team-heading">
       <div class="container">
         <div class="text-center mb-xl animate-on-scroll">
           <span class="section-eyebrow">Our People</span>
           <h2 class="display-lg" id="team-heading">Meet the team</h2>
           <p class="body-lg" style="color:var(--color-text-muted);max-width:520px;margin:16px auto 0;">Every XS Soil Solutions engagement is led by a licensed Qualified Person. Meet the professionals responsible for your project.</p>
         </div>
-        <div class="grid-3">
-          <article class="team-card animate-on-scroll delay-1">
-            <div class="team-avatar" aria-hidden="true">MR</div>
-            <div class="team-name">Marcus Reid, P.Eng.</div>
-            <div class="team-title">Principal &amp; Qualified Person</div>
-            <p class="team-bio">Marcus has 18 years of experience in environmental engineering and soil management across Ontario. He has overseen more than 300 ESMP engagements and serves as the lead QP on all Class 1 projects. Marcus is a Professional Engineer licensed in Ontario and a founding member of the XS Soil Solutions team.</p>
-          </article>
-          <article class="team-card animate-on-scroll delay-2">
-            <div class="team-avatar" aria-hidden="true">SL</div>
-            <div class="team-name">Sarah Lindquist, P.Geo.</div>
-            <div class="team-title">Senior Geoscientist &amp; QP</div>
-            <p class="team-bio">Sarah brings 14 years of environmental geoscience experience including extensive soil characterization, Phase One and Phase Two ESA work, and O. Reg. 406/19 compliance. She leads our soil characterization and ESD assessment practice and has a particular expertise in brownfield redevelopment projects across the Greater Toronto and Hamilton Area.</p>
-          </article>
-          <article class="team-card animate-on-scroll delay-3">
-            <div class="team-avatar" aria-hidden="true">DP</div>
-            <div class="team-name">Daniel Park, P.Eng.</div>
-            <div class="team-title">Project Manager &amp; QP</div>
-            <p class="team-bio">Daniel specializes in municipal infrastructure projects and large-scale Soil Management Systems. With a background in civil engineering and 11 years of project management experience, he coordinates multi-site soil programs for municipal and provincial infrastructure clients. Daniel is the primary contact for municipalities and utility owners across the GTA and Hamilton region.</p>
-          </article>
-        </div>
+        <!-- Team bios to be added when ready -->
         <div class="text-center mt-xl animate-on-scroll">
           <a href="careers.html" class="btn btn-secondary-dark">Join Our Team</a>
         </div>
@@ -234,7 +224,7 @@
     </section>
 
     <!-- LAND ACKNOWLEDGEMENT -->
-    <section class="section-pad-sm" aria-labelledby="land-ack-heading">
+    <section class="section-pad-sm" style="background:var(--color-soil-deep);" aria-labelledby="land-ack-heading">
       <div class="container-sm">
         <div class="land-ack animate-on-scroll">
           <h2 class="heading-md" id="land-ack-heading" style="margin-bottom:16px;font-style:normal;color:var(--color-soil-forest);">Land Acknowledgement</h2>
@@ -264,7 +254,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/XS+Soil+Solutions+Logo-404w.png" alt="XS Soil Solutions" width="160" height="41" style="filter: brightness(0) invert(1);">
+          <img src="https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/XS+Soil+Solutions+Logo-404w.png" alt="XS Soil Solutions" width="160" height="41">
           <p>Ontario&#x27;s trusted experts in excess soil management, regulatory compliance, and site assessment.</p>
           <div style="margin-top:20px;"><span class="footer-cert">QP Certified</span></div>
         </div>
