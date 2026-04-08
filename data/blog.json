@@ -26,6 +26,14 @@
       "date": "2026-04-04",
       "slug": "Road Trip Ottawa",
       "excerpt": "XS Soil leadership team is in the Nation's Capital City of Ottawa / Ville d’Ottawa to engage and support Ontario Stone, Sand & Gravel Association (OSSGA)"
+    },
+    {
+      "published": true,
+      "title": "Testing",
+      "slug": "new-soil-regulations",
+      "date": "2026-04-08",
+      "excerpt": "Testing1",
+      "body": "Testing 123"
     }
   ]
 }
