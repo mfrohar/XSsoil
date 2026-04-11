@@ -207,20 +207,23 @@
   transform: rotate(45deg);
 }
 .hlux-cta-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 34px;
   font-family: 'Raleway', sans-serif;
   font-size: 0.63rem;
-  font-weight: 500;
-  letter-spacing: 0.32em;
+  font-weight: 700;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
-  color: rgba(240,236,226,0.35);
+  color: rgba(240,236,226,0.85);
   text-decoration: none;
-  border-bottom: 1px solid rgba(240,236,226,0.12);
-  padding-bottom: 3px;
-  transition: color 0.2s, border-color 0.2s;
+  border: 1.5px solid rgba(240,236,226,0.3);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 .hlux-cta-ghost:hover {
-  color: rgba(10,154,10,0.75);
-  border-color: rgba(10,154,10,0.25);
+  color: #ffffff;
+  border-color: rgba(10,154,10,0.7);
+  background: rgba(10,154,10,0.12);
 }
 
 /* Scroll indicator */
@@ -272,15 +275,11 @@
 .hlux-photo-frame::before {
   top: 0; left: 0;
   width: 48px; height: 48px;
-  border-top: 1.5px solid rgba(10,154,10,0.55);
-  border-left: 1.5px solid rgba(10,154,10,0.55);
   animation: hluxCornerIn 1s ease 0.8s both;
 }
 .hlux-photo-frame::after {
   bottom: 0; right: 0;
   width: 48px; height: 48px;
-  border-bottom: 1.5px solid rgba(10,154,10,0.55);
-  border-right: 1.5px solid rgba(10,154,10,0.55);
   animation: hluxCornerIn 1s ease 1s both;
 }
 @keyframes hluxCornerIn {
@@ -296,8 +295,8 @@
   height: 48px;
   pointer-events: none;
 }
-.hlux-corner-tl { top: 36px; right: 36px; border-top: 1.5px solid rgba(10,154,10,0.3); border-right: 1.5px solid rgba(10,154,10,0.3); animation: hluxCornerIn 1s ease 1.2s both; }
-.hlux-corner-br { bottom: 36px; left: 36px; border-bottom: 1.5px solid rgba(10,154,10,0.3); border-left: 1.5px solid rgba(10,154,10,0.3); animation: hluxCornerIn 1s ease 1.1s both; }
+.hlux-corner-tl { top: 36px; right: 36px; animation: hluxCornerIn 1s ease 1.2s both; }
+.hlux-corner-br { bottom: 36px; left: 36px; animation: hluxCornerIn 1s ease 1.1s both; }
 
 /* Location card */
 .hlux-location {
@@ -523,10 +522,6 @@
           <div class="hlux-photo-frame" aria-hidden="true"></div>
           <div class="hlux-corner-tl" aria-hidden="true"></div>
           <div class="hlux-corner-br" aria-hidden="true"></div>
-          <div class="hlux-location" aria-label="Based in Burlington, Ontario">
-            <span class="hlux-location-city">Burlington, ON</span>
-            <span class="hlux-location-tag">Ontario Based &mdash; Est. 2010</span>
-          </div>
         </div>
 
       </div>
