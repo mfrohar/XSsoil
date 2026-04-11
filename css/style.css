@@ -1872,20 +1872,6 @@ select.form-control {
 }
 
 
-/* --- GATE TRANSITION OVERLAY --- */
-.gate {
-  position: fixed;
-  inset: 0;
-  background: rgba(11,18,9,0.94);
-  z-index: 5000;
-  opacity: 1;
-  pointer-events: all;
-}
-.gate.hidden {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-}
 
 /* --- DOT NAVIGATION --- */
 .dot-nav {
