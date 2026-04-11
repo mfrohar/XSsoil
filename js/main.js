@@ -7,34 +7,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ==========================================
-     INIT: GATE TRANSITION (cinematic page fade)
-     ========================================== */
-  const gate = document.createElement('div');
-  gate.classList.add('gate');
-  document.body.appendChild(gate);
-
-  // Reveal page: fade out gate after paint
-  // Use both rAF (foreground) and setTimeout (background tab fallback)
-  const revealGate = () => gate.classList.add('hidden');
-  requestAnimationFrame(() => requestAnimationFrame(revealGate));
-  setTimeout(revealGate, 300);
-
-  // Fade out on internal navigation
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href || href.startsWith('#') || href.startsWith('tel') || href.startsWith('mailto') || link.target === '_blank') return;
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      gate.classList.remove('hidden');
-      gate.style.transition = 'none';
-      setTimeout(() => {
-        gate.style.transition = '';
-        window.location.href = href;
-      }, 480);
-    });
-  });
-
-  /* ==========================================
      INIT: SOCIAL SIDEBAR
      ========================================== */
   const sidebar = document.createElement('div');
