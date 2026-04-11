@@ -13,239 +13,399 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
 /* ================================================================
-   HERO LUXURY REDESIGN
+   HERO — SPLIT EDITORIAL LUXURY
    ================================================================ */
 
-/* Base & background override */
+/* Override base hero */
 .hero.hero-luxury {
   background-image: none !important;
-  background-color: #0a0a0a !important;
+  background-color: #050c04 !important;
   align-items: stretch;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .hero.hero-luxury .hero-topo,
 .hero.hero-luxury .hero-gradient {
   display: none;
 }
 
-/* Background layers */
-.hlux-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-.hlux-noise {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-.hlux-slab {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 58%;
-  height: 100%;
-  background: linear-gradient(148deg, #0c1f14 0%, #1a3a2a 38%, #152d20 70%, #0a1e10 100%);
-  clip-path: polygon(24% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-.hlux-slab-glow {
-  position: absolute;
-  top: 10%;
-  right: 25%;
-  width: 40vw;
-  height: 80vh;
-  background: radial-gradient(ellipse at center, rgba(26,58,42,0.22) 0%, transparent 65%);
-}
-.hlux-frame {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-.hframe-diag {
-  fill: none;
-  stroke: #c9a84c;
-  stroke-dasharray: 2000;
-  stroke-dashoffset: 2000;
-}
-.hframe-d1 {
-  stroke-width: 0.5;
-  opacity: 0.2;
-  animation: hluxLineDraw 3.5s cubic-bezier(0.25,0.1,0.25,1) 0.5s forwards;
-}
-.hframe-d2 {
-  stroke-width: 0.4;
-  opacity: 0.12;
-  animation: hluxLineDraw 3s cubic-bezier(0.25,0.1,0.25,1) 1s forwards;
-}
-.hframe-accent {
-  fill: none;
-  stroke: #c9a84c;
-}
-.hframe-horiz {
-  stroke-width: 0.5;
-  opacity: 0.5;
-  stroke-dasharray: 360;
-  stroke-dashoffset: 360;
-  animation: hluxLineDraw 1.6s ease 1.2s forwards;
-}
-.hframe-corner {
-  stroke-width: 1;
-  opacity: 0.7;
-  stroke-dasharray: 80;
-  stroke-dashoffset: 80;
-  animation: hluxLineDraw 1s ease 1.4s forwards;
-}
-@keyframes hluxLineDraw {
-  to { stroke-dashoffset: 0; }
-}
-.hlux-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+/* Two-column editorial grid */
+.hlux-grid {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  flex: 1;
+  min-height: calc(100vh - 88px);
 }
 
-/* Content */
-.hlux-content {
+/* ── LEFT PANEL ── */
+.hlux-left {
   position: relative;
-  z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  min-height: 100vh;
-  padding-top: 140px;
-  padding-bottom: 80px;
+  padding: 80px 56px 80px 72px;
+  background: #050c04;
+  overflow: hidden;
 }
+
+/* Gold editorial trim on left edge */
+.hlux-left::before {
+  content: '';
+  position: absolute;
+  top: 14%;
+  left: 0;
+  width: 3px;
+  height: 72%;
+  background: linear-gradient(180deg, transparent 0%, #0a9a0a 20%, #0a9a0a 80%, transparent 100%);
+  opacity: 0.55;
+}
+
+/* Huge watermark "XS" behind content */
+.hlux-watermark {
+  position: absolute;
+  top: 50%;
+  left: -0.08em;
+  transform: translateY(-50%);
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(220px, 26vw, 360px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: rgba(255,255,255,0.025);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.hlux-copy {
+  position: relative;
+  z-index: 1;
+}
+
+/* Eyebrow */
 .hlux-eyebrow {
   display: flex;
   align-items: center;
   gap: 14px;
   font-family: 'Raleway', sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 500;
-  letter-spacing: 0.38em;
+  letter-spacing: 0.44em;
   text-transform: uppercase;
-  color: rgba(201,168,76,0.75);
-  margin-bottom: 1.6rem;
+  color: rgba(10,154,10,0.6);
+  margin-bottom: 2.2rem;
 }
 .hlux-eyebrow-dash {
   display: inline-block;
-  width: 32px;
+  width: 30px;
   height: 1px;
-  background: #c9a84c;
+  background: rgba(10,154,10,0.55);
   flex-shrink: 0;
 }
+
+/* Headline */
 .hlux-headline {
-  font-family: 'Oswald', sans-serif !important;
-  font-size: clamp(3rem, 9vw, 10rem);
-  font-weight: 700 !important;
-  line-height: 0.9 !important;
-  letter-spacing: -0.01em !important;
-  color: #f5f0e8 !important;
-  margin: 0 0 0.6rem !important;
+  font-family: 'Oswald', sans-serif;
+  line-height: 0.88;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
-  max-width: none !important;
+  margin: 0 0 2.2rem;
 }
-.hlux-headline em {
-  font-style: italic;
-  font-weight: 300;
-  font-size: 0.68em;
-  letter-spacing: 0.06em;
-  color: rgba(245,240,232,0.65);
+.hlux-headline .hl-pre {
+  display: block;
+  font-size: clamp(4.2rem, 8.5vw, 8rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #f0ece2;
+  margin-bottom: 0;
 }
+.hlux-headline .hl-main {
+  display: block;
+  font-size: clamp(4.2rem, 8.5vw, 8rem);
+  font-weight: 600;
+  color: #f0ece2;
+}
+.hlux-headline .hl-secondary {
+  display: block;
+  font-size: clamp(4.2rem, 8.5vw, 8rem);
+  font-weight: 600;
+  color: #f0ece2;
+}
+
+/* Rule + tagline */
 .hlux-rule {
-  width: 64px;
-  height: 2px;
-  background: linear-gradient(90deg, #c9a84c 0%, rgba(201,168,76,0.15) 100%);
+  display: flex;
+  align-items: center;
+  gap: 14px;
   margin-bottom: 1.4rem;
 }
-.hlux-sub {
-  font-family: 'Raleway', sans-serif !important;
-  font-size: clamp(0.82rem, 1.3vw, 1rem) !important;
-  font-weight: 300 !important;
-  letter-spacing: 0.12em !important;
-  color: rgba(245,240,232,0.5) !important;
-  margin: 0 0 2.5rem !important;
-  max-width: 36ch;
-  line-height: 1.75 !important;
-  text-transform: none !important;
+.hlux-rule-line {
+  width: 52px;
+  height: 1px;
+  background: linear-gradient(90deg, #0a9a0a 0%, rgba(10,154,10,0) 100%);
 }
-.hlux-actions {
-  margin-bottom: 3.5rem;
+.hlux-rule-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(10,154,10,0.7);
 }
-.hlux-cta {
-  display: inline-block;
-  padding: 12px 36px;
-  border: 1px solid rgba(201,168,76,0.65);
-  color: #c9a84c;
+
+.hlux-tagline {
   font-family: 'Raleway', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.32em;
+  font-size: clamp(0.78rem, 1.1vw, 0.9rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  line-height: 1.85;
+  color: rgba(240,236,226,0.42);
+  max-width: 36ch;
+  margin-bottom: 2.8rem;
+}
+
+/* CTAs */
+.hlux-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.hlux-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 34px;
+  background: #0a9a0a;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
   text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.4s ease;
-  z-index: 0;
+  transition: background 0.3s ease, gap 0.3s ease;
 }
-.hlux-cta::before {
+.hlux-cta-primary:hover {
+  background: #0d8a0d;
+  gap: 22px;
+}
+.hlux-cta-arrow {
+  display: inline-block;
+  width: 18px;
+  height: 1px;
+  background: #ffffff;
+  position: relative;
+  flex-shrink: 0;
+}
+.hlux-cta-arrow::after {
   content: '';
   position: absolute;
+  right: -1px;
+  top: -3.5px;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid #ffffff;
+  border-top: 1.5px solid #ffffff;
+  transform: rotate(45deg);
+}
+.hlux-cta-ghost {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.63rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(240,236,226,0.35);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(240,236,226,0.12);
+  padding-bottom: 3px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.hlux-cta-ghost:hover {
+  color: rgba(10,154,10,0.75);
+  border-color: rgba(10,154,10,0.25);
+}
+
+/* Scroll indicator */
+
+/* ── RIGHT PANEL (photo) ── */
+.hlux-right {
+  position: relative;
+  overflow: hidden;
+}
+.hlux-photo {
+  position: absolute;
   inset: 0;
-  background: #c9a84c;
-  transform: translateX(-102%);
-  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
-  z-index: -1;
+  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/constrtuction+gorunds-1920w.jpg');
+  background-size: cover;
+  background-position: center 45%;
+  animation: hluxPhotoZoom 12s ease-out forwards;
 }
-.hlux-cta:hover { color: #0a0a0a; }
-.hlux-cta:hover::before { transform: translateX(0); }
+@keyframes hluxPhotoZoom {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1.0); }
+}
 
-/* Stats overrides */
-.hero.hero-luxury .hero-stats {
-  border-top: 1px solid rgba(201,168,76,0.12) !important;
-  padding-top: 2rem;
-  width: 100%;
-  max-width: 680px;
-  gap: 2rem;
+/* Gradient overlay: dark from left, fade to transparent */
+.hlux-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    #050c04 0%,
+    rgba(5,12,4,0.72) 22%,
+    rgba(5,12,4,0.18) 52%,
+    transparent 100%
+  );
+  z-index: 1;
 }
-.hero.hero-luxury .hero-stat-value {
-  color: #c9a84c !important;
-  font-family: 'Oswald', sans-serif !important;
-  font-size: 2rem !important;
-}
-.hero.hero-luxury .hero-stat-label {
-  color: rgba(245,240,232,0.4) !important;
-  font-size: 0.6rem !important;
-  letter-spacing: 0.12em;
-}
-.hero.hero-luxury .hero-scroll {
-  color: rgba(201,168,76,0.45);
+
+/* Architectural corner frames */
+.hlux-photo-frame {
+  position: absolute;
+  inset: 36px;
   z-index: 2;
+  pointer-events: none;
+}
+.hlux-photo-frame::before,
+.hlux-photo-frame::after {
+  content: '';
+  position: absolute;
+}
+.hlux-photo-frame::before {
+  top: 0; left: 0;
+  width: 48px; height: 48px;
+  border-top: 1.5px solid rgba(10,154,10,0.55);
+  border-left: 1.5px solid rgba(10,154,10,0.55);
+  animation: hluxCornerIn 1s ease 0.8s both;
+}
+.hlux-photo-frame::after {
+  bottom: 0; right: 0;
+  width: 48px; height: 48px;
+  border-bottom: 1.5px solid rgba(10,154,10,0.55);
+  border-right: 1.5px solid rgba(10,154,10,0.55);
+  animation: hluxCornerIn 1s ease 1s both;
+}
+@keyframes hluxCornerIn {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
-/* Responsive */
+/* Secondary corner marks */
+.hlux-corner-tl, .hlux-corner-br {
+  position: absolute;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+}
+.hlux-corner-tl { top: 36px; right: 36px; border-top: 1.5px solid rgba(10,154,10,0.3); border-right: 1.5px solid rgba(10,154,10,0.3); animation: hluxCornerIn 1s ease 1.2s both; }
+.hlux-corner-br { bottom: 36px; left: 36px; border-bottom: 1.5px solid rgba(10,154,10,0.3); border-left: 1.5px solid rgba(10,154,10,0.3); animation: hluxCornerIn 1s ease 1.1s both; }
+
+/* Location card */
+.hlux-location {
+  position: absolute;
+  bottom: 52px;
+  right: 52px;
+  z-index: 3;
+  text-align: right;
+  animation: hluxFadeUp 0.8s ease 1.4s both;
+}
+.hlux-location-city {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(240,236,226,0.85);
+  display: block;
+}
+.hlux-location-tag {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.56rem;
+  font-weight: 400;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgba(10,154,10,0.52);
+  display: block;
+  margin-top: 3px;
+}
+
+/* ── STATS BAR ── */
+.hlux-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(10,154,10,0.1);
+  background: rgba(3,7,2,0.9);
+}
+.hlux-stat {
+  padding: 26px 36px;
+  border-right: 1px solid rgba(255,255,255,0.04);
+}
+.hlux-stat:last-child { border-right: none; }
+.hlux-stat-val {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0a9a0a;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.hlux-stat-lbl {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.56rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(240,236,226,0.28);
+}
+
+/* ── ENTRANCE ANIMATIONS ── */
+@keyframes hluxFadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes hluxFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.hlux-anim { opacity: 0; }
+.hlux-a1 { animation: hluxFadeUp 0.75s ease 0.15s forwards; }
+.hlux-a2 { animation: hluxFadeUp 0.75s ease 0.35s forwards; }
+.hlux-a3 { animation: hluxFadeUp 0.75s ease 0.55s forwards; }
+.hlux-a4 { animation: hluxFadeUp 0.75s ease 0.75s forwards; }
+.hlux-a5 { animation: hluxFadeUp 0.75s ease 0.92s forwards; }
+.hlux-right { animation: hluxFadeIn 1.2s ease 0.2s both; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .hlux-left { padding: 80px 48px 80px 56px; }
+}
 @media (max-width: 860px) {
-  .hlux-slab {
-    width: 100%;
-    clip-path: polygon(0% 62%, 100% 42%, 100% 100%, 0% 100%);
-    opacity: 0.55;
+  .hlux-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
   }
-  .hlux-content {
-    padding-top: 120px;
-    padding-bottom: 60px;
+  .hlux-left {
+    padding: 64px 32px 56px 44px;
+    min-height: 60vh;
   }
+  .hlux-right {
+    height: 52vw;
+    min-height: 300px;
+  }
+  .hlux-watermark { font-size: 180px; }
+  .hlux-stats { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) {
-  .hlux-content {
-    padding-top: 100px;
+  .hlux-left {
+    padding: 56px 24px 48px 32px;
   }
-  .hero.hero-luxury .hero-stats {
-    grid-template-columns: 1fr 1fr;
-  }
+  .hlux-left::before { display: none; }
+  .hlux-headline .hl-main,
+  .hlux-headline .hl-secondary { font-size: clamp(3.6rem, 15vw, 5.5rem); }
+  .hlux-actions { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .hlux-stats { grid-template-columns: 1fr 1fr; }
+  .hlux-stat { padding: 20px 20px; }
+  .hlux-stat-val { font-size: 1.6rem; }
 }
   </style>
 </head>
@@ -321,150 +481,90 @@
     <!-- HERO -->
     <section class="hero hero-luxury" aria-label="Hero section">
 
-      <!-- Layered geometric background -->
-      <div class="hlux-bg" aria-hidden="true">
-        <!-- SVG noise texture -->
-        <svg class="hlux-noise" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-          <filter id="hlux-nf">
-            <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch"/>
-            <feColorMatrix type="saturate" values="0"/>
-          </filter>
-          <rect width="100%" height="100%" filter="url(#hlux-nf)" opacity="0.06"/>
-        </svg>
-        <!-- Forest green terrain slab -->
-        <div class="hlux-slab"></div>
-        <div class="hlux-slab-glow"></div>
-        <!-- Animated SVG frame lines — suggest terrain section / architectural drawing -->
-        <svg class="hlux-frame" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <line class="hframe-diag hframe-d1" x1="0" y1="720" x2="760" y2="0"/>
-          <line class="hframe-diag hframe-d2" x1="1050" y1="800" x2="1440" y2="300"/>
-          <line class="hframe-accent hframe-horiz" x1="80" y1="130" x2="440" y2="130"/>
-          <polyline class="hframe-accent hframe-corner" points="80,110 80,80 108,80"/>
-        </svg>
-        <!-- Slow particle drift -->
-        <canvas class="hlux-canvas" id="heroParticles"></canvas>
+      <!-- Two-column editorial grid -->
+      <div class="hlux-grid">
+
+        <!-- ── LEFT PANEL ── -->
+        <div class="hlux-left">
+          <span class="hlux-watermark" aria-hidden="true">XS</span>
+
+          <div class="hlux-copy">
+
+            <h1 class="hlux-headline hlux-anim hlux-a2">
+              <span class="hl-pre">XS</span>
+              <span class="hl-main">Soil</span>
+              <span class="hl-secondary">Solutions</span>
+            </h1>
+
+            <div class="hlux-rule hlux-anim hlux-a3" aria-hidden="true">
+              <div class="hlux-rule-line"></div>
+              <div class="hlux-rule-dot"></div>
+            </div>
+
+            <p class="hlux-tagline hlux-anim hlux-a3">
+              Your trusted partner in excess soil management &mdash; delivering full regulatory compliance for Ontario&rsquo;s most complex construction projects.
+            </p>
+
+            <div class="hlux-actions hlux-anim hlux-a4">
+              <a href="contact.html" class="hlux-cta-primary">
+                Get In Touch
+                <span class="hlux-cta-arrow" aria-hidden="true"></span>
+              </a>
+              <a href="services.html" class="hlux-cta-ghost">Our Services</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ── RIGHT PANEL (photo) ── -->
+        <div class="hlux-right">
+          <div class="hlux-photo"></div>
+          <div class="hlux-photo-overlay"></div>
+          <div class="hlux-photo-frame" aria-hidden="true"></div>
+          <div class="hlux-corner-tl" aria-hidden="true"></div>
+          <div class="hlux-corner-br" aria-hidden="true"></div>
+          <div class="hlux-location" aria-label="Based in Burlington, Ontario">
+            <span class="hlux-location-city">Burlington, ON</span>
+            <span class="hlux-location-tag">Ontario Based &mdash; Est. 2010</span>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Main content -->
-      <div class="container hlux-content">
-
-        <div class="hlux-eyebrow animate-on-scroll">
-          <span class="hlux-eyebrow-dash" aria-hidden="true"></span>
-          Ontario &middot; Excess Soil Management
+      <!-- Stats bar -->
+      <div class="hlux-stats" role="list" aria-label="Company statistics">
+        <div class="hlux-stat" role="listitem">
+          <div class="hlux-stat-val"><span data-counter="500" data-suffix="+">500+</span></div>
+          <div class="hlux-stat-lbl">Projects Completed</div>
         </div>
-
-        <h1 class="hlux-headline animate-on-scroll delay-1">
-          XS Soil<br>Solutions<br><em>Inc.</em>
-        </h1>
-
-        <div class="hlux-rule animate-on-scroll delay-2" aria-hidden="true"></div>
-
-        <p class="hlux-sub animate-on-scroll delay-2">
-          Your trusted partner in soil management strategies.
-        </p>
-
-        <div class="hlux-actions animate-on-scroll delay-3">
-          <a href="contact.html" class="hlux-cta">Get In Touch</a>
+        <div class="hlux-stat" role="listitem">
+          <div class="hlux-stat-val"><span data-counter="12" data-suffix=" yrs">12 yrs</span></div>
+          <div class="hlux-stat-lbl">Industry Experience</div>
         </div>
-
-        <div class="hero-stats animate-on-scroll delay-4">
-          <div>
-            <div class="hero-stat-value">
-              <span data-counter="500" data-suffix="+">500+</span>
-            </div>
-            <div class="hero-stat-label">Projects Completed</div>
-          </div>
-          <div>
-            <div class="hero-stat-value">
-              <span data-counter="12" data-suffix=" yrs">12 yrs</span>
-            </div>
-            <div class="hero-stat-label">Industry Experience</div>
-          </div>
-          <div>
-            <div class="hero-stat-value">
-              <span data-counter="100" data-suffix="%">100%</span>
-            </div>
-            <div class="hero-stat-label">Regulatory Compliance</div>
-          </div>
-          <div>
-            <div class="hero-stat-value">
-              <span data-counter="8">8</span>
-            </div>
-            <div class="hero-stat-label">Qualified Persons on Staff</div>
-          </div>
+        <div class="hlux-stat" role="listitem">
+          <div class="hlux-stat-val"><span data-counter="100" data-suffix="%">100%</span></div>
+          <div class="hlux-stat-lbl">Regulatory Compliance</div>
         </div>
-
+        <div class="hlux-stat" role="listitem">
+          <div class="hlux-stat-val"><span data-counter="15" data-suffix="+">15+</span></div>
+          <div class="hlux-stat-lbl">Municipalities Served</div>
+        </div>
       </div>
 
     </section>
-
-    <script>
-    /* Hero particle system — slow gold drift */
-    (function () {
-      var canvas = document.getElementById('heroParticles');
-      if (!canvas) return;
-      var ctx = canvas.getContext('2d');
-      var W, H, pts;
-
-      function resize() {
-        W = canvas.width = canvas.offsetWidth;
-        H = canvas.height = canvas.offsetHeight;
-      }
-
-      function mkPt() {
-        return {
-          x: Math.random() * W,
-          y: Math.random() * H,
-          r: Math.random() * 1.3 + 0.2,
-          vx: (Math.random() - 0.5) * 0.16,
-          vy: -Math.random() * 0.08 - 0.02,
-          a: Math.random() * 0.22 + 0.04,
-          phase: Math.random() * Math.PI * 2
-        };
-      }
-
-      function init() {
-        resize();
-        pts = Array.from({ length: 55 }, mkPt);
-      }
-
-      function frame() {
-        var t = Date.now() * 0.001;
-        ctx.clearRect(0, 0, W, H);
-        pts.forEach(function (p) {
-          p.x += p.vx;
-          p.y += p.vy;
-          if (p.x < -2) p.x = W + 2;
-          if (p.x > W + 2) p.x = -2;
-          if (p.y < -2) p.y = H + 2;
-          if (p.y > H + 2) p.y = -2;
-          var alpha = p.a * (0.6 + 0.4 * Math.sin(t + p.phase));
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, 6.283);
-          ctx.fillStyle = 'rgba(201,168,76,' + alpha.toFixed(3) + ')';
-          ctx.fill();
-        });
-        requestAnimationFrame(frame);
-      }
-
-      init();
-      requestAnimationFrame(frame);
-      window.addEventListener('resize', resize);
-    })();
-    </script>
 
     <!-- WHO WE HELP -->
     <section class="section-pad" style="background:var(--color-soil-deep);" aria-labelledby="who-help-heading">
       <div class="container">
         <div class="text-center mb-xl animate-on-scroll">
-          <span class="section-eyebrow" style="color:rgba(201,168,76,0.7);">Clients We Serve</span>
+          <span class="section-eyebrow" style="color:rgba(10,154,10,0.7);">Clients We Serve</span>
           <h2 class="display-lg" id="who-help-heading" style="font-family:'Oswald',sans-serif;font-size:clamp(32px,4.5vw,48px);font-weight:600;color:#f5f0e8;margin:12px 0 16px;line-height:1.1;">Who We Help</h2>
           <p class="body-lg" style="color:rgba(245,240,232,0.5);max-width:680px;margin:0 auto 48px;">From constructors to municipalities, we deliver expert soil management solutions tailored to your unique regulatory requirements.</p>
         </div>
         <div class="grid-4">
           <div class="client-card animate-on-scroll delay-1">
             <div class="client-icon" style="margin-bottom:20px;" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0a9a0a" stroke-width="1.5" stroke-linecap="round">
                 <path d="M2 22h20M2 10l10-8 10 8M12 3v18"/>
               </svg>
             </div>
@@ -473,7 +573,7 @@
           </div>
           <div class="client-card animate-on-scroll delay-2">
             <div class="client-icon" style="margin-bottom:20px;" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0a9a0a" stroke-width="1.5" stroke-linecap="round">
                 <rect x="3" y="3" width="18" height="18" rx="2"/>
                 <path d="M3 9h18M9 21V9"/>
               </svg>
@@ -483,7 +583,7 @@
           </div>
           <div class="client-card animate-on-scroll delay-3">
             <div class="client-icon" style="margin-bottom:20px;" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0a9a0a" stroke-width="1.5" stroke-linecap="round">
                 <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
                 <polyline points="9,22 9,12 15,12 15,22"/>
               </svg>
@@ -493,7 +593,7 @@
           </div>
           <div class="client-card animate-on-scroll delay-4">
             <div class="client-icon" style="margin-bottom:20px;" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0a9a0a" stroke-width="1.5" stroke-linecap="round">
                 <path d="M3 21h18M5 21V7l8-4 8 4v14M8 21v-9a2 2 0 012-2h4a2 2 0 012 2v9"/>
               </svg>
             </div>
@@ -511,7 +611,7 @@
     <section class="section-pad" style="background:var(--color-soil-black);" aria-labelledby="projects-heading">
       <div class="container">
         <div class="text-center mb-xl animate-on-scroll">
-          <span class="section-eyebrow" style="color:rgba(201,168,76,0.7);">Our Work</span>
+          <span class="section-eyebrow" style="color:rgba(10,154,10,0.7);">Our Work</span>
           <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:600;color:#f5f0e8;margin:12px 0 0;line-height:1.05;" id="projects-heading">Recent Projects</h2>
           <p class="body-lg" style="color:var(--color-text-muted);max-width:520px;margin:16px auto 0;">From highway infrastructure to large residential subdivisions, our QPs have led some of Ontario's most complex excess soil programs.</p>
         </div>
@@ -560,13 +660,13 @@
     </section>
 
     <!-- WHY XS SOIL - Minimal Luxury -->
-    <section class="section-why-minimal" style="background:var(--color-soil-black);padding:40px 0;" aria-labelledby="why-heading">
+    <section class="section-why-minimal" style="background:var(--color-soil-deep);padding:40px 0;" aria-labelledby="why-heading">
       <div class="container">
         <div class="text-center animate-on-scroll">
-          <span class="section-eyebrow" style="color:rgba(201,168,76,0.7);letter-spacing:0.3em;font-size:0.65rem;text-transform:uppercase;">Why XS Soil</span>
+          <span class="section-eyebrow" style="color:rgba(10,154,10,0.7);letter-spacing:0.3em;font-size:0.65rem;text-transform:uppercase;">Why XS Soil</span>
           <h2 class="display-lg" id="why-heading" style="font-family:'Oswald',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:600;color:#f5f0e8;margin:16px 0 24px;line-height:1.1;">Expertise that eliminates costly delays</h2>
           <p class="body-lg" style="color:rgba(245,240,232,0.5);max-width:680px;margin:0 auto 48px;line-height:1.8;">Ontario's excess soil regulation is complex. Our QPs have seen every scenario — and know how to keep your project moving without stop-work orders or fines.</p>
-          <a href="about.html" class="btn btn-ghost" style="color:rgba(201,168,76,0.8);border-color:rgba(201,168,76,0.4);padding:14px 36px;font-size:0.7rem;letter-spacing:0.25em;">Learn More</a>
+          <a href="about.html" class="btn btn-ghost" style="color:rgba(10,154,10,0.8);border-color:rgba(10,154,10,0.4);padding:14px 36px;font-size:0.7rem;letter-spacing:0.25em;">Learn More</a>
         </div>
       </div>
     </section>
@@ -663,7 +763,7 @@
           <p class="body-lg" style="color:rgba(245,240,232,0.5);max-width:520px;margin:0 auto 32px;">Get a free consultation and fixed-fee estimate within one business day.</p>
           <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
             <a href="contact.html" class="btn btn-primary" style="padding:14px 40px;font-size:0.75rem;letter-spacing:0.2em;">Get a Quote</a>
-            <a href="tel:9053341197" style="color:rgba(201,168,76,0.7);font-size:0.85rem;letter-spacing:0.1em;">905-334-1197</a>
+            <a href="tel:9053341197" style="color:rgba(10,154,10,0.7);font-size:0.85rem;letter-spacing:0.1em;">905-334-1197</a>
           </div>
         </div>
       </div>
@@ -730,6 +830,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>

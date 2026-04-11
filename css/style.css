@@ -2391,39 +2391,54 @@ select.form-control {
   .dot-nav { display: none; }
 }
 
-/* --- SOCIAL SIDEBAR --- */
-.social-sidebar {
-  position: fixed;
-  left: 35px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
+/* --- NAV SOCIAL ICONS --- */
+.nav-social {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 4px;
+  padding-right: 12px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  margin-right: 4px;
 }
-.social-sidebar::after {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 50px;
-  background: rgba(255,255,255,0.15);
-  margin-top: 4px;
-}
-.social-sidebar a {
-  color: rgba(255,255,255,0.3);
-  transition: color 0.3s, transform 0.3s;
+.nav-social-link {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: rgba(255,255,255,0.65);
+  border-radius: 4px;
+  transition: color 0.2s, background-color 0.2s;
 }
-.social-sidebar a:hover {
+.nav-social-link:hover {
   color: var(--color-soil-light);
-  transform: scale(1.2);
+  background-color: rgba(10,154,10,0.1);
 }
-@media (max-width: 1024px) {
-  .social-sidebar { display: none; }
+
+/* Mobile menu social links */
+.nav-mobile-social {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.nav-mobile-social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  color: rgba(255,255,255,0.55);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: color 0.2s, background-color 0.2s;
+}
+.nav-mobile-social-link:hover {
+  color: var(--color-soil-light);
+  background-color: rgba(10,154,10,0.08);
 }
 
 /* --- WATERMARK SECTION TITLES --- */
