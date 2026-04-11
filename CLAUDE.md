@@ -71,13 +71,24 @@ with socketserver.TCPServer(("", PORT), H) as s:
 ```
 
 ### Steps every session
-1. Copy site files to `/tmp`: `cp -r /Users/ryanfrohar/Documents/Documents/git/xs_soil /tmp/xs_soil_site`
+1. Copy site files to `/tmp`: `rm -rf /tmp/xs_soil_site && cp -r /Users/ryanfrohar/Documents/Documents/git/xs_soil /tmp/xs_soil_site`
 2. Write `/tmp/xs_soil_server.py` (above)
 3. Kill any process on port 8090: `lsof -ti :8090 | xargs kill -9 2>/dev/null`
 4. Call `preview_start` with name `"xs-soil"`
 5. Use `preview_screenshot` and `preview_inspect` to verify
 
-**Note:** The preview sandbox snapshots files at server start time — it will NOT pick up file changes made after the server starts. For live verification of edits, use the `mcp__Claude_in_Chrome__navigate` tool pointed at `http://localhost:8090` (or whatever port Bash is serving on) instead.
+### CRITICAL: Sync after every edit
+**After every file change**, re-sync to `/tmp` before screenshotting — otherwise the preview will show stale content:
+```bash
+rsync -a --exclude='.git' /Users/ryanfrohar/Documents/Documents/git/xs_soil/ /tmp/xs_soil_site/
+```
+Then reload the preview:
+```js
+// preview_eval:
+window.location.reload()
+```
+
+**The preview panel renders at ~650px wide (mobile). Desktop layout requires ≥ 860px.** Always use `preview_eval` to check `window.innerWidth` when debugging layout issues.
 
 ### Alternative: Bash server (visible in user's own browser)
 ```bash
