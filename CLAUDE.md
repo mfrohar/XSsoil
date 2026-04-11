@@ -71,7 +71,7 @@ with socketserver.TCPServer(("", PORT), H) as s:
 ```
 
 ### Steps every session
-1. **Always delete and re-copy** site files to `/tmp` — never use `cp -r` into an existing directory or it will nest the source inside it:
+1. **Always delete and re-copy** — never `cp -r` into an existing directory or it will nest the source inside it:
    ```bash
    rm -rf /tmp/xs_soil_site && cp -r /Users/ryanfrohar/Documents/Documents/git/xs_soil /tmp/xs_soil_site
    ```
@@ -80,7 +80,18 @@ with socketserver.TCPServer(("", PORT), H) as s:
 4. Call `preview_start` with name `"xs-soil"`
 5. Use `preview_screenshot` and `preview_inspect` to verify
 
-**Note:** The preview sandbox snapshots files at server start time — it will NOT pick up file changes made after the server starts. For live verification of edits, use the `mcp__Claude_in_Chrome__navigate` tool pointed at `http://localhost:8090` (or whatever port Bash is serving on) instead.
+### CRITICAL: Sync after every edit
+**After every file change**, re-sync to `/tmp` before screenshotting — otherwise the preview will show stale content:
+```bash
+rsync -a --exclude='.git' /Users/ryanfrohar/Documents/Documents/git/xs_soil/ /tmp/xs_soil_site/
+```
+Then reload the preview:
+```js
+// preview_eval:
+window.location.reload()
+```
+
+**The preview panel renders at ~650px wide (mobile). Desktop layout requires ≥ 860px.** Always use `preview_eval` to check `window.innerWidth` when debugging layout issues.
 
 ### Alternative: Bash server (visible in user's own browser)
 ```bash
@@ -102,8 +113,7 @@ If content looks blank on first load, check that `visible` classes are being add
 
 ## Assets & Images
 
-- **Logo (nav + footer):** Local file `assets/XS-Soil-Logo.png` — used on all pages
-- Footer logo uses CSS `filter: brightness(0) invert(1)` for white-on-dark
+- **Logo (nav + footer):** Local file `assets/XS-Soil-Logo.png` — used on all pages, no filters applied
 - The `assets/logo-dark.svg` and `assets/logo.svg` are unused fallbacks
 - Background images sourced from `https://lirp.cdn-website.com/b7deef0f/...` (xssoil.ca CDN) and Unsplash
 
