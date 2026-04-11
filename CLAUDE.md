@@ -71,8 +71,11 @@ with socketserver.TCPServer(("", PORT), H) as s:
 ```
 
 ### Steps every session
-1. Copy site files to `/tmp`: `rm -rf /tmp/xs_soil_site && cp -r /Users/ryanfrohar/Documents/Documents/git/xs_soil /tmp/xs_soil_site`
-2. Write `/tmp/xs_soil_server.py` (above)
+1. **Always delete and re-copy** — never `cp -r` into an existing directory or it will nest the source inside it:
+   ```bash
+   rm -rf /tmp/xs_soil_site && cp -r /Users/ryanfrohar/Documents/Documents/git/xs_soil /tmp/xs_soil_site
+   ```
+2. Write `/tmp/xs_soil_server.py` (above) using a Bash heredoc (the Write tool requires a prior Read, so use Bash)
 3. Kill any process on port 8090: `lsof -ti :8090 | xargs kill -9 2>/dev/null`
 4. Call `preview_start` with name `"xs-soil"`
 5. Use `preview_screenshot` and `preview_inspect` to verify
@@ -110,9 +113,8 @@ If content looks blank on first load, check that `visible` classes are being add
 
 ## Assets & Images
 
-- **Logo (nav):** Real XS Soil Solutions PNG — `https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/XS+Soil+Solutions+Logo-404w.png`
-- **Logo (footer):** Same URL with CSS `filter: brightness(0) invert(1)` for white-on-dark
-- The `assets/logo-dark.svg` and `assets/logo.svg` are custom SVG fallbacks — not the real brand logo
+- **Logo (nav + footer):** Local file `assets/XS-Soil-Logo.png` — used on all pages, no filters applied
+- The `assets/logo-dark.svg` and `assets/logo.svg` are unused fallbacks
 - Background images sourced from `https://lirp.cdn-website.com/b7deef0f/...` (xssoil.ca CDN) and Unsplash
 
 ---
