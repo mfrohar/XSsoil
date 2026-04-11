@@ -22,8 +22,25 @@
       <div class="nav-links" role="list">
         <a href="index.html" class="nav-link" role="listitem">Home</a>
         <a href="projects.html" class="nav-link active" role="listitem">Projects</a>
-        <a href="services.html" class="nav-link" role="listitem">Services</a>
-        <a href="about.html" class="nav-link" role="listitem">About</a>
+        <div class="nav-dropdown" role="listitem">
+          <a href="services.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Services</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="services.html#esmp" class="nav-dropdown-link" role="menuitem">Excess Soil Management Plans</a>
+            <a href="services.html#sap" class="nav-dropdown-link" role="menuitem">Site Alteration Plans</a>
+            <a href="services.html#scr" class="nav-dropdown-link" role="menuitem">Soil Characterization</a>
+            <a href="services.html#esdar" class="nav-dropdown-link" role="menuitem">ESD Assessments</a>
+            <a href="services.html#fmp" class="nav-dropdown-link" role="menuitem">Fill Management Plans</a>
+            <a href="services.html#sms" class="nav-dropdown-link" role="menuitem">Soil Management Systems</a>
+          </div>
+        </div>
+        <div class="nav-dropdown" role="listitem">
+          <a href="about.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">About</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="about.html" class="nav-dropdown-link" role="menuitem">About Us</a>
+            <a href="who-we-help.html" class="nav-dropdown-link" role="menuitem">Who We Help</a>
+            <a href="careers.html" class="nav-dropdown-link" role="menuitem">Careers</a>
+          </div>
+        </div>
         <a href="contact.html" class="nav-link" role="listitem">Contact</a>
       </div>
       <div class="nav-actions">
@@ -39,8 +56,25 @@
   <div id="mobile-menu" class="nav-mobile-menu" role="dialog" aria-label="Mobile navigation">
     <a href="index.html" class="nav-mobile-link">Home</a>
     <a href="projects.html" class="nav-mobile-link">Projects</a>
-    <a href="services.html" class="nav-mobile-link">Services</a>
-    <a href="about.html" class="nav-mobile-link">About</a>
+    <div class="nav-mobile-dropdown">
+      <a href="services.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">Services</a>
+      <div class="nav-mobile-dropdown-menu">
+        <a href="services.html#esmp" class="nav-mobile-link nav-mobile-sublink">Excess Soil Management Plans</a>
+        <a href="services.html#sap" class="nav-mobile-link nav-mobile-sublink">Site Alteration Plans</a>
+        <a href="services.html#scr" class="nav-mobile-link nav-mobile-sublink">Soil Characterization</a>
+        <a href="services.html#esdar" class="nav-mobile-link nav-mobile-sublink">ESD Assessments</a>
+        <a href="services.html#fmp" class="nav-mobile-link nav-mobile-sublink">Fill Management Plans</a>
+        <a href="services.html#sms" class="nav-mobile-link nav-mobile-sublink">Soil Management Systems</a>
+      </div>
+    </div>
+    <div class="nav-mobile-dropdown">
+      <a href="about.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">About</a>
+      <div class="nav-mobile-dropdown-menu">
+        <a href="about.html" class="nav-mobile-link nav-mobile-sublink">About Us</a>
+        <a href="who-we-help.html" class="nav-mobile-link nav-mobile-sublink">Who We Help</a>
+        <a href="careers.html" class="nav-mobile-link nav-mobile-sublink">Careers</a>
+      </div>
+    </div>
     <a href="contact.html" class="nav-mobile-link">Contact</a>
     <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px;">
       <a href="contact.html" class="btn btn-primary">Get a Quote</a>
@@ -172,7 +206,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="section-pad-sm" aria-labelledby="projects-cta-heading">
+    <section class="section-pad-sm" style="background:var(--color-soil-black);" aria-labelledby="projects-cta-heading">
       <div class="container">
         <div class="cta-section animate-on-scroll">
           <div class="grid-2" style="align-items:center;gap:48px;">
@@ -197,7 +231,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/XS+Soil+Solutions+Logo-404w.png" alt="XS Soil Solutions" width="160" height="41" style="filter:brightness(0) invert(1);">
+          <img src="https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/XS+Soil+Solutions+Logo-404w.png" alt="XS Soil Solutions" width="160" height="41">
           <p>Ontario's trusted experts in excess soil management, regulatory compliance, and site assessment. Serving constructors, developers, and municipalities province-wide.</p>
           <div style="margin-top:20px;">
             <span class="footer-cert">QP Certified</span>

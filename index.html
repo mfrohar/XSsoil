@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=8">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
@@ -140,7 +139,7 @@
   flex-shrink: 0;
 }
 .hlux-headline {
-  font-family: 'Cormorant Garamond', serif !important;
+  font-family: 'Oswald', sans-serif !important;
   font-size: clamp(3rem, 9vw, 10rem);
   font-weight: 700 !important;
   line-height: 0.9 !important;
@@ -215,7 +214,7 @@
 }
 .hero.hero-luxury .hero-stat-value {
   color: #c9a84c !important;
-  font-family: 'Cormorant Garamond', serif !important;
+  font-family: 'Oswald', sans-serif !important;
   font-size: 2rem !important;
 }
 .hero.hero-luxury .hero-stat-label {
@@ -261,8 +260,25 @@
       <div class="nav-links" role="list">
         <a href="index.html" class="nav-link active" role="listitem">Home</a>
         <a href="projects.html" class="nav-link" role="listitem">Projects</a>
-        <a href="services.html" class="nav-link" role="listitem">Services</a>
-        <a href="about.html" class="nav-link" role="listitem">About</a>
+        <div class="nav-dropdown" role="listitem">
+          <a href="services.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Services</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="services.html#esmp" class="nav-dropdown-link" role="menuitem">Excess Soil Management Plans</a>
+            <a href="services.html#sap" class="nav-dropdown-link" role="menuitem">Site Alteration Plans</a>
+            <a href="services.html#scr" class="nav-dropdown-link" role="menuitem">Soil Characterization</a>
+            <a href="services.html#esdar" class="nav-dropdown-link" role="menuitem">ESD Assessments</a>
+            <a href="services.html#fmp" class="nav-dropdown-link" role="menuitem">Fill Management Plans</a>
+            <a href="services.html#sms" class="nav-dropdown-link" role="menuitem">Soil Management Systems</a>
+          </div>
+        </div>
+        <div class="nav-dropdown" role="listitem">
+          <a href="about.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">About</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="about.html" class="nav-dropdown-link" role="menuitem">About Us</a>
+            <a href="who-we-help.html" class="nav-dropdown-link" role="menuitem">Who We Help</a>
+            <a href="careers.html" class="nav-dropdown-link" role="menuitem">Careers</a>
+          </div>
+        </div>
         <a href="contact.html" class="nav-link" role="listitem">Contact</a>
       </div>
       <div class="nav-actions">
@@ -278,8 +294,25 @@
   <div id="mobile-menu" class="nav-mobile-menu" role="dialog" aria-label="Mobile navigation">
     <a href="index.html" class="nav-mobile-link">Home</a>
     <a href="projects.html" class="nav-mobile-link">Projects</a>
-    <a href="services.html" class="nav-mobile-link">Services</a>
-    <a href="about.html" class="nav-mobile-link">About</a>
+    <div class="nav-mobile-dropdown">
+      <a href="services.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">Services</a>
+      <div class="nav-mobile-dropdown-menu">
+        <a href="services.html#esmp" class="nav-mobile-link nav-mobile-sublink">Excess Soil Management Plans</a>
+        <a href="services.html#sap" class="nav-mobile-link nav-mobile-sublink">Site Alteration Plans</a>
+        <a href="services.html#scr" class="nav-mobile-link nav-mobile-sublink">Soil Characterization</a>
+        <a href="services.html#esdar" class="nav-mobile-link nav-mobile-sublink">ESD Assessments</a>
+        <a href="services.html#fmp" class="nav-mobile-link nav-mobile-sublink">Fill Management Plans</a>
+        <a href="services.html#sms" class="nav-mobile-link nav-mobile-sublink">Soil Management Systems</a>
+      </div>
+    </div>
+    <div class="nav-mobile-dropdown">
+      <a href="about.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">About</a>
+      <div class="nav-mobile-dropdown-menu">
+        <a href="about.html" class="nav-mobile-link nav-mobile-sublink">About Us</a>
+        <a href="who-we-help.html" class="nav-mobile-link nav-mobile-sublink">Who We Help</a>
+        <a href="careers.html" class="nav-mobile-link nav-mobile-sublink">Careers</a>
+      </div>
+    </div>
     <a href="contact.html" class="nav-mobile-link">Contact</a>
     <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px;">
       <a href="contact.html" class="btn btn-primary">Get a Quote</a>
@@ -365,13 +398,6 @@
 
       </div>
 
-      <div class="hero-scroll" aria-hidden="true">
-        <span>Scroll</span>
-        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-          <path d="M10 4v12M4 10l6 6 6-6"/>
-        </svg>
-      </div>
-
     </section>
 
     <script>
@@ -429,56 +455,57 @@
     })();
     </script>
 
-    <!-- GATEWAY CARDS -->
-    <section aria-label="Site navigation cards">
-      <div class="gateway-cards">
-
-        <a href="about.html" class="gateway-card gateway-card--about">
-          <span class="gateway-card-number" aria-hidden="true">01</span>
-          <svg class="gateway-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
-          </svg>
-          <span class="gateway-card-label">Our Story</span>
-          <h2 class="gateway-card-title">About Us</h2>
-          <p class="gateway-card-desc">Ontario's dedicated excess soil consultancy — built on expertise, compliance, and trust.</p>
-          <span class="gateway-card-arrow">
-            <span class="gateway-card-arrow-line"></span>
-            Learn More
-          </span>
-        </a>
-
-        <a href="services.html" class="gateway-card gateway-card--services">
-          <span class="gateway-card-number" aria-hidden="true">02</span>
-          <svg class="gateway-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true">
-            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
-          </svg>
-          <span class="gateway-card-label">What We Do</span>
-          <h2 class="gateway-card-title">Our Services</h2>
-          <p class="gateway-card-desc">ESMPs, soil characterization, QP services, and full O. Reg. 406/19 compliance programs.</p>
-          <span class="gateway-card-arrow">
-            <span class="gateway-card-arrow-line"></span>
-            Explore Services
-          </span>
-        </a>
-
-        <a href="projects.html" class="gateway-card gateway-card--projects">
-          <span class="gateway-card-number" aria-hidden="true">03</span>
-          <svg class="gateway-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true">
-            <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
-            <line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/>
-          </svg>
-          <span class="gateway-card-label">Our Work</span>
-          <h2 class="gateway-card-title">Past Projects</h2>
-          <p class="gateway-card-desc">500+ completed engagements — from highway corridors to waterfront remediation.</p>
-          <span class="gateway-card-arrow">
-            <span class="gateway-card-arrow-line"></span>
-            View All Projects
-          </span>
-        </a>
-
+    <!-- WHO WE HELP -->
+    <section class="section-pad" style="background:var(--color-soil-deep);" aria-labelledby="who-help-heading">
+      <div class="container">
+        <div class="text-center mb-xl animate-on-scroll">
+          <span class="section-eyebrow" style="color:rgba(201,168,76,0.7);">Clients We Serve</span>
+          <h2 class="display-lg" id="who-help-heading" style="font-family:'Oswald',sans-serif;font-size:clamp(32px,4.5vw,48px);font-weight:600;color:#f5f0e8;margin:12px 0 16px;line-height:1.1;">Who We Help</h2>
+          <p class="body-lg" style="color:rgba(245,240,232,0.5);max-width:680px;margin:0 auto 48px;">From constructors to municipalities, we deliver expert soil management solutions tailored to your unique regulatory requirements.</p>
+        </div>
+        <div class="grid-4">
+          <div class="client-card animate-on-scroll delay-1">
+            <div class="client-icon" style="margin-bottom:20px;" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round">
+                <path d="M2 22h20M2 10l10-8 10 8M12 3v18"/>
+              </svg>
+            </div>
+            <h3 class="heading-md" style="margin-bottom:12px;color:#f5f0e8;">Constructors</h3>
+            <p class="body-md" style="color:rgba(245,240,232,0.5);">ESMPs, soil characterization, and site monitoring to keep construction projects on schedule and compliant.</p>
+          </div>
+          <div class="client-card animate-on-scroll delay-2">
+            <div class="client-icon" style="margin-bottom:20px;" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M9 21V9"/>
+              </svg>
+            </div>
+            <h3 class="heading-md" style="margin-bottom:12px;color:#f5f0e8;">Developers</h3>
+            <p class="body-md" style="color:rgba(245,240,232,0.5);">Portfolio-level soil strategies, due diligence support, and regulatory approval assistance.</p>
+          </div>
+          <div class="client-card animate-on-scroll delay-3">
+            <div class="client-icon" style="margin-bottom:20px;" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                <polyline points="9,22 9,12 15,12 15,22"/>
+              </svg>
+            </div>
+            <h3 class="heading-md" style="margin-bottom:12px;color:#f5f0e8;">Property Owners</h3>
+            <p class="body-md" style="color:rgba(245,240,232,0.5);">Receiving site setup, municipal permit support, and protection from soil liability.</p>
+          </div>
+          <div class="client-card animate-on-scroll delay-4">
+            <div class="client-icon" style="margin-bottom:20px;" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round">
+                <path d="M3 21h18M5 21V7l8-4 8 4v14M8 21v-9a2 2 0 012-2h4a2 2 0 012 2v9"/>
+              </svg>
+            </div>
+            <h3 class="heading-md" style="margin-bottom:12px;color:#f5f0e8;">Municipalities</h3>
+            <p class="body-md" style="color:rgba(245,240,232,0.5);">Infrastructure project support, policy guidance, and regulatory compliance assistance.</p>
+          </div>
+        </div>
+        <div class="text-center mt-xl animate-on-scroll">
+          <a href="who-we-help.html" class="btn btn-secondary-dark btn-lg">Learn More About Our Clients</a>
+        </div>
       </div>
     </section>
 
@@ -487,7 +514,7 @@
       <div class="container">
         <div class="text-center mb-xl animate-on-scroll">
           <span class="section-eyebrow" style="color:rgba(201,168,76,0.7);">Our Work</span>
-          <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:600;color:#f5f0e8;margin:12px 0 0;line-height:1.05;" id="projects-heading">Recent Projects</h2>
+          <h2 style="font-family:'Oswald',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:600;color:#f5f0e8;margin:12px 0 0;line-height:1.05;" id="projects-heading">Recent Projects</h2>
           <p class="body-lg" style="color:var(--color-text-muted);max-width:520px;margin:16px auto 0;">From highway infrastructure to large residential subdivisions, our QPs have led some of Ontario's most complex excess soil programs.</p>
         </div>
         <div class="project-grid">
@@ -518,31 +545,13 @@
               <div class="project-card-desc">Excess soil management and fill management planning for a major highway interchange expansion.</div>
             </div>
           </a>
-          <a href="projects/toronto-portlands.html" class="project-card animate-on-scroll delay-1">
+          <a href="projects/toronto-portlands.html" class="project-card animate-on-scroll delay-4">
             <img class="project-card-img" src="https://picsum.photos/seed/toronto-port/800/600" alt="Toronto Portlands Flood Protection" loading="lazy">
             <div class="project-card-overlay"></div>
             <div class="project-card-content">
               <span class="project-card-status status-featured">Featured Project</span>
               <div class="project-card-name">Toronto Portlands Flood Protection</div>
               <div class="project-card-desc">Complex multi-phase soil remediation and reuse strategy for a 290-acre waterfront transformation.</div>
-            </div>
-          </a>
-          <a href="projects/mississauga-corsair.html" class="project-card animate-on-scroll delay-2">
-            <img class="project-card-img" src="https://picsum.photos/seed/mississauga-sub/800/600" alt="Mississauga Corsair Subdivision" loading="lazy">
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <span class="project-card-status status-completed">Completed</span>
-              <div class="project-card-name">Mississauga Corsair Subdivision</div>
-              <div class="project-card-desc">Site characterization and ESMP services across a 380-unit residential subdivision in north Mississauga.</div>
-            </div>
-          </a>
-          <a href="projects/burlington-distribution.html" class="project-card animate-on-scroll delay-3">
-            <img class="project-card-img" src="https://picsum.photos/seed/burlington-ind/800/600" alt="Burlington Distribution Centre" loading="lazy">
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <span class="project-card-status status-completed">Completed</span>
-              <div class="project-card-name">Burlington Distribution Centre</div>
-              <div class="project-card-desc">Brownfield redevelopment soil management for a 1.2M sq ft industrial distribution facility.</div>
             </div>
           </a>
         </div>
@@ -552,337 +561,111 @@
       </div>
     </section>
 
-    <!-- FEATURE STRIP -->
-    <div class="feature-strip">
-      <div class="feature-strip-item">
-        <div class="feature-strip-label">Soil Management</div>
-        <div class="feature-strip-sub">Expert Compliance</div>
-        <div class="feature-strip-desc">Full O. Reg. 406/19 compliance from site assessment to final documentation</div>
-      </div>
-      <div class="feature-strip-item">
-        <div class="feature-strip-label">Qualified Persons</div>
-        <div class="feature-strip-sub">QP on Every Project</div>
-        <div class="feature-strip-desc">Licensed QPs leading every engagement — no junior-only handoffs, ever</div>
-      </div>
-      <div class="feature-strip-item">
-        <div class="feature-strip-label">Fast Delivery</div>
-        <div class="feature-strip-sub">On Time &amp; On Budget</div>
-        <div class="feature-strip-desc">Registry filings within 48 hours, reports delivered to your project timeline</div>
-      </div>
-    </div>
-
-    <!-- TRUST BAR -->
-    <div class="trust-bar animate-on-scroll">
+    <!-- WHY XS SOIL - Minimal Luxury -->
+    <section class="section-why-minimal" style="background:var(--color-soil-black);padding:40px 0;" aria-labelledby="why-heading">
       <div class="container">
-        <div class="trust-items">
-          <div class="trust-item">
-            <div class="trust-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/>
-              </svg>
-            </div>
-            <div>
-              <div class="trust-title">Qualified Persons (QPs)</div>
-              <div class="trust-desc">O. Reg. 406/19 certified professionals on every project</div>
-            </div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <rect x="3" y="4" width="18" height="16" rx="2"/>
-                <path d="M8 2v4M16 2v4M3 10h18"/>
-              </svg>
-            </div>
-            <div>
-              <div class="trust-title">On-Schedule Delivery</div>
-              <div class="trust-desc">Reports and plans delivered to meet your project timeline</div>
-            </div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M9 12l2 2 4-4"/>
-              </svg>
-            </div>
-            <div>
-              <div class="trust-title">Zero Regulatory Issues</div>
-              <div class="trust-desc">Perfect track record with MECP and municipal compliance</div>
-            </div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
-              </svg>
-            </div>
-            <div>
-              <div class="trust-title">Trusted by 200+ Clients</div>
-              <div class="trust-desc">Municipalities, developers, and constructors across Ontario</div>
-            </div>
-          </div>
+        <div class="text-center animate-on-scroll">
+          <span class="section-eyebrow" style="color:rgba(201,168,76,0.7);letter-spacing:0.3em;font-size:0.65rem;text-transform:uppercase;">Why XS Soil</span>
+          <h2 class="display-lg" id="why-heading" style="font-family:'Oswald',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:600;color:#f5f0e8;margin:16px 0 24px;line-height:1.1;">Expertise that eliminates costly delays</h2>
+          <p class="body-lg" style="color:rgba(245,240,232,0.5);max-width:680px;margin:0 auto 48px;line-height:1.8;">Ontario's excess soil regulation is complex. Our QPs have seen every scenario — and know how to keep your project moving without stop-work orders or fines.</p>
+          <a href="about.html" class="btn btn-ghost" style="color:rgba(201,168,76,0.8);border-color:rgba(201,168,76,0.4);padding:14px 36px;font-size:0.7rem;letter-spacing:0.25em;">Learn More</a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- SERVICES GRID (removed per request) -->
-    <!--
-    <section class="section-pad section-services-bg" aria-labelledby="services-heading">
-      <div class="container">
+    <!-- FAQ -->
+    <section class="section-pad faq-snap" style="background:var(--color-soil-black);" aria-labelledby="faq-heading">
+      <div class="container-sm">
         <div class="text-center mb-xl animate-on-scroll">
-          <span class="watermark-title" aria-hidden="true">Services</span>
-          <span class="section-eyebrow">What We Do</span>
-          <h2 class="display-lg" id="services-heading">Comprehensive soil management services</h2>
-          <p class="body-lg" style="color:var(--color-text-muted);max-width:560px;margin:16px auto 0;">From initial site characterization through final regulatory sign-off, we manage every aspect of your excess soil compliance program.</p>
+          <span class="section-eyebrow">FAQ</span>
+          <h2 class="display-lg" id="faq-heading">Common questions about soil management</h2>
         </div>
-        <div class="grid-3">
-
-          <article class="card card-hover animate-on-scroll delay-1">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M3 3h18v18H3z"/><path d="M8 9h8M8 13h5"/>
-              </svg>
-            </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">Assessment of Past Uses</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">A study involving site visits, interviews, and historical records review to identify the likelihood that one or more contaminants of concern are present on your site.</p>
-            <div style="margin-bottom:16px;">
-              <span class="service-tag">Phase I ESA</span>
-              <span class="service-tag">Site History</span>
-            </div>
-            <a href="services.html#esmp" class="btn btn-ghost">Learn more →</a>
-          </article>
-
-          <article class="card card-hover animate-on-scroll delay-2">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M9 11l3 3L22 4"/>
-                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
-              </svg>
-            </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">Excess Soil Management Plan</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">A comprehensive approach to soil management on your site, identifying how soil will be stockpiled, temporarily stored, hauled, tested and transported to final destination sites.</p>
-            <div style="margin-bottom:16px;">
-              <span class="service-tag">O. Reg. 406/19</span>
-              <span class="service-tag">MECP</span>
-            </div>
-            <a href="services.html#esmp" class="btn btn-ghost">Learn more →</a>
-          </article>
-
-          <article class="card card-hover animate-on-scroll delay-3">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <circle cx="11" cy="11" r="8"/>
-                <path d="M21 21l-4.35-4.35"/>
-              </svg>
-            </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">Soil Characterization Report</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">Using data from the soil sampling plan, XS Soil develops site-specific reports required for receiving site review and utilized for all soil disposal locations.</p>
-            <div style="margin-bottom:16px;">
-              <span class="service-tag">Table 1 &amp; 2</span>
-              <span class="service-tag">Lab Analysis</span>
-            </div>
-            <a href="services.html#scr" class="btn btn-ghost">Learn more →</a>
-          </article>
-
-          <article class="card card-hover animate-on-scroll delay-1">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/>
-              </svg>
-            </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">Excess Soil Destination Assessment Report</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">Prior to hauling excess soil offsite, ensure the receiving site has measures in place to protect the natural environment. XS Soil conducts destination site reviews on your behalf.</p>
-            <div style="margin-bottom:16px;">
-              <span class="service-tag">Receiving Sites</span>
-              <span class="service-tag">Disclosure</span>
-            </div>
-            <a href="services.html#esdar" class="btn btn-ghost">Learn more →</a>
-          </article>
-
-          <article class="card card-hover animate-on-scroll delay-2">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <rect x="1" y="3" width="15" height="13" rx="2"/>
-                <path d="M16 8h4l3 4v4h-7V8z"/>
-                <circle cx="5.5" cy="18.5" r="2.5"/>
-                <circle cx="18.5" cy="18.5" r="2.5"/>
-              </svg>
-            </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">Fill Management Plan</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">For receiving sites accepting over 10,000 m³, this plan covers truck-tracking, load record-keeping, protocols for incoming soil and the process for rejected loads.</p>
-            <div style="margin-bottom:16px;">
-              <span class="service-tag">Truck Tracking</span>
-              <span class="service-tag">Documentation</span>
-            </div>
-            <a href="services.html#fmp" class="btn btn-ghost">Learn more →</a>
-          </article>
-
-          <article class="card card-hover animate-on-scroll delay-3">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-            </div>
-            <h3 class="heading-md" style="margin:16px 0 8px;">Soil Management Strategies</h3>
-            <p class="body-md" style="color:var(--color-text-muted);margin-bottom:16px;">With experience managing over 8 million metric tons of soil, XS Soil develops unique strategies to help you efficiently test, characterize, stockpile, haul, track and manage your soil.</p>
-            <div style="margin-bottom:16px;">
-              <span class="service-tag">Digital Tracking</span>
-              <span class="service-tag">Mass Balance</span>
-            </div>
-            <a href="services.html#sms" class="btn btn-ghost">Learn more →</a>
-          </article>
-
-        </div>
-        <div class="text-center mt-xl animate-on-scroll">
-          <a href="services.html" class="btn btn-secondary-dark">View all services</a>
-        </div>
-      </div>
-    </section>
-    -->
-
-    <!-- WHY XS SOIL: SPLIT LAYOUT -->
-    <section class="section-pad section-bg-photo" style="background:var(--color-soil-black);" aria-labelledby="why-heading">
-      <div class="container">
-        <div class="grid-2" style="align-items:center;">
-          <div class="animate-on-scroll">
-            <span class="watermark-title" aria-hidden="true">Expertise</span>
-            <span class="section-eyebrow" style="color:var(--color-soil-light);">Why XS Soil</span>
-            <h2 class="display-lg" id="why-heading" style="color:var(--color-white);margin-bottom:24px;">Expertise that eliminates costly delays</h2>
-            <p class="body-lg" style="color:rgba(255,255,255,0.65);margin-bottom:32px;">Ontario&#x27;s excess soil regulation is complex and evolving. Mistakes trigger stop-work orders, fines, and remediation costs. Our QPs have seen every scenario — and know how to keep your project moving.</p>
-            <div class="checkpoint-list" style="--checkpoint-color:var(--color-soil-light);">
-              <div class="checkpoint">
-                <div class="checkpoint-icon" style="background:var(--color-soil-light);" aria-hidden="true">
-                  <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6l3 3 5-5"/></svg>
-                </div>
-                <div class="checkpoint-text" style="color:rgba(255,255,255,0.8);">Qualified Persons on every engagement — no junior-only handoffs</div>
-              </div>
-              <div class="checkpoint">
-                <div class="checkpoint-icon" style="background:var(--color-soil-light);" aria-hidden="true">
-                  <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6l3 3 5-5"/></svg>
-                </div>
-                <div class="checkpoint-text" style="color:rgba(255,255,255,0.8);">Registered Soil Lots submitted within 48 hours of field work</div>
-              </div>
-              <div class="checkpoint">
-                <div class="checkpoint-icon" style="background:var(--color-soil-light);" aria-hidden="true">
-                  <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6l3 3 5-5"/></svg>
-                </div>
-                <div class="checkpoint-text" style="color:rgba(255,255,255,0.8);">Coordinated with your site team, GC, and municipal reviewers</div>
-              </div>
-              <div class="checkpoint">
-                <div class="checkpoint-icon" style="background:var(--color-soil-light);" aria-hidden="true">
-                  <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6l3 3 5-5"/></svg>
-                </div>
-                <div class="checkpoint-text" style="color:rgba(255,255,255,0.8);">Clear fixed-fee quotes — no surprise change orders</div>
-              </div>
-              <div class="checkpoint">
-                <div class="checkpoint-icon" style="background:var(--color-soil-light);" aria-hidden="true">
-                  <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6l3 3 5-5"/></svg>
-                </div>
-                <div class="checkpoint-text" style="color:rgba(255,255,255,0.8);">Available for urgent mobilization across Ontario</div>
-              </div>
-            </div>
-            <div style="margin-top:32px;">
-              <a href="about.html" class="btn btn-secondary">Meet our team</a>
+        <div class="faq-list animate-on-scroll delay-1">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What is O. Reg. 406/19 and does it apply to my project?
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">O. Reg. 406/19 is Ontario&#x27;s On-Site and Excess Soil Management regulation, which came into force in January 2021. It applies to any project that generates excess soil — meaning soil that will be removed from the project area — if that project meets minimum size thresholds. Class 1 projects (generally larger construction and infrastructure projects) have the most comprehensive requirements. Class 2 projects have a simplified set of requirements. Contact us with your project details for a free assessment of your regulatory obligations.</div>
             </div>
           </div>
-
-          <!-- Soil-core illustration (CSS/SVG) -->
-          <div class="animate-on-scroll delay-2" aria-hidden="true" style="display:flex;justify-content:center;">
-            <svg viewBox="0 0 200 320" width="200" height="320" xmlns="http://www.w3.org/2000/svg">
-              <!-- Core tube -->
-              <rect x="80" y="10" width="40" height="280" rx="20" fill="rgba(255,255,255,0.04)" stroke="rgba(151,196,89,0.3)" stroke-width="1.5"/>
-              <!-- Soil strata layers -->
-              <rect x="81" y="11" width="38" height="40" rx="4" fill="#3B6D11" opacity="0.7"/>
-              <rect x="81" y="52" width="38" height="50" rx="2" fill="#2D4A22" opacity="0.8"/>
-              <rect x="81" y="103" width="38" height="35" rx="2" fill="#243020" opacity="0.85"/>
-              <rect x="81" y="139" width="38" height="55" rx="2" fill="#1C2318" opacity="0.9"/>
-              <rect x="81" y="195" width="38" height="40" rx="2" fill="#3B6D11" opacity="0.5"/>
-              <rect x="81" y="236" width="38" height="30" rx="2" fill="#97C459" opacity="0.3"/>
-              <!-- Strata labels -->
-              <text x="75" y="36" font-family="monospace" font-size="8" fill="rgba(151,196,89,0.7)" text-anchor="end">Fill</text>
-              <text x="75" y="82" font-family="monospace" font-size="8" fill="rgba(151,196,89,0.7)" text-anchor="end">Topsoil</text>
-              <text x="75" y="125" font-family="monospace" font-size="8" fill="rgba(151,196,89,0.7)" text-anchor="end">Subsoil</text>
-              <text x="75" y="170" font-family="monospace" font-size="8" fill="rgba(151,196,89,0.7)" text-anchor="end">Clay</text>
-              <text x="75" y="218" font-family="monospace" font-size="8" fill="rgba(151,196,89,0.7)" text-anchor="end">Silt</text>
-              <text x="75" y="254" font-family="monospace" font-size="8" fill="rgba(151,196,89,0.7)" text-anchor="end">Sand</text>
-              <!-- Tick marks -->
-              <line x1="120" y1="51" x2="130" y2="51" stroke="rgba(151,196,89,0.4)" stroke-width="1"/>
-              <line x1="120" y1="102" x2="130" y2="102" stroke="rgba(151,196,89,0.4)" stroke-width="1"/>
-              <line x1="120" y1="138" x2="130" y2="138" stroke="rgba(151,196,89,0.4)" stroke-width="1"/>
-              <line x1="120" y1="194" x2="130" y2="194" stroke="rgba(151,196,89,0.4)" stroke-width="1"/>
-              <line x1="120" y1="235" x2="130" y2="235" stroke="rgba(151,196,89,0.4)" stroke-width="1"/>
-            </svg>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Who is a Qualified Person (QP) and why do I need one?
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">A Qualified Person under O. Reg. 406/19 is a licensed professional engineer or professional geoscientist registered in Ontario with specific experience in soil assessment and environmental site investigations. QPs are legally responsible for the ESMPs and other technical documents they sign off on. The regulation requires QP authorship for Class 1 ESMPs, soil characterization reports, and ESD assessments. Using a non-QP for these documents can result in regulatory non-compliance and project delays. All XS Soil Solutions professionals who sign regulatory documents are licensed QPs.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How much does an ESMP cost?
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">ESMP costs vary based on project complexity, soil volume, number of receiving sites, and the extent of site investigation required. Simple single-destination ESMPs for smaller projects can start around $3,000–$6,000. Complex multi-destination ESMPs for large infrastructure projects can range from $15,000–$50,000 or more. We provide transparent fixed-fee quotes after reviewing your project information — no hourly billing surprises. Contact us for a free project assessment and quote.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What happens if I move soil without an ESMP?
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Moving soil without the required ESMP is a violation of O. Reg. 406/19 and can result in stop-work orders issued by the Ministry of Environment, Conservation and Parks (MECP), significant administrative penalties, requirements to retrieve and properly characterize all soil that was moved, and potential Director&#x27;s Orders requiring site remediation. Municipal stop-work orders can also be issued separately. We strongly recommend addressing ESMP requirements before breaking ground, but we can also help you remedy non-compliance situations urgently.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How long does the soil characterization process take?
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Soil characterization typically takes 15–25 business days from field sampling through final report. This includes 2–3 days for field work, 10 business days for standard laboratory analysis, and 3–5 days for report preparation and QP review. Rush services with 5-day lab turnaround are available for time-sensitive projects at a premium. Contact us early in your project planning to ensure characterization timelines align with your construction schedule.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can I reuse excess soil on another one of my own projects?
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Yes, reusing excess soil between your own projects is permitted and often the most cost-effective approach — but it still requires compliance with O. Reg. 406/19. Soil must be characterized, the generating site must have a compliant ESMP, and the receiving site must have a registered ESDA if it meets the regulatory threshold. We help many developers and municipalities build soil reuse programs that significantly reduce disposal costs while maintaining full compliance.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Does O. Reg. 406/19 apply to rural and agricultural sites?
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">The regulation includes some exemptions for agricultural receiving sites, but these exemptions are narrower than many people expect and include specific soil quality restrictions. Agricultural sites accepting fill from urban construction projects typically do not qualify for full exemption. Rural and agricultural project leaders should seek professional advice before assuming an exemption applies to their situation, as non-compliant fill placement has resulted in significant enforcement actions against rural property owners.</div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What is the Ontario Excess Soil Registry?
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">The Ontario Excess Soil Registry is an online platform administered by the MECP where generating sites, receiving sites, and soil lots must be registered for regulated projects. It creates a transparent chain of custody from source to destination and gives MECP inspectors real-time visibility into soil movements across the province. Registration in the Registry is mandatory for all regulated Class 1 and many Class 2 projects. XS Soil Solutions manages all registry filings as part of our ESMP and ESDAR services.</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHO WE HELP -->
-    <section class="section-pad dot-grid" style="background:var(--color-soil-deep);" aria-labelledby="audience-heading">
+    <!-- CTA SECTION - Minimal -->
+    <section class="section-pad-cta" style="background:var(--color-soil-deep);" aria-labelledby="cta-heading">
       <div class="container">
-        <div class="text-center mb-xl animate-on-scroll">
-          <span class="watermark-title" aria-hidden="true">Clients</span>
-          <span class="section-eyebrow">Clients We Serve</span>
-          <h2 class="display-lg" id="audience-heading">Built for every project type</h2>
-          <p class="body-lg" style="color:var(--color-text-muted);max-width:520px;margin:16px auto 0;">Whether you&#x27;re breaking ground or receiving fill, we have the expertise your project requires.</p>
-        </div>
-        <div class="grid-4">
-          <a href="who-we-help.html#constructors" class="card card-hover animate-on-scroll delay-1" style="text-decoration:none;">
-            <div style="font-size:32px;font-family:var(--font-display);font-weight:700;color:var(--color-soil-pale);margin-bottom:12px;">01</div>
-            <h3 class="heading-md" style="margin-bottom:8px;">Constructors &amp; Contractors</h3>
-            <p class="body-md" style="color:var(--color-text-muted);">ESMPs, soil tracking, and regulatory sign-off for building and infrastructure projects of all scales.</p>
-          </a>
-          <a href="who-we-help.html#developers" class="card card-hover animate-on-scroll delay-2" style="text-decoration:none;">
-            <div style="font-size:32px;font-family:var(--font-display);font-weight:700;color:var(--color-soil-pale);margin-bottom:12px;">02</div>
-            <h3 class="heading-md" style="margin-bottom:8px;">Land Developers</h3>
-            <p class="body-md" style="color:var(--color-text-muted);">Site assessment, characterization, and ESMP services that keep your subdivision and commercial projects on schedule.</p>
-          </a>
-          <a href="who-we-help.html#owners" class="card card-hover animate-on-scroll delay-3" style="text-decoration:none;">
-            <div style="font-size:32px;font-family:var(--font-display);font-weight:700;color:var(--color-soil-pale);margin-bottom:12px;">03</div>
-            <h3 class="heading-md" style="margin-bottom:8px;">Property Owners</h3>
-            <p class="body-md" style="color:var(--color-text-muted);">Site alteration plans, fill management, and guidance for owners accepting or moving soil on private land.</p>
-          </a>
-          <a href="who-we-help.html#municipalities" class="card card-hover animate-on-scroll delay-4" style="text-decoration:none;">
-            <div style="font-size:32px;font-family:var(--font-display);font-weight:700;color:var(--color-soil-pale);margin-bottom:12px;">04</div>
-            <h3 class="heading-md" style="margin-bottom:8px;">Municipalities</h3>
-            <p class="body-md" style="color:var(--color-text-muted);">Soil management systems and compliance programs for road works, utility projects, and municipal receiving sites.</p>
-          </a>
-        </div>
-        <div class="text-center mt-xl animate-on-scroll">
-          <a href="who-we-help.html" class="btn btn-secondary-dark">See how we help →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="section-pad-sm" aria-labelledby="cta-heading">
-      <div class="container">
-        <div class="cta-section animate-on-scroll">
-          <div class="grid-2" style="align-items:center;gap:48px;">
-            <div>
-              <span class="section-eyebrow" style="color:var(--color-gold);">Ready to Start?</span>
-              <h2 class="display-md" id="cta-heading" style="margin:12px 0 16px;color:var(--color-gold-text);">Get a free project consultation today</h2>
-              <p class="body-lg" style="color:var(--color-gold-text);opacity:0.8;margin-bottom:24px;">Tell us about your project and we&#x27;ll provide a scope of work and fixed-fee estimate within one business day.</p>
-              <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;color:var(--color-gold-text);">
-                <div style="display:flex;align-items:center;gap:10px;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.08 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17z"/></svg>
-                  <a href="tel:9053341197" style="color:var(--color-gold-text);font-weight:600;">905-334-1197</a>
-                </div>
-                <div style="display:flex;align-items:center;gap:10px;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  <a href="mailto:info@xssoil.ca" style="color:var(--color-gold-text);font-weight:600;">info@xssoil.ca</a>
-                </div>
-              </div>
-            </div>
-            <div>
-              <a href="contact.html" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-bottom:12px;">Request a Free Quote</a>
-              <a href="services.html" class="btn btn-secondary-dark btn-lg" style="width:100%;justify-content:center;">Explore Our Services</a>
-            </div>
+        <div class="cta-minimal animate-on-scroll">
+          <h2 class="display-lg" id="cta-heading" style="font-family:'Oswald',sans-serif;font-size:clamp(32px,4.5vw,48px);font-weight:600;color:#f5f0e8;margin-bottom:16px;line-height:1.1;">Ready to discuss your project?</h2>
+          <p class="body-lg" style="color:rgba(245,240,232,0.5);max-width:520px;margin:0 auto 32px;">Get a free consultation and fixed-fee estimate within one business day.</p>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+            <a href="contact.html" class="btn btn-primary" style="padding:14px 40px;font-size:0.75rem;letter-spacing:0.2em;">Get a Quote</a>
+            <a href="tel:9053341197" style="color:rgba(201,168,76,0.7);font-size:0.85rem;letter-spacing:0.1em;">905-334-1197</a>
           </div>
         </div>
       </div>

@@ -71,6 +71,62 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================
+     2.5. NAVIGATION DROPDOWN TOGGLES
+     ========================================== */
+  const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+  
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other dropdowns
+      dropdownToggles.forEach(otherToggle => {
+        if (otherToggle !== toggle) {
+          otherToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+      
+      // For anchor tags (like Services), allow navigation on click
+      // For buttons (like About), toggle dropdown
+      if (toggle.tagName === 'BUTTON') {
+        e.preventDefault();
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+      } else {
+        // For anchor tags, toggle dropdown and allow navigation
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+      }
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', () => {
+    dropdownToggles.forEach(toggle => {
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Mobile dropdown toggles
+  const mobileDropdownToggles = document.querySelectorAll('.nav-mobile-dropdown-toggle');
+  
+  mobileDropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      
+      // For anchor tags (like Services), allow navigation on click
+      // For buttons (like About), toggle dropdown
+      if (toggle.tagName === 'BUTTON') {
+        e.preventDefault();
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+      } else {
+        // For anchor tags, toggle dropdown and allow navigation
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+      }
+    });
+  });
+
+  /* ==========================================
      3. SMOOTH SCROLL FOR ANCHOR LINKS
      ========================================== */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -327,53 +383,25 @@ document.addEventListener('DOMContentLoaded', () => {
       if (/^<br/i.test(seg)) {
         result += seg;
       } else {
-        for (const ch of seg) {
-          if (ch === ' ') {
+        const words = seg.split(' ');
+        words.forEach((word, wordIdx) => {
+          if (wordIdx > 0) {
             result += `<span class="hero-letter-space">&nbsp;</span>`;
-          } else {
-            result += `<span class="hero-letter" style="animation-delay:${delay}ms">${ch}</span>`;
-            delay += 38;
           }
-        }
+          if (word.length > 0) {
+            result += `<span style="display:inline-block;white-space:nowrap">`;
+            for (const ch of word) {
+              result += `<span class="hero-letter" style="animation-delay:${delay}ms">${ch}</span>`;
+              delay += 38;
+            }
+            result += `</span>`;
+          }
+        });
       }
     });
 
     headline.innerHTML = result;
   })();
 
-  /* ==========================================
-     13. MOUSE SCROLL INDICATOR (replaces arrow)
-     ========================================== */
-  (function upgradeHeroScroll() {
-    const heroSection = document.querySelector('.hero');
-    if (!heroSection) return;
-
-    const old = heroSection.querySelector('.hero-scroll');
-    if (old) old.remove();
-
-    const indicator = document.createElement('div');
-    indicator.classList.add('hero-scroll-mouse');
-    indicator.setAttribute('role', 'button');
-    indicator.setAttribute('tabindex', '0');
-    indicator.setAttribute('aria-label', 'Scroll to content');
-    indicator.innerHTML = `
-      <div class="hero-scroll-mouse-icon">
-        <div class="hero-scroll-mouse-dot"></div>
-      </div>
-      <div class="hero-scroll-mouse-label">Scroll <strong>Down</strong></div>
-    `;
-
-    function scrollDown() {
-      const next = heroSection.nextElementSibling;
-      if (next) next.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    indicator.addEventListener('click', scrollDown);
-    indicator.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); scrollDown(); }
-    });
-
-    heroSection.appendChild(indicator);
-  })();
 
 });

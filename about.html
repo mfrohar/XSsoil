@@ -23,8 +23,25 @@
       <div class="nav-links" role="list">
         <a href="index.html" class="nav-link" role="listitem">Home</a>
         <a href="projects.html" class="nav-link" role="listitem">Projects</a>
-        <a href="services.html" class="nav-link" role="listitem">Services</a>
-        <a href="about.html" class="nav-link active" role="listitem">About</a>
+        <div class="nav-dropdown" role="listitem">
+          <a href="services.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Services</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="services.html#esmp" class="nav-dropdown-link" role="menuitem">Excess Soil Management Plans</a>
+            <a href="services.html#sap" class="nav-dropdown-link" role="menuitem">Site Alteration Plans</a>
+            <a href="services.html#scr" class="nav-dropdown-link" role="menuitem">Soil Characterization</a>
+            <a href="services.html#esdar" class="nav-dropdown-link" role="menuitem">ESD Assessments</a>
+            <a href="services.html#fmp" class="nav-dropdown-link" role="menuitem">Fill Management Plans</a>
+            <a href="services.html#sms" class="nav-dropdown-link" role="menuitem">Soil Management Systems</a>
+          </div>
+        </div>
+        <div class="nav-dropdown" role="listitem">
+          <a href="about.html" class="nav-link nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true">About</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="about.html" class="nav-dropdown-link" role="menuitem">About Us</a>
+            <a href="who-we-help.html" class="nav-dropdown-link" role="menuitem">Who We Help</a>
+            <a href="careers.html" class="nav-dropdown-link" role="menuitem">Careers</a>
+          </div>
+        </div>
         <a href="contact.html" class="nav-link" role="listitem">Contact</a>
       </div>
       <div class="nav-actions">
@@ -39,8 +56,25 @@
   <div class="nav-mobile-menu" role="dialog" aria-label="Mobile navigation">
     <a href="index.html" class="nav-mobile-link">Home</a>
     <a href="projects.html" class="nav-mobile-link">Projects</a>
-    <a href="services.html" class="nav-mobile-link">Services</a>
-    <a href="about.html" class="nav-mobile-link active">About</a>
+    <div class="nav-mobile-dropdown">
+      <a href="services.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">Services</a>
+      <div class="nav-mobile-dropdown-menu">
+        <a href="services.html#esmp" class="nav-mobile-link nav-mobile-sublink">Excess Soil Management Plans</a>
+        <a href="services.html#sap" class="nav-mobile-link nav-mobile-sublink">Site Alteration Plans</a>
+        <a href="services.html#scr" class="nav-mobile-link nav-mobile-sublink">Soil Characterization</a>
+        <a href="services.html#esdar" class="nav-mobile-link nav-mobile-sublink">ESD Assessments</a>
+        <a href="services.html#fmp" class="nav-mobile-link nav-mobile-sublink">Fill Management Plans</a>
+        <a href="services.html#sms" class="nav-mobile-link nav-mobile-sublink">Soil Management Systems</a>
+      </div>
+    </div>
+    <div class="nav-mobile-dropdown">
+      <a href="about.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">About</a>
+      <div class="nav-mobile-dropdown-menu">
+        <a href="about.html" class="nav-mobile-link nav-mobile-sublink">About Us</a>
+        <a href="who-we-help.html" class="nav-mobile-link nav-mobile-sublink">Who We Help</a>
+        <a href="careers.html" class="nav-mobile-link nav-mobile-sublink">Careers</a>
+      </div>
+    </div>
     <a href="contact.html" class="nav-mobile-link">Contact</a>
     <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px;">
       <a href="contact.html" class="btn btn-primary">Get a Quote</a>
@@ -230,6 +264,18 @@
       </div>
     </section>
   </main>
+
+  <!-- CTA -->
+  <section class="section-pad-sm cta-snap" style="background:var(--color-soil-black);">
+    <div class="container">
+      <div class="cta-section animate-on-scroll" style="text-align:center;">
+        <span class="section-eyebrow" style="color:var(--color-gold);">Ready to Start?</span>
+        <h2 class="display-md" style="margin:12px 0 16px;color:var(--color-gold-text);">Get your project compliant today</h2>
+        <p class="body-lg" style="color:var(--color-gold-text);opacity:0.8;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">Contact us for a free consultation and fixed-fee quote. We respond within one business day.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Request a Free Quote</a>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer" aria-label="Site footer">
