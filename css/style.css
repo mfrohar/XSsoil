@@ -2415,6 +2415,32 @@ select.form-control {
   background-color: rgba(10,154,10,0.1);
 }
 
+/* Mobile menu social links */
+.nav-mobile-social {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.nav-mobile-social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  color: rgba(255,255,255,0.55);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: color 0.2s, background-color 0.2s;
+}
+.nav-mobile-social-link:hover {
+  color: var(--color-soil-light);
+  background-color: rgba(10,154,10,0.08);
+}
+
 /* --- WATERMARK SECTION TITLES --- */
 .watermark-title {
   font-family: 'Oswald', sans-serif;

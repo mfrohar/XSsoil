@@ -36,6 +36,35 @@ document.addEventListener('DOMContentLoaded', () => {
     navActions.insertBefore(socialIcons, navActions.firstChild);
   }
 
+  const mobileMenuEl = document.getElementById('mobile-menu');
+  if (mobileMenuEl) {
+    const mobileSocial = document.createElement('div');
+    mobileSocial.classList.add('nav-mobile-social');
+    mobileSocial.innerHTML = `
+      <a href="https://www.linkedin.com/company/xs-soil-solutions" target="_blank" rel="noopener" aria-label="LinkedIn" class="nav-mobile-social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+          <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        LinkedIn
+      </a>
+      <a href="mailto:info@xssoil.ca" aria-label="Email us" class="nav-mobile-social-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        info@xssoil.ca
+      </a>
+      <a href="tel:9053341197" aria-label="Call us" class="nav-mobile-social-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.08 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17z"/>
+        </svg>
+        905-334-1197
+      </a>
+    `;
+    mobileMenuEl.appendChild(mobileSocial);
+  }
+
   /* ==========================================
      1. NAV SCROLL BEHAVIOUR
      ========================================== */
