@@ -61,7 +61,7 @@ The Claude Preview sandbox **cannot** serve files from `~/Documents/` directly d
 Create this file before calling `preview_start`:
 ```python
 import http.server, socketserver, os
-os.chdir('/Users/mehranfrohar/Documents/projectXSsoil')
+os.chdir('/tmp/xs_soil_site')
 PORT = 8090
 class H(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *a): pass
@@ -71,10 +71,11 @@ with socketserver.TCPServer(("", PORT), H) as s:
 ```
 
 ### Steps every session
-1. Write `/tmp/xs_soil_server.py` (above)
-2. Kill any process on port 8090: `lsof -ti :8090 | xargs kill -9 2>/dev/null`
-3. Call `preview_start` with name `"xs-soil"`
-4. Use `preview_screenshot` and `preview_inspect` to verify
+1. Copy site files to `/tmp`: `cp -r /Users/ryanfrohar/Documents/Documents/git/xs_soil /tmp/xs_soil_site`
+2. Write `/tmp/xs_soil_server.py` (above)
+3. Kill any process on port 8090: `lsof -ti :8090 | xargs kill -9 2>/dev/null`
+4. Call `preview_start` with name `"xs-soil"`
+5. Use `preview_screenshot` and `preview_inspect` to verify
 
 **Note:** The preview sandbox snapshots files at server start time — it will NOT pick up file changes made after the server starts. For live verification of edits, use the `mcp__Claude_in_Chrome__navigate` tool pointed at `http://localhost:8090` (or whatever port Bash is serving on) instead.
 

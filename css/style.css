@@ -2560,13 +2560,3 @@ body.page-services {
   padding-top: 32px;
   border-top: 1px solid var(--color-border);
 }
-
-/* --- Admin footer link (discrete) --- */
-.footer-admin-link {
-  color: rgba(255,255,255,0.18);
-  font-size: 11px;
-  text-decoration: none;
-  transition: color 0.2s;
-  letter-spacing: 1px;
-}
-.footer-admin-link:hover { color: rgba(255,255,255,0.45); }
