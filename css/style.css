@@ -928,11 +928,11 @@ input, textarea, select {
   width: 100%;
   height: 44px;
   padding: 0 var(--space-md);
-  border: 1.5px solid rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.2);
   border-radius: var(--radius-md);
   font-size: 15px;
-  color: var(--color-text);
-  background: var(--color-charcoal);
+  color: var(--color-soil-black);
+  background: #fff;
   transition: border-color var(--transition), box-shadow var(--transition);
   appearance: none;
 }
@@ -1839,41 +1839,82 @@ select.form-control {
 /* ============================================
    23. CLIENT CARDS (Who We Help)
    ============================================ */
-.client-card {
+/* Cards */
+.wwh-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 32px 24px;
   background: rgba(201, 168, 76, 0.05);
   border: 1px solid rgba(201, 168, 76, 0.1);
   border-radius: var(--radius-lg);
+  padding: 40px 28px 0;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-.client-card:hover {
+.wwh-card:hover {
   background: rgba(201, 168, 76, 0.1);
   border-color: rgba(201, 168, 76, 0.3);
   transform: translateY(-4px);
 }
 
-.client-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 20px;
-  background: rgba(201, 168, 76, 0.1);
-  border-radius: 50%;
+.wwh-card-icon {
+  font-size: 56px;
+  margin-bottom: 24px;
+  line-height: 1;
 }
 
-.client-icon svg {
-  width: 32px;
-  height: 32px;
+.wwh-card-title {
+  font-family: var(--font-body);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 700;
+  color: #f5f0e8;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  min-height: 2.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wwh-card-body {
+  font-size: 15px;
+  color: rgba(245, 240, 232, 0.6);
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 28px;
+}
+
+.wwh-card-body em {
+  font-style: italic;
+}
+
+.wwh-card-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-soil-light);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.wwh-card-link:hover {
+  color: #f5f0e8;
 }
 
 /* Responsive - Client Cards */
 @media (max-width: 860px) {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
   }
 }
 
