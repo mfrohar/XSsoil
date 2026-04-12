@@ -360,44 +360,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* ==========================================
-     11. DOT NAVIGATION
-     ========================================== */
-  (function initDotNav() {
-    const sections = Array.from(document.querySelectorAll(
-      'main > section:not(.faq-snap):not(.cta-snap), main > div.trust-bar, main > header, .feature-strip'
-    ));
-    if (sections.length < 2) return;
-
-    const dotNav = document.createElement('nav');
-    dotNav.classList.add('dot-nav');
-    dotNav.setAttribute('aria-label', 'Page section navigation');
-    document.body.appendChild(dotNav);
-
-    const dots = sections.map((section, i) => {
-      const dot = document.createElement('a');
-      dot.classList.add('dot-nav-item');
-      dot.setAttribute('href', '#');
-      dot.setAttribute('aria-label', `Go to section ${i + 1}`);
-      dot.addEventListener('click', (e) => {
-        e.preventDefault();
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-      dotNav.appendChild(dot);
-      return dot;
-    });
-
-    function syncDots() {
-      let active = 0;
-      sections.forEach((section, i) => {
-        if (section.getBoundingClientRect().top <= window.innerHeight * 0.55) active = i;
-      });
-      dots.forEach((dot, i) => dot.classList.toggle('active', i === active));
-    }
-
-    window.addEventListener('scroll', syncDots, { passive: true });
-    syncDots();
-  })();
 
   /* ==========================================
      12. HERO LETTER ANIMATION

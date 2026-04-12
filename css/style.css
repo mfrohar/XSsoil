@@ -551,7 +551,7 @@ input, textarea, select {
   position: relative;
   min-height: 100vh;
   background-color: var(--color-soil-black);
-  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/constrtuction+gorunds-1920w.jpg');
+  background-image: url('assets/headers/constrtuction+gorunds-1920w.jpg');
   background-size: cover;
   background-position: center 40%;
   display: flex;
@@ -700,7 +700,7 @@ input, textarea, select {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/soil_sampling-94e1ea1c-1920w.jpg');
+  background-image: url('assets/headers/soil_sampling-94e1ea1c-1920w.jpg');
   background-size: cover;
   background-position: center 40%;
   opacity: 0.32;
@@ -2045,7 +2045,7 @@ select.form-control {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/Fill+Management+Plan.jpg');
+  background-image: url('assets/headers/Fill+Management+Plan-2880w.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.12;
@@ -2291,7 +2291,7 @@ select.form-control {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/soil+management+strategy.jpg');
+  background-image: url('../assets/headers/constrtuction+gorunds-1920w.jpg');
   background-size: cover;
   background-position: center 40%;
   opacity: 0.18;
@@ -2310,7 +2310,7 @@ select.form-control {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/Excavated+Material+Management+Plan.webp');
+  background-image: url('../assets/headers/Fill+Management+Plan-2880w.jpg');
   background-size: cover;
   background-position: center 60%;
   opacity: 0.08;
@@ -2330,7 +2330,7 @@ select.form-control {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/soil-help-2880w.jpg');
+  background-image: url('assets/headers/soil-help-2880w.jpg');
   background-size: cover;
   background-position: center 40%;
   opacity: 0.25;
@@ -2350,7 +2350,7 @@ select.form-control {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/Soil+Management+Strategies.jpg');
+  background-image: url('assets/headers/Soil+Management+Strategies-2880w.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.12;
@@ -2363,13 +2363,11 @@ select.form-control {
 
 /* Page-specific hero backgrounds */
 .hero-contact::before {
-  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/Excavated+Material+Management+Plan.webp') !important;
-  background-position: center 40% !important;
-  opacity: 0.35 !important;
+  display: none;
 }
 
 .hero-careers::before {
-  background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/constrtuction+gorunds-1920w.jpg') !important;
+  background-image: url('assets/headers/constrtuction+gorunds-1920w.jpg') !important;
   background-position: center 50% !important;
   opacity: 0.40 !important;
 }
@@ -2421,39 +2419,6 @@ select.form-control {
 
 
 
-/* --- DOT NAVIGATION --- */
-.dot-nav {
-  position: fixed;
-  right: 35px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.dot-nav-item {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.2);
-  cursor: pointer;
-  border: 1.5px solid rgba(255,255,255,0.4);
-  transition: background 0.3s, transform 0.3s, border-color 0.3s;
-  display: block;
-}
-.dot-nav-item.active {
-  background: var(--color-soil-light);
-  border-color: var(--color-soil-light);
-  transform: scale(1.5);
-}
-.dot-nav-item:hover {
-  background: rgba(10,154,10,0.5);
-  border-color: var(--color-soil-light);
-}
-@media (max-width: 1024px) {
-  .dot-nav { display: none; }
-}
 
 /* --- NAV SOCIAL ICONS --- */
 .nav-social {
