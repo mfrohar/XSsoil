@@ -1204,13 +1204,13 @@ select.form-control {
    16. FAQ ACCORDION
    ============================================ */
 .faq-list {
-  border: 1px solid var(--color-charcoal-border);
+  border: 1px solid rgba(151,196,89,0.2);
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
 
 .faq-item {
-  border-bottom: 1px solid var(--color-charcoal-border);
+  border-bottom: 1px solid rgba(151,196,89,0.15);
 }
 
 .faq-item:last-child {
@@ -1228,18 +1228,18 @@ select.form-control {
   font-size: 15px;
   font-weight: 500;
   color: var(--color-text);
-  background: var(--color-charcoal);
+  background: #1e2e19;
   cursor: pointer;
   transition: background-color var(--transition), color var(--transition);
 }
 
 .faq-question:hover {
-  background: var(--color-charcoal-mid);
+  background: #253820;
   color: var(--color-soil-light);
 }
 
 .faq-question.open {
-  background: var(--color-charcoal-mid);
+  background: #253820;
   color: var(--color-soil-light);
 }
 
@@ -1267,7 +1267,7 @@ select.form-control {
   font-size: 15px;
   line-height: 1.7;
   color: var(--color-text-muted);
-  background: #1c2d17;
+  background: #192615;
 }
 
 /* ============================================
@@ -1504,10 +1504,74 @@ select.form-control {
 }
 
 /* ============================================
-   21. MINIMAL WHY SECTION
+   21. O.REG TIMELINE
    ============================================ */
-.section-why-minimal {
-  padding: 140px 0;
+.oreg-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-left: 1px solid rgba(151,196,89,0.25);
+  margin-left: 16px;
+  padding-left: 0;
+}
+
+.oreg-step {
+  display: flex;
+  gap: var(--space-xl);
+  padding: var(--space-xl) 0 var(--space-xl) var(--space-xl);
+  position: relative;
+}
+
+.oreg-step:last-child {
+  padding-bottom: 0;
+}
+
+.oreg-marker {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-soil-black);
+  border: 1px solid rgba(151,196,89,0.4);
+  color: var(--color-soil-light);
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -18px;
+  top: var(--space-xl);
+}
+
+.oreg-content {
+  padding-left: 28px;
+}
+
+.oreg-date {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-soil-light);
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+.oreg-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f5f0e8;
+  margin: 0 0 8px;
+}
+
+.oreg-content p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(245,240,232,0.5);
+  margin: 0;
 }
 
 /* ============================================
@@ -2600,12 +2664,12 @@ select.form-control {
   border-radius: 0;
 }
 
-/* --- FAQs — SQUARE CORNERS --- */
+/* --- FAQs — ROUNDED CORNERS --- */
 .faq-list {
-  border-radius: 0;
+  border-radius: 12px;
 }
 .faq-answer-inner {
-  background: rgba(11,18,9,0.6);
+  background: #192615;
 }
 
 /* --- CARDS — SQUARE CORNERS --- */
