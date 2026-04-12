@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="nav-dropdown" role="listitem">
-          <a href="about.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">About</a>
+          <a href="about.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">About Us</a>
           <div class="nav-dropdown-menu" role="menu">
             <a href="who-we-help.html" class="nav-dropdown-link" role="menuitem">Who We Help</a>
             <a href="careers.html" class="nav-dropdown-link" role="menuitem">Careers</a>
@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="nav-mobile-dropdown">
-      <a href="about.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">About</a>
+      <a href="about.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">About Us</a>
       <div class="nav-mobile-dropdown-menu">
         <a href="who-we-help.html" class="nav-mobile-link nav-mobile-sublink">Who We Help</a>
         <a href="careers.html" class="nav-mobile-link nav-mobile-sublink">Careers</a>
@@ -82,9 +82,9 @@
 
   <main>
     <!-- HERO -->
-    <header class="hero-dark-photo hero-careers" style="min-height:280px;background:var(--color-soil-black);display:flex;align-items:flex-start;position:relative;overflow:hidden;" aria-label="Page header">
+    <header class="hero-dark-photo hero-careers" style="background:var(--color-soil-black);display:flex;align-items:flex-start;position:relative;overflow:hidden;" aria-label="Page header">
       <div class="hero-topo" aria-hidden="true"></div>
-      <div class="container" style="position:relative;z-index:2;padding-top:48px;padding-bottom:48px;">
+      <div class="container" style="position:relative;z-index:2;padding-top:48px;padding-bottom:32px;">
         <nav class="hero-breadcrumb" aria-label="Breadcrumb">
           <a href="index.html">Home</a>
           <span class="hero-breadcrumb-sep" aria-hidden="true">/</span>
@@ -98,16 +98,28 @@
     </header>
 
     <!-- OPEN ROLES -->
-    <section class="section-pad" style="background:var(--color-soil-black);" aria-labelledby="roles-heading">
+    <section class="section-pad-sm" style="background:var(--color-soil-black);" aria-labelledby="roles-heading">
       <div class="container">
         <div class="text-center mb-xl animate-on-scroll">
           <span class="section-eyebrow">Open Positions</span>
           <h2 class="display-lg" id="roles-heading">Current opportunities</h2>
-          <p class="body-lg" style="color:var(--color-text-muted);max-width:520px;margin:16px auto 0;">There are no open positions at this time. Send us your resume below and we'll keep it on file for future opportunities.</p>
         </div>
 
-        <div style="display:flex;flex-direction:column;gap:24px;">
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <!-- Job listings go here when available. Example:
+          <div class="card" style="padding:28px 32px;display:flex;justify-content:space-between;align-items:center;gap:24px;">
+            <div>
+              <h3 class="heading-md" style="margin-bottom:4px;">QP Environmental Consultant</h3>
+              <p class="body-sm" style="color:var(--color-text-muted);">Full-time · Burlington, ON</p>
+            </div>
+            <a href="#apply" class="btn btn-primary btn-sm">Apply</a>
+          </div>
+          -->
+
           <!-- No current openings -->
+          <div class="animate-on-scroll" style="border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);padding:40px;text-align:center;">
+            <p class="body-lg" style="color:var(--color-text-muted);margin:0;">There are no open roles at this time. Submit a general application below and we'll reach out when a position becomes available.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -119,68 +131,47 @@
           <span class="section-eyebrow">Why Join Us</span>
           <h2 class="display-lg" id="benefits-heading">What we offer</h2>
         </div>
-        <div class="grid-3">
+        <div class="grid-4">
           <div class="benefit-item animate-on-scroll delay-1">
             <div class="benefit-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
               </svg>
             </div>
-            <h3 class="heading-md" style="margin-bottom:8px;">Professional Growth</h3>
-            <p class="body-md" style="color:var(--color-text-muted);">We support P.Eng. and P.Geo. designation pathways for all eligible staff, covering exam fees, study materials, and providing the supervised experience hours required for licensure.</p>
+            <h3 class="heading-md" style="margin-bottom:8px;">Work-Life Balance</h3>
+            <p class="body-md" style="color:var(--color-text-muted);">Our <strong>hybrid-remote work model</strong> includes <strong>4-day work weeks</strong> during off-season, a <strong>4-week vacation base</strong>, and <strong>flexible hours</strong> — because a healthy team is a productive team.</p>
           </div>
           <div class="benefit-item animate-on-scroll delay-2">
             <div class="benefit-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                <line x1="4" y1="22" x2="4" y2="15"/>
               </svg>
             </div>
-            <h3 class="heading-md" style="margin-bottom:8px;">Collaborative Culture</h3>
-            <p class="body-md" style="color:var(--color-text-muted);">Small enough that your work has real impact, large enough to have the project diversity that keeps your skills sharp. Senior QPs mentor junior staff on every project, not just at performance review time.</p>
+            <h3 class="heading-md" style="margin-bottom:8px;">Exciting</h3>
+            <p class="body-md" style="color:var(--color-text-muted);">Our work spans major infrastructure projects for Ontario's largest construction firms. Every day is a new opportunity to <strong>learn</strong> from the experts, <strong>advance</strong> your skills, and <strong>grow</strong> your career.</p>
           </div>
           <div class="benefit-item animate-on-scroll delay-3">
             <div class="benefit-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <rect x="1" y="3" width="15" height="13" rx="2"/>
-                <path d="M16 8h4l3 4v4h-7V8z"/>
-                <circle cx="5.5" cy="18.5" r="2.5"/>
-                <circle cx="18.5" cy="18.5" r="2.5"/>
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
               </svg>
             </div>
-            <h3 class="heading-md" style="margin-bottom:8px;">Competitive Compensation</h3>
-            <p class="body-md" style="color:var(--color-text-muted);">Competitive base salary benchmarked against Ontario consulting industry standards, group health and dental benefits, RRSP matching, mileage reimbursement, and paid professional development days.</p>
+            <h3 class="heading-md" style="margin-bottom:8px;">Challenging</h3>
+            <p class="body-md" style="color:var(--color-text-muted);">We push our people to <strong>exceed expectations</strong> and tackle every challenge with confidence. Individual coaching and ongoing training ensure you have the tools to reach your <strong>maximum potential</strong>.</p>
           </div>
-          <div class="benefit-item animate-on-scroll delay-1">
+          <div class="benefit-item animate-on-scroll delay-4">
             <div class="benefit-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <rect x="3" y="4" width="18" height="16" rx="2"/>
-                <path d="M8 2v4M16 2v4M3 10h18"/>
-                <path d="M8 14l2 2 4-4"/>
+                <circle cx="12" cy="8" r="6"/>
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
               </svg>
             </div>
-            <h3 class="heading-md" style="margin-bottom:8px;">Flexible Arrangements</h3>
-            <p class="body-md" style="color:var(--color-text-muted);">Hybrid work arrangements for office-based roles, flexible start/finish times, and an understanding that field schedules sometimes require early mornings and early afternoons off.</p>
-          </div>
-          <div class="benefit-item animate-on-scroll delay-2">
-            <div class="benefit-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M9 12l2 2 4-4"/>
-              </svg>
-            </div>
-            <h3 class="heading-md" style="margin-bottom:8px;">Meaningful Work</h3>
-            <p class="body-md" style="color:var(--color-text-muted);">Excess soil management directly protects Ontario&#x27;s land and water resources. Our work matters to the environment and to the communities where we live and work.</p>
-          </div>
-          <div class="benefit-item animate-on-scroll delay-3">
-            <div class="benefit-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/>
-              </svg>
-            </div>
-            <h3 class="heading-md" style="margin-bottom:8px;">Diverse Project Experience</h3>
-            <p class="body-md" style="color:var(--color-text-muted);">Work on residential subdivisions, municipal infrastructure, commercial developments, and industrial redevelopments across Ontario — no two projects are the same.</p>
+            <h3 class="heading-md" style="margin-bottom:8px;">Rewarding</h3>
+            <p class="body-md" style="color:var(--color-text-muted);">We offer a stable career path with <strong>group health benefits</strong>, staff appreciation events, and networking opportunities. The positive impact our team has extends well beyond any single project.</p>
           </div>
         </div>
       </div>
@@ -191,8 +182,8 @@
       <div class="container-sm">
         <div class="text-center mb-xl animate-on-scroll">
           <span class="section-eyebrow">Apply Now</span>
-          <h2 class="display-lg" id="apply-heading">Submit your application</h2>
-          <p class="body-lg" style="color:var(--color-text-muted);max-width:500px;margin:16px auto 0;">Send us your resume and we&#x27;ll be in touch. We review all applications and respond within two business days.</p>
+          <h2 class="display-lg" id="apply-heading">Submit Your Application</h2>
+          <p class="body-lg" style="color:var(--color-text-muted);max-width:500px;margin:16px auto 0;">No open roles right now? No problem. Send us your resume and we&#x27;ll keep it on file — you&#x27;ll be the first we reach out to when the right opportunity opens up.</p>
         </div>
 
         <div class="card animate-on-scroll delay-1" style="padding:40px;">
@@ -232,10 +223,7 @@
               <label class="form-label" for="app-role">Position Applying For <span class="required" aria-hidden="true">*</span></label>
               <select id="app-role" name="role" class="form-control" required aria-required="true">
                 <option value="" disabled selected>Select a position…</option>
-                <option value="qp-consultant">QP Environmental Consultant</option>
-                <option value="field-technician">Field Technician</option>
-                <option value="project-coordinator">Project Coordinator</option>
-                <option value="general">General / Future Opportunities</option>
+                <option value="general">Future Opportunities</option>
               </select>
               <span class="form-error" role="alert"></span>
             </div>
@@ -267,18 +255,6 @@
       </div>
     </section>
   </main>
-
-  <!-- CTA -->
-  <section class="section-pad-sm cta-snap" style="background:var(--color-soil-black);">
-    <div class="container">
-      <div class="cta-section animate-on-scroll" style="text-align:center;">
-        <span class="section-eyebrow" style="color:var(--color-gold);">Ready to Start?</span>
-        <h2 class="display-md" style="margin:12px 0 16px;color:var(--color-gold-text);">Get your project compliant today</h2>
-        <p class="body-lg" style="color:var(--color-gold-text);opacity:0.8;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;">Contact us for a free consultation and fixed-fee quote. We respond within one business day.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Request a Free Quote</a>
-      </div>
-    </div>
-  </section>
 
   <!-- FOOTER -->
   <footer class="footer" aria-label="Site footer">
