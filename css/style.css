@@ -687,11 +687,12 @@ input, textarea, select {
 
 /* Hero variants */
 .hero-inner {
-  min-height: 400px;
+  min-height: 280px;
   background-color: var(--color-soil-black);
   display: flex;
-  align-items: flex-end;
-  padding-bottom: var(--space-2xl);
+  align-items: flex-start;
+  padding-top: 48px;
+  padding-bottom: 48px;
   position: relative;
   overflow: hidden;
 }
@@ -3496,7 +3497,7 @@ body.page-services {
 /* Projects page hero */
 .page-hero {
   background: var(--color-soil-black);
-  padding: 120px 0 64px;
+  padding: 48px 0 64px;
   position: relative;
   overflow: hidden;
 }
