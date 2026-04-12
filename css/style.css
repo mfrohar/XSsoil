@@ -2173,9 +2173,20 @@ select.form-control {
   padding: var(--space-xl);
 }
 
+.benefit-item h3 {
+  min-height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-item p {
+  text-align: justify;
+}
+
 .benefit-icon {
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   border-radius: var(--radius-lg);
   background: rgba(10,154,10,0.15);
   display: flex;
@@ -2185,8 +2196,8 @@ select.form-control {
 }
 
 .benefit-icon svg {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   color: var(--color-soil-light);
 }
 
