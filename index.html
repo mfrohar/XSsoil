@@ -145,7 +145,7 @@
   font-weight: 300;
   letter-spacing: 0.06em;
   line-height: 1.85;
-  color: rgba(240,236,226,0.42);
+  color: rgba(240,236,226,0.82);
   max-width: 36ch;
   margin-bottom: 2.8rem;
 }
@@ -319,30 +319,37 @@
 .hlux-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid rgba(10,154,10,0.1);
-  background: rgba(3,7,2,0.9);
+  border-top: 1px solid rgba(10,154,10,0.22);
+  background: linear-gradient(180deg, #030902 0%, #050c04 100%);
 }
 .hlux-stat {
-  padding: 26px 36px;
-  border-right: 1px solid rgba(255,255,255,0.04);
+  padding: 44px 28px 40px;
+  border-right: 1px solid rgba(255,255,255,0.06);
   text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
 }
 .hlux-stat:last-child { border-right: none; }
 .hlux-stat-val {
   font-family: 'Oswald', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #0a9a0a;
+  font-size: clamp(2.4rem, 3.2vw, 3.2rem);
+  font-weight: 700;
+  color: var(--color-soil-light);
   line-height: 1;
-  margin-bottom: 5px;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
 }
 .hlux-stat-lbl {
   font-family: 'Raleway', sans-serif;
-  font-size: 0.56rem;
-  font-weight: 400;
-  letter-spacing: 0.15em;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(240,236,226,0.28);
+  color: rgba(240,236,226,0.82);
+  line-height: 1.5;
 }
 
 /* ── ENTRANCE ANIMATIONS ── */
@@ -393,8 +400,9 @@
   .hlux-headline .hl-secondary { font-size: clamp(3.6rem, 15vw, 5.5rem); }
   .hlux-actions { flex-direction: column; align-items: flex-start; gap: 18px; }
   .hlux-stats { grid-template-columns: 1fr 1fr; }
-  .hlux-stat { padding: 20px 20px; }
-  .hlux-stat-val { font-size: 1.6rem; }
+  .hlux-stat { padding: 32px 16px 28px; }
+  .hlux-stat-val { font-size: clamp(2rem, 8vw, 2.6rem); }
+  .hlux-stat-lbl { font-size: 0.64rem; letter-spacing: 0.1em; }
 }
   </style>
 </head>
