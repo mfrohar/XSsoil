@@ -20,12 +20,29 @@
         <img src="assets/XS-Soil-Logo.png" alt="XS Soil Solutions" width="180" height="46">
       </a>
       <div class="nav-links" role="list">
-        <a href="services.html" class="nav-link" role="listitem">Services</a>
-        <a href="who-we-help.html" class="nav-link" role="listitem">Who We Help</a>
+        <a href="index.html" class="nav-link" role="listitem">Home</a>
+        <a href="projects.html" class="nav-link" role="listitem">Projects</a>
+        <div class="nav-dropdown" role="listitem">
+          <a href="services.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Services</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="services.html#esmp" class="nav-dropdown-link" role="menuitem">Excess Soil Management Plans</a>
+            <a href="services.html#sap" class="nav-dropdown-link" role="menuitem">Site Alteration Plans</a>
+            <a href="services.html#scr" class="nav-dropdown-link" role="menuitem">Soil Characterization</a>
+            <a href="services.html#esdar" class="nav-dropdown-link" role="menuitem">ESD Assessments</a>
+            <a href="services.html#fmp" class="nav-dropdown-link" role="menuitem">Fill Management Plans</a>
+            <a href="services.html#sms" class="nav-dropdown-link" role="menuitem">Soil Management Systems</a>
+          </div>
+        </div>
+        <div class="nav-dropdown" role="listitem">
+          <a href="about.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">About Us</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="who-we-help.html" class="nav-dropdown-link" role="menuitem">Who We Help</a>
+            <a href="careers.html" class="nav-dropdown-link" role="menuitem">Careers</a>
+            <a href="land-acknowledgement.html" class="nav-dropdown-link" role="menuitem">Land Acknowledgement</a>
+          </div>
+        </div>
         <a href="blog.html" class="nav-link active" role="listitem">Blog</a>
-        <a href="about.html" class="nav-link" role="listitem">About Us</a>
         <a href="contact.html" class="nav-link" role="listitem">Contact</a>
-        <a href="careers.html" class="nav-link" role="listitem">Careers</a>
       </div>
       <div class="nav-actions">
         <a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a>
@@ -38,12 +55,29 @@
 
   <!-- MOBILE MENU -->
   <div class="nav-mobile-menu" role="dialog" aria-label="Mobile navigation">
-    <a href="services.html" class="nav-mobile-link">Services</a>
-    <a href="who-we-help.html" class="nav-mobile-link">Who We Help</a>
+    <a href="index.html" class="nav-mobile-link">Home</a>
+    <a href="projects.html" class="nav-mobile-link">Projects</a>
+    <div class="nav-mobile-dropdown">
+      <a href="services.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">Services</a>
+      <div class="nav-mobile-dropdown-menu">
+        <a href="services.html#esmp" class="nav-mobile-link nav-mobile-sublink">Excess Soil Management Plans</a>
+        <a href="services.html#sap" class="nav-mobile-link nav-mobile-sublink">Site Alteration Plans</a>
+        <a href="services.html#scr" class="nav-mobile-link nav-mobile-sublink">Soil Characterization</a>
+        <a href="services.html#esdar" class="nav-mobile-link nav-mobile-sublink">ESD Assessments</a>
+        <a href="services.html#fmp" class="nav-mobile-link nav-mobile-sublink">Fill Management Plans</a>
+        <a href="services.html#sms" class="nav-mobile-link nav-mobile-sublink">Soil Management Systems</a>
+      </div>
+    </div>
+    <div class="nav-mobile-dropdown">
+      <a href="about.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">About Us</a>
+      <div class="nav-mobile-dropdown-menu">
+        <a href="who-we-help.html" class="nav-mobile-link nav-mobile-sublink">Who We Help</a>
+        <a href="careers.html" class="nav-mobile-link nav-mobile-sublink">Careers</a>
+        <a href="land-acknowledgement.html" class="nav-mobile-link nav-mobile-sublink">Land Acknowledgement</a>
+      </div>
+    </div>
     <a href="blog.html" class="nav-mobile-link active">Blog</a>
-    <a href="about.html" class="nav-mobile-link">About Us</a>
     <a href="contact.html" class="nav-mobile-link">Contact</a>
-    <a href="careers.html" class="nav-mobile-link">Careers</a>
     <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px;">
       <a href="contact.html" class="btn btn-primary">Get a Quote</a>
     </div>
@@ -168,22 +202,21 @@
       }
 
       root.innerHTML = `
-        <header class="hero-inner" aria-label="Blog page header">
+        <header class="hero-dark-photo" style="background:var(--color-soil-black);display:flex;align-items:flex-start;position:relative;overflow:hidden;" aria-label="Blog page header">
           <div class="hero-topo" aria-hidden="true"></div>
-          <div class="container" style="position:relative;z-index:2;padding-bottom:48px;">
+          <div class="container" style="position:relative;z-index:2;padding-top:48px;padding-bottom:32px;">
             <nav class="hero-breadcrumb" aria-label="Breadcrumb">
               <a href="index.html">Home</a>
               <span class="hero-breadcrumb-sep" aria-hidden="true">/</span>
               <span aria-current="page">Blog</span>
             </nav>
-            <span class="watermark-title" aria-hidden="true">Blog</span>
-            <span class="section-eyebrow" style="color:var(--color-soil-light);">Insights &amp; Updates</span>
-            <h1 class="display-xl" style="color:var(--color-white);margin-top:12px;max-width:720px;">
-              Soil management insights for Ontario&#x27;s construction industry
+            <h1 class="display-xl" style="color:var(--color-white);margin-top:0;max-width:680px;">
+              Blog
             </h1>
+            <p style="color:rgba(255,255,255,0.6);font-size:18px;margin-top:16px;max-width:520px;">Soil management insights for Ontario&#x27;s construction industry.</p>
           </div>
         </header>
-        <section class="section-pad" style="background:var(--color-soil-black);" aria-label="Blog posts">
+        <section style="background:var(--color-soil-black);padding:24px 0 64px;" aria-label="Blog posts">
           <div class="container">
             ${cardsHtml}
           </div>
