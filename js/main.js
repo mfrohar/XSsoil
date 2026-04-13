@@ -184,9 +184,12 @@ document.addEventListener('DOMContentLoaded', () => {
   mobileDropdownToggles.forEach(toggle => {
     toggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      e.preventDefault();  // Always expand/collapse — never navigate from the toggle
       const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!isExpanded));
+      if (!isExpanded) {
+        e.preventDefault(); // First click: expand sub-items, don't navigate
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+      // Second click: already expanded — let navigation happen naturally
     });
   });
 
