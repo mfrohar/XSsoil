@@ -22,8 +22,26 @@
       <div class="nav-links" role="list">
         <a href="../index.html" class="nav-link" role="listitem">Home</a>
         <a href="../projects.html" class="nav-link active" role="listitem">Projects</a>
-        <a href="../services.html" class="nav-link" role="listitem">Services</a>
-        <a href="../about.html" class="nav-link" role="listitem">About Us</a>
+        <div class="nav-dropdown" role="listitem">
+          <a href="../services.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Services</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="../services.html#esmp" class="nav-dropdown-link" role="menuitem">Excess Soil Management Plans</a>
+            <a href="../services.html#sap" class="nav-dropdown-link" role="menuitem">Site Alteration Plans</a>
+            <a href="../services.html#scr" class="nav-dropdown-link" role="menuitem">Soil Characterization</a>
+            <a href="../services.html#esdar" class="nav-dropdown-link" role="menuitem">ESD Assessments</a>
+            <a href="../services.html#fmp" class="nav-dropdown-link" role="menuitem">Fill Management Plans</a>
+            <a href="../services.html#sms" class="nav-dropdown-link" role="menuitem">Soil Management Systems</a>
+          </div>
+        </div>
+        <div class="nav-dropdown" role="listitem">
+          <a href="../about.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">About Us</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="../who-we-help.html" class="nav-dropdown-link" role="menuitem">Who We Help</a>
+            <a href="../careers.html" class="nav-dropdown-link" role="menuitem">Careers</a>
+            <a href="../land-acknowledgement.html" class="nav-dropdown-link" role="menuitem">Land Acknowledgement</a>
+          </div>
+        </div>
+        <a href="../blog.html" class="nav-link" role="listitem">Blog</a>
         <a href="../contact.html" class="nav-link" role="listitem">Contact</a>
       </div>
       <div class="nav-actions">
@@ -36,11 +54,31 @@
   </nav>
   <div id="mobile-menu" class="nav-mobile-menu" role="dialog" aria-label="Mobile navigation">
     <a href="../index.html" class="nav-mobile-link">Home</a>
-    <a href="../projects.html" class="nav-mobile-link active">Projects</a>
-    <a href="../services.html" class="nav-mobile-link">Services</a>
-    <a href="../about.html" class="nav-mobile-link">About Us</a>
+    <a href="../projects.html" class="nav-mobile-link">Projects</a>
+    <div class="nav-mobile-dropdown">
+      <a href="../services.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">Services</a>
+      <div class="nav-mobile-dropdown-menu">
+        <a href="../services.html#esmp" class="nav-mobile-link nav-mobile-sublink">Excess Soil Management Plans</a>
+        <a href="../services.html#sap" class="nav-mobile-link nav-mobile-sublink">Site Alteration Plans</a>
+        <a href="../services.html#scr" class="nav-mobile-link nav-mobile-sublink">Soil Characterization</a>
+        <a href="../services.html#esdar" class="nav-mobile-link nav-mobile-sublink">ESD Assessments</a>
+        <a href="../services.html#fmp" class="nav-mobile-link nav-mobile-sublink">Fill Management Plans</a>
+        <a href="../services.html#sms" class="nav-mobile-link nav-mobile-sublink">Soil Management Systems</a>
+      </div>
+    </div>
+    <div class="nav-mobile-dropdown">
+      <a href="../about.html" class="nav-mobile-link nav-mobile-dropdown-toggle" aria-expanded="false">About Us</a>
+      <div class="nav-mobile-dropdown-menu">
+        <a href="../who-we-help.html" class="nav-mobile-link nav-mobile-sublink">Who We Help</a>
+        <a href="../careers.html" class="nav-mobile-link nav-mobile-sublink">Careers</a>
+        <a href="../land-acknowledgement.html" class="nav-mobile-link nav-mobile-sublink">Land Acknowledgement</a>
+      </div>
+    </div>
+    <a href="../blog.html" class="nav-mobile-link">Blog</a>
     <a href="../contact.html" class="nav-mobile-link">Contact</a>
-    <div style="margin-top:24px;"><a href="../contact.html" class="btn btn-primary">Get a Quote</a></div>
+    <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px;">
+      <a href="../contact.html" class="btn btn-primary">Get a Quote</a>
+    </div>
   </div>
 
   <main>
