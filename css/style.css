@@ -1093,8 +1093,8 @@ select.form-control {
 
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .animate-on-scroll.visible {
@@ -1568,7 +1568,7 @@ select.form-control {
    20. MINIMAL CTA SECTION
    ============================================ */
 .section-pad-cta {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .cta-minimal {
@@ -2970,7 +2970,7 @@ body.page-services {
   gap: 22px;
   padding: clamp(40px, 5vw, 80px) clamp(32px, 4vw, 72px);
   overflow-y: auto;
-  background: var(--color-soil-black);
+  background: var(--color-soil-deep);
 }
 
 /* Decorative service number in text column */
@@ -3006,14 +3006,13 @@ body.page-services {
 }
 
 /* Slide-up reveal on scroll into view */
-.page-services .service-section .animate-on-scroll {
-  transform: translateY(50px);
-  opacity: 0;
-  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
-}
-.page-services .service-section .animate-on-scroll.visible {
+.page-services .service-section .animate-on-scroll,
+.page-services .service-section .animate-on-scroll.visible,
+.page-services .cta-minimal.animate-on-scroll,
+.page-services .cta-minimal.animate-on-scroll.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  transition: none;
 }
 .page-services .service-section .animate-on-scroll.delay-2 {
   transition-delay: 0.15s;

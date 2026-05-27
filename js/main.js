@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px 200px 0px' });
 
     animEls.forEach(el => {
       const rect = el.getBoundingClientRect();
