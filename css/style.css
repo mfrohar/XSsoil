@@ -2953,7 +2953,6 @@ body.page-services {
 .page-services #esdar    { z-index: 4; }
 .page-services #fmp      { z-index: 5; }
 .page-services #sms      { z-index: 6; }
-.page-services #problems { z-index: 7; }
 
 /* Full-bleed two-column grid — no container wrapper */
 .service-inner {
@@ -3037,7 +3036,6 @@ body.page-services {
   .page-services #esdar,
   .page-services #fmp,
   .page-services #sms,
-  .page-services #problems { z-index: auto; }
 
   .service-inner {
     grid-template-columns: 1fr;
