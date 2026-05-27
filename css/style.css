@@ -173,7 +173,7 @@ input, textarea, select {
 }
 
 .mono {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--font-body);
   font-size: 13px;
 }
 
@@ -1093,8 +1093,8 @@ select.form-control {
 
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .animate-on-scroll.visible {
@@ -1568,7 +1568,7 @@ select.form-control {
    20. MINIMAL CTA SECTION
    ============================================ */
 .section-pad-cta {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .cta-minimal {
@@ -2920,7 +2920,8 @@ body.page-services {
 /* Hero — matches standard inner-page hero height */
 .page-services .hero-inner {
   height: auto;
-  min-height: 420px;
+  min-height: 240px;
+  padding-bottom: 24px;
 }
 
 /* =============================================
@@ -2935,7 +2936,7 @@ body.page-services {
 .page-services .service-section {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 70vh;
   min-height: unset;
   padding: 0;
   overflow: hidden;
@@ -2952,7 +2953,6 @@ body.page-services {
 .page-services #esdar    { z-index: 4; }
 .page-services #fmp      { z-index: 5; }
 .page-services #sms      { z-index: 6; }
-.page-services #problems { z-index: 7; }
 
 /* Full-bleed two-column grid — no container wrapper */
 .service-inner {
@@ -2970,7 +2970,7 @@ body.page-services {
   gap: 22px;
   padding: clamp(40px, 5vw, 80px) clamp(32px, 4vw, 72px);
   overflow-y: auto;
-  background: var(--color-soil-black);
+  background: var(--color-soil-deep);
 }
 
 /* Decorative service number in text column */
@@ -3006,14 +3006,13 @@ body.page-services {
 }
 
 /* Slide-up reveal on scroll into view */
-.page-services .service-section .animate-on-scroll {
-  transform: translateY(50px);
-  opacity: 0;
-  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
-}
-.page-services .service-section .animate-on-scroll.visible {
+.page-services .service-section .animate-on-scroll,
+.page-services .service-section .animate-on-scroll.visible,
+.page-services .cta-minimal.animate-on-scroll,
+.page-services .cta-minimal.animate-on-scroll.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  transition: none;
 }
 .page-services .service-section .animate-on-scroll.delay-2 {
   transition-delay: 0.15s;
@@ -3037,7 +3036,6 @@ body.page-services {
   .page-services #esdar,
   .page-services #fmp,
   .page-services #sms,
-  .page-services #problems { z-index: auto; }
 
   .service-inner {
     grid-template-columns: 1fr;
@@ -3235,7 +3233,7 @@ body.page-services {
 .blog-post-body code {
   background: rgba(255,255,255,0.06);
   padding: 2px 6px;
-  font-family: 'Courier New', monospace;
+  font-family: var(--font-body);
   font-size: 14px;
   border-radius: 3px;
 }
