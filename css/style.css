@@ -2484,10 +2484,14 @@ select.form-control {
   z-index: 1;
 }
 
-/* Dark header photo — for inline-styled dark headers (contact, careers) */
+/* Dark header photo — shared base for contact/careers inner-page heroes */
 .hero-dark-photo {
+  background: var(--color-soil-black);
+  display: flex;
+  align-items: flex-start;
   position: relative;
   overflow: hidden;
+  min-height: 280px;
 }
 .hero-dark-photo::before {
   content: '';
@@ -2502,6 +2506,13 @@ select.form-control {
 .hero-dark-photo > * {
   position: relative;
   z-index: 1;
+}
+.hero-dark-photo .container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.hero-dark-photo .hero-topo {
+  opacity: 0.2;
 }
 
 /* Timeline section background */
@@ -3432,6 +3443,13 @@ body.page-services {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
+  padding: 0 16px;
+}
+
+@media (min-width: 860px) {
+  .project-grid {
+    padding: 0 48px;
+  }
 }
 
 @media (min-width: 600px) {
