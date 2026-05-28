@@ -794,6 +794,13 @@ input, textarea, select {
   z-index: 1;
 }
 
+.hero-inner .container,
+.hero-dark-photo .container {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 48px;
+}
+
 .hero-breadcrumb {
   display: flex;
   align-items: center;
@@ -1860,6 +1867,10 @@ select.form-control {
 
 /* Dark header photo — for inline-styled dark headers (contact, careers) */
 .hero-dark-photo {
+  min-height: 280px;
+  background-color: var(--color-soil-black);
+  display: flex;
+  align-items: flex-end;
   position: relative;
   overflow: hidden;
 }
@@ -1909,6 +1920,14 @@ select.form-control {
   background-image: url('https://lirp.cdn-website.com/b7deef0f/dms3rep/multi/opt/constrtuction+gorunds-1920w.jpg') !important;
   background-position: center 50% !important;
   opacity: 0.40 !important;
+}
+
+.hero-dark-photo .hero-topo {
+  opacity: 0.2;
+}
+
+.hero-careers {
+  min-height: 360px;
 }
 
 /* ============================================
